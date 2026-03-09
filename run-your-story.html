@@ -64,6 +64,7 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
 
 /* MARQUEE (after meta strip) */
 .cs-marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 0;overflow:hidden;background:var(--bg2)}
+.cs-marquee:hover .cs-marquee-inner{animation-play-state:paused}
 .cs-marquee-inner{display:flex;gap:clamp(30px,5vw,60px);white-space:nowrap;animation:mq 28s linear infinite;width:max-content}
 .cs-mi{font-family:'Bebas Neue',sans-serif;font-size:clamp(11px,1.3vw,13px);letter-spacing:.25em;color:var(--dim);display:flex;align-items:center;gap:clamp(14px,2vw,24px);transition:color .2s ease;cursor:default}
 .cs-mi:hover{color:var(--accent)}
@@ -570,6 +571,14 @@ const scrollBtn=document.getElementById('scroll-top');
 window.addEventListener('scroll',()=>{
   scrollBtn.classList.toggle('visible',window.scrollY>400);
 },{passive:true});
+
+/* MARQUEE TOUCH PAUSE */
+const marqueeEl=document.querySelector('.cs-marquee');
+const marqueeInner=document.querySelector('.cs-marquee-inner');
+if(marqueeEl&&marqueeInner){
+  marqueeEl.addEventListener('touchstart',()=>{marqueeInner.style.animationPlayState='paused'},{passive:true});
+  marqueeEl.addEventListener('touchend',()=>{marqueeInner.style.animationPlayState='running'},{passive:true});
+}
 </script>
 </body>
 </html>
