@@ -71,9 +71,9 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
 .caption::before{content:'';width:20px;height:1px;background:var(--border);flex-shrink:0}
 .screen-grid{padding:0 clamp(20px,6vw,80px);margin:clamp(30px,5vh,60px) 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,24px)}
 .screen-grid img,.screen-grid video{width:100%;display:block;border-radius:10px;aspect-ratio:9/19.5;object-fit:cover;object-position:top}
-.wire-grid{padding:0 clamp(20px,6vw,80px);margin:clamp(30px,5vh,60px) 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,24px)}
-.wire-grid img{width:100%;display:block;border-radius:6px;border:1px solid var(--border)}
-@media(max-width:600px){.wire-grid{grid-template-columns:1fr}}
+.wire-grid{padding:0 clamp(20px,6vw,80px);margin:clamp(30px,5vh,60px) 0;display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(12px,2vw,24px)}
+.wire-grid img{width:100%;display:block;border-radius:6px;border:1px solid var(--border);height:clamp(340px,50vw,620px);object-fit:cover;object-position:top center}
+@media(max-width:600px){.wire-grid{grid-template-columns:1fr}.wire-grid img{height:clamp(260px,70vw,420px)}}
 .logo-display{padding:clamp(50px,8vh,90px) clamp(20px,6vw,80px);background:#ede9e0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center}
 .logo-display img{max-width:clamp(220px,40vw,480px);width:100%;display:block}
 /* entry video — phone aspect, centered, rounded */
@@ -280,9 +280,8 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="wire-grid rev">
-  <img src="page2_2.png" alt="Onboarding and role flow wireframe"/>
-  <img src="page2_3.png" alt="Purchase flow wireframe"/>
-  <img src="page2_4.png" alt="Posting flow wireframe"/>
+  <img src="page2_2.png" alt="Role onboarding flow wireframe"/>
+  <img src="page2_3.png" alt="Purchase flow and posting flow wireframe"/>
 </div>
 <div class="caption rev">Wireframes · role onboarding, purchase flow, posting flow</div>
 
