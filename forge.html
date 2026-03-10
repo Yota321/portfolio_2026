@@ -34,7 +34,13 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
 .cs-hero-gradient{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 0%,rgba(10,10,10,.7) 55%,rgba(10,10,10,.15) 100%)}
 .cs-hero-ghost{position:absolute;right:-2%;bottom:-6%;z-index:1;font-family:'Bebas Neue',sans-serif;font-size:clamp(100px,22vw,300px);color:rgba(255,255,255,0.025);letter-spacing:-.02em;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
 .cs-hero-orb{position:absolute;width:clamp(300px,50vw,600px);height:clamp(300px,50vw,600px);border-radius:50%;background:radial-gradient(circle,rgba(232,93,38,.07) 0%,transparent 70%);top:10%;left:20%;animation:orb 8s ease-in-out infinite;pointer-events:none;z-index:1}
-@keyframes orb{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes heroFadeIn{from{opacity:0}to{opacity:1}}
+.cs-hero-content .cs-eyebrow{animation:heroFadeUp .9s cubic-bezier(.22,1,.36,1) .3s both}
+.cs-hero-content .cs-title{animation:heroFadeUp .9s cubic-bezier(.22,1,.36,1) .48s both}
+.cs-hero-content .cs-subtitle{animation:heroFadeUp .9s cubic-bezier(.22,1,.36,1) .62s both}
+.cs-hero-video{animation:heroFadeIn 1.4s ease .1s both}
+.cs-hero-ghost{animation:heroFadeIn 1.8s ease .6s both}
 .cs-hero-content{position:relative;z-index:3;max-width:780px}
 .cs-eyebrow{display:flex;align-items:center;gap:clamp(12px,2vw,20px);margin-bottom:clamp(16px,3vh,28px);flex-wrap:wrap}
 .cs-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,93,38,.35);background:rgba(232,93,38,.08);color:var(--accent);font-size:clamp(8px,.9vw,10px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:30px}
@@ -161,19 +167,19 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
   </video>
   <div class="cs-hero-gradient"></div>
   <div class="cs-hero-content">
-    <div class="cs-eyebrow rev">
+    <div class="cs-eyebrow">
       <span class="cs-tag">UI/UX &amp; Platform Design</span>
       <span class="cs-year">Concept · 2024 / 25</span>
     </div>
-    <h1 class="cs-title rev" style="transition-delay:.08s"><span class="t-stroke">For</span>ge</h1>
-    <p class="cs-subtitle rev" style="transition-delay:.16s">A platform built for footwear designers. Community and commerce in one place, without one swallowing the other.</p>
+    <h1 class="cs-title" style=""><span class="t-stroke">For</span>ge</h1>
+    <p class="cs-subtitle">A platform built for footwear designers. Community and commerce in one place, without one swallowing the other.</p>
   </div>
 </section>
 
 <div class="cs-meta">
-  <div class="meta-item rev"><div class="meta-lbl">Tools</div><div class="meta-val">Figma<br>Photoshop</div></div>
+  <div class="meta-item rev"><div class="meta-lbl">Tools</div><div class="meta-val">Figma<br>Photoshop<br>Illustrator</div></div>
   <div class="meta-item rev" style="transition-delay:.06s"><div class="meta-lbl">Scope</div><div class="meta-val">App Concept<br>Branding<br>UI/UX<br>Interactions</div></div>
-  <div class="meta-item rev" style="transition-delay:.12s"><div class="meta-lbl">Platform</div><div class="meta-val">Mobile App<br>iOS Concept</div></div>
+  <div class="meta-item rev" style="transition-delay:.12s"><div class="meta-lbl">Platform</div><div class="meta-val">Mobile App<br>Android &amp; iOS</div></div>
   <div class="meta-item rev" style="transition-delay:.18s"><div class="meta-lbl">Type</div><div class="meta-val">Product Concept<br>Community &amp; Marketplace</div></div>
 </div>
 
@@ -239,34 +245,11 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <hr class="div"/>
 
-<!-- 03 STRUCTURE -->
+<!-- 03 BRANDING -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">03 — Structure</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Product<span>Structure.</span></h2>
-    </div>
-    <div>
-      <p class="body-text rev">The platform runs on a clear structure. Designers share and document work. Makers and brands discover or commission. Social features support visibility. Commerce integrates without dominating.</p>
-      <p class="body-text rev" style="transition-delay:.08s">These three screens show the core views a user moves between daily: the home feed for casual discovery, the marketplace for structured browsing, and the notifications layer for community activity.</p>
-    </div>
-  </div>
-</div>
-
-<div class="screen-grid rev">
-  <img src="page2_5.png" alt="Forge home feed"/>
-  <img src="page2_6.png" alt="Forge marketplace"/>
-  <img src="page2_7.png" alt="Forge notifications"/>
-</div>
-<div class="caption rev">Product structure · Home Feed, Marketplace, Notifications</div>
-
-<hr class="div"/>
-
-<!-- 04 BRANDING -->
-<div class="cs-body">
-  <div class="two-col">
-    <div class="two-col-sticky">
-      <span class="s-label rev-l">04 — Branding</span>
+      <span class="s-label rev-l">03 — Branding</span>
       <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Entry<span>Experience.</span></h2>
     </div>
     <div>
@@ -284,6 +267,29 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
   </div>
 </div>
 <div class="caption rev">Opening animation · first-launch experience</div>
+
+<hr class="div"/>
+
+<!-- 04 STRUCTURE -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rev-l">04 — Structure</span>
+      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Product<span>Structure.</span></h2>
+    </div>
+    <div>
+      <p class="body-text rev">The platform runs on a clear structure. Designers share and document work. Makers and brands discover or commission. Social features support visibility. Commerce integrates without dominating.</p>
+      <p class="body-text rev" style="transition-delay:.08s">These three screens show the core views a user moves between daily: the home feed for casual discovery, the marketplace for structured browsing, and the notifications layer for community activity.</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rev">
+  <img src="page2_5.png" alt="Forge home feed"/>
+  <img src="page2_6.png" alt="Forge marketplace"/>
+  <img src="page2_7.png" alt="Forge notifications"/>
+</div>
+<div class="caption rev">Product structure · Home Feed, Marketplace, Notifications</div>
 
 <hr class="div"/>
 
