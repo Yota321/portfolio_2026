@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>G.S. Ahamed — Portfolio</title>
+<title>G.S.Ahamed — Portfolio</title>
 
 <!-- Open Graph / WhatsApp / Telegram / iMessage -->
 <meta property="og:title" content="Sayon Ahamed — Portfolio 2026"/>
 <meta property="og:description" content="Brand &amp; UI Designer. Branding, UI/UX and Visual Systems Design."/>
-<meta property="og:image" content="https://yota321.github.io/portfolio_2026/og-image.jpg"/>
-<meta property="og:url" content="https://yota321.github.io/portfolio_2026/"/>
+<meta property="og:image" content="https://sayanahamed.online/og-image.jpg"/>
+<meta property="og:url" content="https://sayanahamed.online/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:site_name" content="G.S. Ahamed"/>
+<meta property="og:site_name" content="G.S.Ahamed"/>
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Sayon Ahamed — Portfolio 2026"/>
+<meta name="twitter:title" content="Golam Sayon Ahamed — Portfolio 2026"/>
 <meta name="twitter:description" content="Brand &amp; UI Designer. Branding, UI/UX and Visual Systems Design."/>
-<meta name="twitter:image" content="https://yota321.github.io/portfolio_2026/og-image.jpg"/>
+<meta name="twitter:image" content="https://sayanahamed.online/og-image.jpg"/>
 
 <!-- General -->
-<meta name="description" content="Brand &amp; UI Designer focused on digital systems, user psychology, and clear visual communication."/>
+<meta name="description" content="Golam Sayon Ahamed — Brand &amp; UI Designer from Bangalore. Portfolio of branding, UI/UX, and visual systems work. Available for internship Aug–Sept 2026."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
@@ -307,6 +307,9 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
   color:#0a0a0a;
   font-family:'Bebas Neue',sans-serif;
 }
+.hero-title-photo{display:none}
+.hero-title-row{display:none}
+
 
 .hero-name{
   font-family:'Cormorant Garamond',serif;
@@ -433,19 +436,49 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
 @media(max-width:640px){
   .hero{
     min-height:auto;
-    padding:80px 20px 48px;
-    gap:24px;
+    padding:72px 20px 36px;
+    grid-template-columns:1fr;
+    gap:0;
   }
-  .hero-right{order:1;justify-content:flex-start}
-  .photo-wrap{max-width:160px}
-  .hero-img{aspect-ratio:1/1;object-position:center 10%}
-  .photo-wrap::before,.photo-wrap::after{display:none}
+  .hero-right{display:none}
   .scroll-float{display:none}
-  .hero-left{order:2;text-align:left;max-width:100%}
+  .photo-wrap::before,.photo-wrap::after{display:none}
+  .hero-left{order:1;text-align:left;max-width:100%}
   .hero-desc{margin-left:0;margin-right:0;text-align:left}
   .hero-cta{justify-content:flex-start}
   .stat{justify-content:flex-start;text-align:left}
   .pill{font-size:9px}
+  .hero-title-desktop{display:none}
+  /* hero title row: text stack left, photo right */
+  .hero-title-row{
+    display:flex;
+    align-items:stretch;
+    gap:8px;
+    margin-bottom:clamp(10px,1.5vh,18px);
+  }
+  .hero-title-stack{
+    flex:1;
+    min-width:0;
+  }
+  .hero-title-line{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(58px,21vw,88px);
+    line-height:.9;
+    letter-spacing:.02em;
+    display:block;
+  }
+  .hero-port .t-fill{color:var(--white)}
+  .hero-folio .t-stroke{
+    -webkit-text-stroke:1.5px var(--white);
+    color:transparent;
+  }
+  .hero-title-photo{
+    display:flex;
+    width:clamp(100px,28vw,130px);
+    flex-shrink:0;
+  }
+  .hero-title-photo img,.hero-title-photo .hero-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;border-radius:8px;display:block;filter:grayscale(15%)}
+  .hero-title-photo .photo-placeholder{width:100%;aspect-ratio:3/4;border-radius:8px}
 }
 
 /*──────────────────────────────────────
@@ -693,6 +726,68 @@ footer{
 .f-links a{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.18);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:rgba(255,255,255,.45)}
 </style>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://sayanahamed.online/"/>
+
+<!-- Theme color (mobile browser chrome) -->
+<meta name="theme-color" content="#0a0a0a"/>
+
+<!-- Preload hero image (above the fold) -->
+<link rel="preload" as="image" href="https://raw.githubusercontent.com/Yota321/portfolio_2026/main/profile.jpg"/>
+
+<!-- Structured Data: Person + ProfilePage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://sayanahamed.online/#person",
+      "name": "Golam Sayon Ahamed",
+      "alternateName": "G.S. Ahamed",
+      "url": "https://sayanahamed.online/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://raw.githubusercontent.com/Yota321/portfolio_2026/main/profile.jpg",
+        "contentUrl": "https://raw.githubusercontent.com/Yota321/portfolio_2026/main/profile.jpg"
+      },
+      "jobTitle": "Brand & UI Designer",
+      "description": "Brand & UI Designer focused on digital systems, user psychology, and clear visual communication. Third-year BVA student at Idea Worldwide College, Bangalore.",
+      "knowsAbout": ["Brand Design", "UI/UX Design", "Visual Systems", "Web Design", "User Psychology", "Figma", "Adobe Illustrator", "Adobe Photoshop"],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Idea Worldwide College",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bangalore",
+          "addressCountry": "IN"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://in.linkedin.com/in/golam-sayon-ahamed-568913253",
+        "https://www.behance.net/sayanbox",
+        "https://github.com/Yota321"
+      ],
+      "email": "sayanahamed06@gmail.com"
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://sayanahamed.online/#profilepage",
+      "url": "https://sayanahamed.online/",
+      "name": "Golam Sayon Ahamed — Brand & UI Designer Portfolio",
+      "description": "Portfolio of Golam Sayon Ahamed, a Brand & UI Designer focused on digital systems, user psychology, and clear visual communication.",
+      "mainEntity": { "@id": "https://sayanahamed.online/#person" },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -708,9 +803,9 @@ footer{
     A separate thin bar tracks below.
 ═══════════════════════════════════-->
 <div id="loader">
-  <div class="loader-logo-stack" aria-label="G.S. AHAMED">
-    <div class="loader-logo-base" aria-hidden="true">G.S. AHAMED</div>
-    <div class="loader-logo-fill" id="logo-fill" aria-hidden="true">G.S. AHAMED</div>
+  <div class="loader-logo-stack" aria-label="G.S.AHAMED">
+    <div class="loader-logo-base" aria-hidden="true">G.S.AHAMED</div>
+    <div class="loader-logo-fill" id="logo-fill" aria-hidden="true">G.S.AHAMED</div>
   </div>
   <div class="loader-bar-wrap">
     <div class="loader-track"><div id="loader-bar"></div></div>
@@ -728,7 +823,7 @@ footer{
 
   <!-- NAV -->
   <header class="nav">
-    <a href="#" class="nav-logo">G.S. Ahamed</a>
+    <a href="#" class="nav-logo">G.S.Ahamed</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#works">Selected Work</a></li>
@@ -758,8 +853,17 @@ footer{
         <span class="dot"></span>Available for Internship
       </div>
       <p class="hero-eyebrow rev" style="transition-delay:.1s">Brand &amp; UI Designer</p>
-      <h1 class="hero-title rev" style="transition-delay:.15s">
-      <h1 class="hero-title rev" style="transition-delay:.15s"><span class="t-fill">PORT</span><span class="t-stroke">FOLIO</span></h1>
+      <h1 class="hero-title hero-title-desktop rev" style="transition-delay:.15s"><span class="t-fill">PORT</span><span class="t-stroke">FOLIO</span></h1>
+      <div class="hero-title-row">
+        <div class="hero-title-stack">
+          <div class="hero-title-line hero-port rev" style="transition-delay:.15s"><span class="t-fill">PORT</span></div>
+          <div class="hero-title-line hero-folio rev" style="transition-delay:.18s"><span class="t-stroke">FOLIO</span></div>
+        </div>
+        <div class="hero-title-photo rev" style="transition-delay:.2s">
+          <img src="https://raw.githubusercontent.com/Yota321/portfolio_2026/main/profile.jpg" alt="Golam Sayon Ahamed" class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="photo-placeholder" style="display:none"><span class="ph-init">GSA</span></div>
+        </div>
+      </div>
       <p class="hero-name rev" style="transition-delay:.2s">Golam Sayon Ahamed</p>
       <p class="hero-desc rev" style="transition-delay:.25s">
         Brand &amp; UI Designer focused on digital systems,<br>
@@ -1124,15 +1228,15 @@ const ring = document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{
   mx=e.clientX; my=e.clientY;
-  cur.style.left=mx+'px';
-  cur.style.top=my+'px';
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
 });
-(function loop(){
+let rafId;
+function animRing(){
   rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
-  ring.style.left=rx+'px';
-  ring.style.top=ry+'px';
-  requestAnimationFrame(loop);
-})();
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  rafId=requestAnimationFrame(animRing);
+}
+animRing();
 </script>
 </body>
 </html>
