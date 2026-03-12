@@ -116,10 +116,10 @@ body:has(a:hover,button:hover) #cur{width:16px;height:16px}
 .cell-b{font-size:clamp(12px,1.1vw,13.5px);font-weight:300;line-height:1.85;color:var(--mid)}
 @media(max-width:600px){.cells{grid-template-columns:1fr}.cell.full{grid-column:1}}
 /* pull quote */
-.pull-quote{padding:clamp(50px,8vh,90px) clamp(20px,6vw,80px);background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
-.pq-mark{font-family:'Cormorant Garamond',serif;font-size:clamp(60px,10vw,120px);color:rgba(200,169,110,.12);line-height:.6;margin-bottom:clamp(20px,4vh,40px);display:block}
+.pull-quote{padding:clamp(70px,12vh,120px) clamp(20px,6vw,80px);background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
+.pq-mark{font-family:'Cormorant Garamond',serif;font-size:clamp(60px,10vw,120px);color:rgba(200,169,110,.12);line-height:.6;margin-bottom:clamp(40px,7vh,70px);display:block}
 .pq-text{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;color:var(--white);max-width:720px;margin:0 auto;line-height:1.5;letter-spacing:.02em}
-.pq-attr{margin-top:clamp(18px,3vh,28px);font-size:clamp(9px,.9vw,10.5px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+.pq-attr{margin-top:clamp(28px,4vh,40px);font-size:clamp(9px,.9vw,10.5px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
 /* next project */
 .next-project{border-top:1px solid var(--border);background:var(--bg2);padding:clamp(50px,8vh,100px) clamp(20px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,40px);text-decoration:none;transition:background .3s;position:relative;overflow:hidden}
 .next-project::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(232,93,38,.05),transparent);transition:width .5s ease}
@@ -315,7 +315,7 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 </div>
 <div class="caption rev">Poster series · four standalone film identities within the same universe</div>
 
-<div class="pull-quote">
+<div class="pull-quote" style="margin-top:clamp(40px,8vh,90px)">
   <span class="pq-mark rev">"</span>
   <p class="pq-text rev" style="transition-delay:.08s">Where Intimacy Meets Infinity.</p>
   <p class="pq-attr rev" style="transition-delay:.16s">Marvel × A24 · Campaign Tagline</p>
