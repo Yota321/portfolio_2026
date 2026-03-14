@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NETCLEAN // ARASAKA BREACH v4.0</title>
+<title>NETCLEAN // ARASAKA BREACH v5.0</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
 
@@ -602,6 +602,142 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
 ::-webkit-scrollbar-thumb{background:var(--border2);}
 ::-webkit-scrollbar-thumb:hover{background:var(--y);}
 
+/* ── LOADING SCREEN ── */
+#loader{
+  position:fixed;inset:0;z-index:9999;
+  background:#020306;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:opacity .6s ease, visibility .6s;
+}
+#loader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+
+.loader-bg{
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,245,255,0.015) 2px,rgba(0,245,255,0.015) 3px);
+  pointer-events:none;
+}
+.loader-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,transparent 30%,rgba(0,0,0,0.9) 100%);
+  pointer-events:none;
+}
+
+.loader-inner{position:relative;text-align:center;z-index:1;width:560px;max-width:90vw;}
+
+.loader-skull{
+  font-size:56px;
+  filter:drop-shadow(0 0 20px rgba(255,228,0,0.8)) drop-shadow(0 0 40px rgba(255,228,0,0.4));
+  animation:skull-pulse 1.5s ease-in-out infinite;
+  margin-bottom:24px;
+  display:block;
+}
+@keyframes skull-pulse{
+  0%,100%{transform:scale(1);filter:drop-shadow(0 0 20px rgba(255,228,0,0.8)) drop-shadow(0 0 40px rgba(255,228,0,0.4));}
+  50%{transform:scale(1.08);filter:drop-shadow(0 0 30px rgba(255,228,0,1)) drop-shadow(0 0 60px rgba(255,228,0,0.6)) drop-shadow(0 0 80px rgba(255,0,60,0.3));}
+}
+
+.loader-brand{
+  font-family:'Orbitron',monospace;font-size:clamp(28px,6vw,52px);font-weight:900;
+  letter-spacing:10px;color:var(--y);
+  text-shadow:0 0 30px var(--y),0 0 60px rgba(255,228,0,0.5);
+  animation:loader-brand-glitch 4s infinite;
+  position:relative;
+}
+.loader-brand::before{
+  content:'NETCLEAN';position:absolute;left:0;top:0;width:100%;
+  color:var(--c);animation:loader-glitch-a 4s infinite;
+  clip-path:inset(0 100% 0 0);
+}
+.loader-brand::after{
+  content:'NETCLEAN';position:absolute;left:0;top:0;width:100%;
+  color:var(--r);animation:loader-glitch-b 4s infinite;
+  clip-path:inset(0 100% 0 0);
+}
+@keyframes loader-glitch-a{
+  0%,88%,100%{clip-path:inset(0 100% 0 0);transform:translate(0);}
+  89%{clip-path:inset(10% 0 70% 0);transform:translate(-4px,1px);}
+  90%{clip-path:inset(60% 0 10% 0);transform:translate(4px,-1px);}
+  91%{clip-path:inset(0 100% 0 0);}
+}
+@keyframes loader-glitch-b{
+  0%,91%,100%{clip-path:inset(0 100% 0 0);transform:translate(0);}
+  92%{clip-path:inset(30% 0 50% 0);transform:translate(5px,2px);}
+  93%{clip-path:inset(0 100% 0 0);}
+}
+
+.loader-sub{
+  font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:6px;
+  color:var(--c2);margin-top:6px;margin-bottom:32px;
+  animation:fade-in-up .8s .3s both;
+}
+@keyframes fade-in-up{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+.loader-pct{
+  font-family:'Orbitron',monospace;font-size:clamp(48px,10vw,80px);font-weight:900;
+  color:var(--y);letter-spacing:4px;line-height:1;
+  text-shadow:0 0 40px var(--y),0 0 80px rgba(255,228,0,0.4);
+  margin-bottom:10px;
+  animation:fade-in-up .5s .5s both;
+}
+
+.loader-bar-wrap{
+  width:100%;height:3px;background:rgba(255,228,0,0.1);
+  margin:16px 0;position:relative;overflow:visible;
+}
+.loader-bar{
+  height:100%;background:linear-gradient(90deg,transparent,var(--y),var(--c));
+  width:0%;transition:width .15s ease;
+  box-shadow:0 0 12px var(--y),0 0 24px rgba(255,228,0,0.5);
+  position:relative;
+}
+.loader-bar::after{
+  content:'';position:absolute;right:-2px;top:-4px;
+  width:3px;height:10px;background:var(--y);
+  box-shadow:0 0 8px var(--y);
+}
+
+.loader-status{
+  font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;
+  color:var(--c);height:18px;margin-top:4px;
+  animation:fade-in-up .5s .6s both;
+}
+
+.loader-log{
+  margin-top:28px;text-align:left;
+  border:1px solid rgba(0,245,255,0.15);
+  background:rgba(0,0,0,0.4);
+  padding:12px 16px;
+  max-height:120px;overflow:hidden;
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--txt2);line-height:1.9;letter-spacing:1px;
+  animation:fade-in-up .5s .8s both;
+}
+.loader-log-line{animation:log-slide-in .2s ease;}
+@keyframes log-slide-in{from{opacity:0;transform:translateX(-8px);}to{opacity:1;transform:translateX(0);}}
+.ll-ok{color:var(--c);}
+.ll-y{color:var(--y);}
+.ll-r{color:var(--r);}
+
+.loader-corners{position:absolute;inset:0;pointer-events:none;}
+.lc{position:absolute;}
+.lc-tl{top:12px;left:12px;}
+.lc-tr{top:12px;right:12px;transform:scaleX(-1);}
+.lc-bl{bottom:12px;left:12px;transform:scaleY(-1);}
+.lc-br{bottom:12px;right:12px;transform:scale(-1,-1);}
+
+/* Loader animated scan beam */
+.loader-scan{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.loader-scan::after{
+  content:'';position:absolute;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(0,245,255,0.5),transparent);
+  box-shadow:0 0 10px rgba(0,245,255,0.3);
+  animation:loader-scan-move 3s linear infinite;
+  top:0;
+}
+@keyframes loader-scan-move{from{top:0;}to{top:100%;}}
+
 /* ── CP LORE BOX ── */
 .lore-box{
   border:1px solid rgba(0,245,255,0.2);
@@ -660,6 +796,42 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
 
 <!-- Animated background layers -->
 <canvas id="bg-canvas"></canvas>
+
+<!-- ════ BOOT LOADER ════ -->
+<div id="loader">
+  <div class="loader-bg"></div>
+  <div class="loader-scan"></div>
+  <div class="loader-vignette"></div>
+  <div class="loader-corners">
+    <svg class="lc lc-tl" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <path d="M0 25L0 0L25 0" stroke="#FFE400" stroke-width="2" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="#FFE400"/>
+    </svg>
+    <svg class="lc lc-tr" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <path d="M0 25L0 0L25 0" stroke="#FFE400" stroke-width="2" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="#FFE400"/>
+    </svg>
+    <svg class="lc lc-bl" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <path d="M0 25L0 0L25 0" stroke="#00F5FF" stroke-width="2" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="#00F5FF"/>
+    </svg>
+    <svg class="lc lc-br" width="50" height="50" viewBox="0 0 50 50" fill="none">
+      <path d="M0 25L0 0L25 0" stroke="#00F5FF" stroke-width="2" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="#00F5FF"/>
+    </svg>
+  </div>
+  <div class="loader-inner">
+    <span class="loader-skull">💀</span>
+    <div class="loader-brand">NETCLEAN</div>
+    <div class="loader-sub">ARASAKA // BREACH PROTOCOL v5.0</div>
+    <div class="loader-pct" id="ldr-pct">0%</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="ldr-bar"></div>
+    </div>
+    <div class="loader-status" id="ldr-status">INITIALIZING NEURAL UPLINK...</div>
+    <div class="loader-log" id="ldr-log"></div>
+  </div>
+</div>
 <div class="bg-grid"></div>
 <div class="scanlines"></div>
 <div class="vignette"></div>
@@ -731,6 +903,7 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
   <div class="nav-section">HARDWARE OPS</div>
   <div class="nav-item" onclick="showPage('defrag')" id="nav-defrag"><span class="ni">▤</span>DRIVE OPTIMIZE</div>
   <div class="nav-item" onclick="showPage('startup')" id="nav-startup"><span class="ni">▷</span>BOOT OVERRIDE</div>
+  <div class="nav-item" onclick="showPage('winopt')" id="nav-winopt"><span class="ni">⚙</span>WIN OPTIMIZER <span class="nav-badge hot">NEW</span></div>
 
   <div class="nav-section">EXECUTE</div>
   <div class="nav-item" onclick="showPage('generate')" id="nav-generate"><span class="ni">⬇</span>COMPILE & DROP</div>
@@ -741,7 +914,7 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
       <span id="threat-txt">ANALYZING RIG...</span>
     </div>
     <div style="margin-top:8px;font-size:9px;color:var(--txt2);">
-      NETCLEAN v4.0 // ARASAKA DIVISION<br>
+      NETCLEAN v5.0 // ARASAKA DIVISION<br>
       <span style="color:var(--c)">BUILT FOR NIGHT CITY NETRUNNERS</span>
     </div>
   </div>
@@ -1047,6 +1220,24 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
     <label class="chk-opt"><input type="checkbox" id="opt-admin-check" checked> Abort if not running as Administrator</label>
   </div>
 
+  <div class="slabel" style="margin-top:8px">DEPLOYMENT MODE</div>
+  <div style="border:1px solid var(--border2);background:var(--panel2);padding:18px;margin-bottom:20px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,0 100%);">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--c);margin-bottom:14px;">HOW DOES YOUR TARGET RIG RUN SCRIPTS?</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <label class="radio-opt"><input type="radio" name="deploy" value="py" id="deploy-py" checked> 🐍 &nbsp;PYTHON INSTALLED — Download <code>.py</code> · Double-click → UAC prompt → done</label>
+      <label class="radio-opt"><input type="radio" name="deploy" value="bat" id="deploy-bat"> ⚡ &nbsp;NO PYTHON — Download <code>.py</code> + <code>build.bat</code> · bat installs PyInstaller, compiles to <code>.exe</code>, optionally cleans up Python after</label>
+    </div>
+    <div id="bat-opts" style="display:none;margin-top:14px;border-top:1px solid var(--border);padding-top:14px;">
+      <div style="font-size:10px;letter-spacing:2px;color:var(--y);font-family:'Share Tech Mono',monospace;margin-bottom:10px;">BAT OPTIONS</div>
+      <label class="chk-opt"><input type="checkbox" id="opt-cleanup-py" checked> Uninstall Python + PyInstaller after <code>.exe</code> is compiled</label>
+      <label class="chk-opt"><input type="checkbox" id="opt-auto-run"> Auto-launch compiled <code>.exe</code> immediately after build</label>
+      <div style="margin-top:10px;font-size:10px;color:var(--txt2);font-family:'Share Tech Mono',monospace;line-height:1.8;border-left:2px solid rgba(255,228,0,0.3);padding-left:10px;">
+        ⚠ Antivirus may flag <code>build.bat</code> as suspicious — it installs packages and compiles executables.<br>
+        Whitelist or temporarily disable AV during build. The compiled <code>.exe</code> runs clean.
+      </div>
+    </div>
+  </div>
+
   <div class="cbar">
     <button class="btn btn-c" onclick="updatePreview()">⟳ REFRESH MANIFEST</button>
     <button class="btn btn-y" id="gen-btn" onclick="confirmGen()">⚡ COMPILE &amp; DROP SCRIPT</button>
@@ -1073,9 +1264,29 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
         <div class="sstat"><div class="v" style="color:var(--c)">OK</div><div class="l">STATUS</div></div>
       </div>
       <div style="margin-top:14px;font-size:12px;color:var(--txt2);line-height:1.9;font-family:'Rajdhani',sans-serif;">
-        Drop <span style="color:var(--y)">sysclean_v4.py</span> on your rig. Right-click → <strong style="color:var(--txt)">Run as administrator</strong>. The script runs clean — no network calls, no telemetry, no corpo callbacks. <span style="color:var(--c)">Your machine. Your rules. Choom.</span>
+        Drop <span style="color:var(--y)" id="script-filename">sysclean_v5.py</span> on your rig. Right-click → <strong style="color:var(--txt)">Run as administrator</strong>. The script runs clean — no network calls, no telemetry, no corpo callbacks. <span style="color:var(--c)">Your machine. Your rules. Choom.</span>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ══════ WINDOWS OPTIMIZER ══════ -->
+<div class="page" id="page-winopt">
+  <div class="back-btn" onclick="showPage('overview')">BACK TO NET OVERVIEW</div>
+  <div class="page-hdr">
+    <div class="crumb">NETCLEAN // WIN_OPTIMIZER</div>
+    <h2 data-text="OVERRIDE CORPO SETTINGS">OVERRIDE CORPO SETTINGS</h2>
+    <p>Microsoft ships Windows pre-loaded with <span style="color:var(--y)">corpo bloatware settings</span> — Xbox garbage, telemetry spies, visual lag, useless animations. Flatline them. Run leaner. Run faster.</p>
+    <div class="hdr-line"></div>
+  </div>
+  <div class="warn-banner warn-banner-y">All changes are registry edits. Reversible anytime. Script creates restore points where noted. Nothing is permanently broken, choom.</div>
+  <div class="slabel">SELECT OPTIMIZATION TARGETS</div>
+  <div class="grid" id="grid-winopt"></div>
+  <div class="cbar">
+    <button class="btn btn-c" onclick="selAll('winopt')">SELECT ALL</button>
+    <button class="btn btn-c" onclick="selNone('winopt')">CLEAR ALL</button>
+    <button class="btn btn-y" onclick="selSafe('winopt')">SAFE TARGETS ONLY</button>
+    <span class="sel-count"><span id="sc-winopt">0</span> ARMED</span>
   </div>
 </div>
 
@@ -1107,6 +1318,94 @@ label.chk-opt code{color:var(--c);font-family:'Share Tech Mono',monospace;font-s
 </div>
 
 <script>
+// ══════════════════════════════════════════════════════
+// BOOT LOADER SEQUENCE
+// ══════════════════════════════════════════════════════
+
+(function(){
+  const ldrPct = document.getElementById('ldr-pct');
+  const ldrBar = document.getElementById('ldr-bar');
+  const ldrStatus = document.getElementById('ldr-status');
+  const ldrLog = document.getElementById('ldr-log');
+  const loader = document.getElementById('loader');
+
+  const bootLines = [
+    {t:0,   cls:'ll-y', txt:'// NETCLEAN v5.0 — ARASAKA BREACH PROTOCOL'},
+    {t:200, cls:'',     txt:'[SYS]  Initializing neural uplink...'},
+    {t:500, cls:'ll-ok',txt:'[OK]   Memory banks online — 0x0000 to 0xFFFF mapped'},
+    {t:800, cls:'',     txt:'[SYS]  Scanning threat matrix...'},
+    {t:1100,cls:'ll-ok',txt:'[OK]   ICE firewall bypassed'},
+    {t:1400,cls:'',     txt:'[SYS]  Loading breach modules — 8 protocols detected'},
+    {t:1700,cls:'ll-ok',txt:'[OK]   JUNK PURGE · BROWSER WIPE · REGISTRY BURN online'},
+    {t:2000,cls:'ll-ok',txt:'[OK]   GHOST MODE · DRIVE OPT · BOOT OVERRIDE online'},
+    {t:2300,cls:'ll-y', txt:'[NEW]  WIN OPTIMIZER — 14 targets loaded'},
+    {t:2600,cls:'ll-ok',txt:'[OK]   RAM FLUSH · DNS FLUSH injected into JUNK PURGE'},
+    {t:2900,cls:'',     txt:'[SYS]  Verifying neural signature...'},
+    {t:3200,cls:'ll-ok',txt:'[OK]   Netrunner identity confirmed — access granted'},
+    {t:3500,cls:'ll-y', txt:'[SYS]  BREACH PROTOCOL ARMED — entering Night City net'},
+  ];
+
+  const pctSteps = [
+    {t:0, p:0},
+    {t:300, p:8},
+    {t:600, p:18},
+    {t:900, p:30},
+    {t:1200,p:42},
+    {t:1500,p:55},
+    {t:1800,p:64},
+    {t:2100,p:73},
+    {t:2400,p:82},
+    {t:2700,p:89},
+    {t:3000,p:94},
+    {t:3300,p:98},
+    {t:3700,p:100},
+  ];
+
+  const statusSteps=[
+    {t:0,   s:'INITIALIZING NEURAL UPLINK...'},
+    {t:600, s:'SCANNING THREAT MATRIX...'},
+    {t:1200,s:'LOADING BREACH MODULES...'},
+    {t:2000,s:'INJECTING PROTOCOLS...'},
+    {t:2600,s:'VERIFYING NETRUNNER SIGNATURE...'},
+    {t:3300,s:'BREACH SEQUENCE ARMED'},
+    {t:3700,s:'ENTERING NIGHT CITY NET...'},
+  ];
+
+  bootLines.forEach(({t,cls,txt})=>{
+    setTimeout(()=>{
+      const line=document.createElement('div');
+      line.className='loader-log-line'+(cls?' '+cls:'');
+      line.textContent=txt;
+      ldrLog.appendChild(line);
+      ldrLog.scrollTop=ldrLog.scrollHeight;
+    },t);
+  });
+
+  pctSteps.forEach(({t,p})=>{
+    setTimeout(()=>{
+      ldrPct.textContent=p+'%';
+      ldrBar.style.width=p+'%';
+    },t);
+  });
+
+  statusSteps.forEach(({t,s})=>{
+    setTimeout(()=>{ ldrStatus.textContent=s; },t);
+  });
+
+  setTimeout(()=>{
+    loader.classList.add('hidden');
+  },4200);
+})();
+
+// Deploy radio toggle
+document.addEventListener('DOMContentLoaded',()=>{});
+document.querySelectorAll('input[name="deploy"]').forEach(r=>{
+  r.addEventListener('change',()=>{
+    document.getElementById('bat-opts').style.display=
+      document.getElementById('deploy-bat').checked?'block':'none';
+  });
+});
+
 // ══════════════════════════════════════════════════════
 // BACKGROUND ANIMATIONS
 // ══════════════════════════════════════════════════════
@@ -1412,6 +1711,22 @@ const TARGETS={
     {id:'su_discord',name:'DISCORD AUTO-LAUNCH',path:'HKCU\\...\\Run — Discord',badge:'SAFE',desc:'Discord launches on boot and runs in the system tray consuming RAM. For gamers who open Discord intentionally, this startup is just unnecessary overhead.',risk:'safe',rn:'Discord must be launched manually',caution:false},
     {id:'su_xbox',name:'XBOX GAME BAR WRITER',path:'HKLM\\...\\Run — GameBarPresenceWriter',badge:'SAFE',desc:'Xbox Game Bar\'s presence writer process — runs at startup even if you never use Game Bar. Disabling reduces background process count at boot.',risk:'safe',rn:'Game Bar toggled manually in-game',caution:false},
     {id:'su_cortana',name:'CORTANA AI AGENT',path:'HKCU\\...\\Run — Cortana',badge:'SAFE',desc:'Microsoft\'s Cortana assistant process at startup. Rarely used, always consuming resources. Disable safely — Cortana can still run if triggered.',risk:'safe',rn:'Cortana not auto-launched',caution:false},
+  ],
+  winopt:[
+    {id:'wo_gamebar',name:'XBOX GAME BAR KILL',path:'HKCU\\...\\GameDVR — AppCaptureEnabled',badge:'SAFE',desc:'Xbox Game Bar (Win+G) runs background hooks even when you\'re not gaming. Disabling it frees CPU overhead and stops the constant screen capture readiness. No performance impact on games.',risk:'safe',rn:'Win+G no longer works. Re-enable in Settings → Gaming',caution:false},
+    {id:'wo_telemetry',name:'TELEMETRY BLACKOUT',path:'HKLM\\...\\DataCollection — AllowTelemetry: 0',badge:'SAFE',desc:'Microsoft collects usage data, crash reports, and behavioral telemetry by default. Setting to 0 (Security level) sends zero diagnostic data. Reduces background network activity and CPU wake-ups.',risk:'safe',rn:'No functional impact. May break some MS feedback tools',caution:false},
+    {id:'wo_cortana_web',name:'CORTANA WEB SEARCH KILL',path:'HKCU\\...\\Search — BingSearchEnabled: 0',badge:'SAFE',desc:'Windows Search sends every keystroke to Bing by default. Disabling Cortana web search keeps your search queries local only — no cloud roundtrips, faster results, zero data leak.',risk:'safe',rn:'Search no longer shows web results inline',caution:false},
+    {id:'wo_visual_fx',name:'VISUAL EFFECTS OPTIMIZE',path:'HKCU\\...\\VisualEffects — VisualFXSetting: 2',badge:'SAFE',desc:'Windows ships with animations, fade effects, and shadow rendering that waste GPU cycles on nothing useful. "Adjust for best performance" nukes them all. Noticeably snappier UI response.',risk:'safe',rn:'Windows UI looks more flat/basic. Fully reversible.',caution:false},
+    {id:'wo_hibernate',name:'HIBERNATION FLATLINE',path:'powercfg /hibernate off',badge:'CAUTION',desc:'Hibernation reserves RAM-sized space on your drive (8-32GB). If you never hibernate — just sleep or shutdown — this is pure wasted SSD space. Disabling reclaims it instantly.',risk:'caution',rn:'Hibernate option removed from power menu',caution:true},
+    {id:'wo_superfetch',name:'SUPERFETCH / SYSMAIN KILL',path:'HKLM\\...\\SysMain — Start: 4',badge:'CAUTION',desc:'SysMain (formerly Superfetch) pre-loads frequently used apps into RAM. On SSDs this is counterproductive — SSDs are already fast enough that pre-loading adds RAM overhead with no speed gain.',risk:'caution',rn:'Recommended for SSDs only. HDDs benefit from Superfetch.',caution:true},
+    {id:'wo_search_index',name:'SEARCH INDEX SUSPEND',path:'HKLM\\...\\WSearch — Start: 4',badge:'CAUTION',desc:'Windows Search constantly indexes your files in the background, hammering disk I/O. Disabling stops the background indexing — search still works but results may take longer on cold searches.',risk:'caution',rn:'Windows Search slower on first use after reboot',caution:true},
+    {id:'wo_autoplay',name:'AUTOPLAY TERMINATION',path:'HKCU\\...\\Explorer — NoDriveTypeAutoRun: 255',badge:'SAFE',desc:'Autoplay launches programs automatically when you plug in USB drives or insert discs. A classic attack vector for malware delivery. Disabling it is a pure security and annoyance win.',risk:'safe',rn:'USB drives and discs no longer auto-launch',caution:false},
+    {id:'wo_error_report',name:'ERROR REPORTING BLACKOUT',path:'HKLM\\...\\WindowsErrorReporting — Disabled: 1',badge:'SAFE',desc:'Every crash triggers a report sent to Microsoft. Disabling stops these background uploads. You still see crash dialogs locally — they just don\'t phone home.',risk:'safe',rn:'Crash data no longer sent to Microsoft',caution:false},
+    {id:'wo_delivery_opt',name:'DELIVERY OPTIMIZATION KILL',path:'HKLM\\...\\DeliveryOptimization — DODownloadMode: 0',badge:'SAFE',desc:'Windows uses your PC to upload Windows updates to other people\'s computers by default — a BitTorrent-style system that eats your upload bandwidth. Disabling stops all peer sharing.',risk:'safe',rn:'Updates download from Microsoft only, not peer devices',caution:false},
+    {id:'wo_timeline',name:'ACTIVITY TIMELINE PURGE',path:'HKLM\\...\\System — EnableActivityFeed: 0',badge:'SAFE',desc:'Windows Timeline logs everything you do — every document opened, every website visited, every app used — and syncs it to Microsoft\'s cloud. Disabling stops the data collection entirely.',risk:'safe',rn:'Timeline / Task View history disabled',caution:false},
+    {id:'wo_lockscreen_ads',name:'LOCK SCREEN ADS KILL',path:'HKCU\\...\\ContentDeliveryManager — RotatingLockScreenOverlayEnabled: 0',badge:'SAFE',desc:'Microsoft serves ads and "suggested apps" on the Windows lock screen. Pure corporate surveillance on your own machine. One registry key to terminate it permanently.',risk:'safe',rn:'Lock screen shows your wallpaper only',caution:false},
+    {id:'wo_start_ads',name:'START MENU ADS FLATLINE',path:'HKCU\\...\\ContentDeliveryManager — SystemPaneSuggestionsEnabled: 0',badge:'SAFE',desc:'The Windows Start menu shows "suggested apps" (ads) by default. Disabling removes the Arasaka-approved sponsored suggestions. Your Start menu, your apps only.',risk:'safe',rn:'No suggested/sponsored apps in Start',caution:false},
+    {id:'wo_ram_flush',name:'RAM STANDBY FLUSH',path:'RamMap / EmptyStandbyList API',badge:'CAUTION',desc:'Windows fills RAM standby with cached data that\'s no longer actively used but stays resident. Flushing clears the standby list and releases memory back to the available pool. Useful before heavy tasks.',risk:'caution',rn:'Brief performance spike as Windows rebuilds cache',caution:true},
   ]
 };
 
@@ -1419,7 +1734,7 @@ const TARGETS={
 // SELECTION STATE
 // ══════════════════════════════════════════════════════
 
-const SEL={sys:new Set(),browser:new Set(),registry:new Set(),privacy:new Set(),startup:new Set()};
+const SEL={sys:new Set(),browser:new Set(),registry:new Set(),privacy:new Set(),startup:new Set(),winopt:new Set()};
 let dlArmed=false,dlSelectedOpt='move',defragArmed=false;
 const drivesSel=new Set();
 
@@ -1523,7 +1838,7 @@ function armedModules(){
 function updatePreview(){
   const el=document.getElementById('task-preview');
   let lines=[];
-  const gNames={sys:'JUNK PURGE',browser:'BROWSER WIPE',registry:'REGISTRY BURN',privacy:'GHOST MODE',startup:'BOOT OVERRIDE'};
+  const gNames={sys:'JUNK PURGE',browser:'BROWSER WIPE',registry:'REGISTRY BURN',privacy:'GHOST MODE',startup:'BOOT OVERRIDE',winopt:'WIN OPTIMIZER'};
   Object.keys(SEL).forEach(g=>{
     SEL[g].forEach(id=>{
       const t=TARGETS[g].find(x=>x.id===id);
@@ -1578,7 +1893,7 @@ async function doGenerate(){
   }
 
   log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━','lsk');
-  log('⚡ BREACH SEQUENCE INITIATED — NETCLEAN v4.0','li');
+  log('⚡ BREACH SEQUENCE INITIATED — NETCLEAN v5.0','li');
   log('Jacking into OS layer...','li');
   await sleep(300);
 
@@ -1587,44 +1902,47 @@ async function doGenerate(){
   const useCd=document.getElementById('opt-countdown').checked;
   const useAdmin=document.getElementById('opt-admin-check').checked;
   const useSysReport=document.getElementById('chk-sysreport')?.checked;
+  const deployMode=document.querySelector('input[name="deploy"]:checked')?.value||'py';
+  const cleanupPy=document.getElementById('opt-cleanup-py')?.checked;
+  const autoRun=document.getElementById('opt-auto-run')?.checked;
 
   let script=[];
   script.push(`"""
 ╔══════════════════════════════════════════════════════════════╗
-║            NETCLEAN v4.0 — BREACH PROTOCOL SCRIPT           ║
+║            NETCLEAN v5.0 — BREACH PROTOCOL SCRIPT           ║
 ║         Built for Netrunners. Optimized for Night City.      ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  Generated: ${new Date().toLocaleString().padEnd(49)}║
-║  Run as: Administrator (right-click → Run as administrator)  ║
-║  Warning: Review this script before execution                ║
+║  Double-click to run — UAC prompt will appear automatically  ║
+║  No manual "Run as administrator" needed                     ║
 ╚══════════════════════════════════════════════════════════════╝
 """
 
 import os, shutil, subprocess, ctypes, sys, glob, time, datetime
 from pathlib import Path
 
-print("""
-╔══════════════════════════════════╗
-║   NETCLEAN v4.0 // ARASAKA      ║  
-║   BREACH PROTOCOL ACTIVE        ║
-╚══════════════════════════════════╝
-""")
-`);
-
-  if(useAdmin){
-    script.push(`
+# ── AUTO UAC ELEVATION — double-click and it asks for admin ──
 def is_admin():
     try: return ctypes.windll.shell32.IsUserAnAdmin()
     except: return False
 
 if not is_admin():
-    print("[ABORT] This script requires Administrator privileges.")
-    print("Right-click the .py file and select 'Run as administrator'")
-    input("Press Enter to exit...")
-    sys.exit(1)
-print("[OK] Administrator privileges confirmed — breach clearance granted\\n")
+    # Re-launch self with admin rights — triggers UAC prompt
+    ctypes.windll.shell32.ShellExecuteW(
+        None, "runas", sys.executable,
+        ' '.join(f'"{a}"' for a in sys.argv),
+        None, 1
+    )
+    sys.exit()
+
+print("""
+╔══════════════════════════════════╗
+║   NETCLEAN v5.0 // ARASAKA      ║  
+║   BREACH PROTOCOL ACTIVE        ║
+║   ADMIN — CLEARANCE GRANTED     ║
+╚══════════════════════════════════╝
+""")
 `);
-  }
 
   script.push(`
 LOG_LINES = []
@@ -1722,9 +2040,25 @@ def main():
     su_xbox:`    try:\n        subprocess.run(['reg','delete','HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run','/v','GameBarPresenceWriter','/f'],capture_output=True)\n        log("  OK    Xbox Game Bar — startup killed"); total+=1\n    except: pass`,
     su_cortana:`    try:\n        subprocess.run(['reg','delete','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run','/v','Cortana','/f'],capture_output=True)\n        log("  OK    Cortana — startup killed"); total+=1\n    except: pass`,
   };
+  const woMap={
+    wo_gamebar:`    try:\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\GameDVR','/v','AppCaptureEnabled','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\GameDVR','/v','AllowGameDVR','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Xbox Game Bar — disabled"); total+=1\n    except Exception as e: log(f"  WARN  GameBar: {e}")`,
+    wo_telemetry:`    try:\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\DataCollection','/v','AllowTelemetry','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        subprocess.run(['sc','config','DiagTrack','start=','disabled'],capture_output=True)\n        subprocess.run(['sc','stop','DiagTrack'],capture_output=True)\n        log("  OK    Telemetry — blacked out"); total+=1\n    except Exception as e: log(f"  WARN  Telemetry: {e}")`,
+    wo_cortana_web:`    try:\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Search','/v','BingSearchEnabled','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Search','/v','CortanaConsent','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Cortana web search — killed"); total+=1\n    except Exception as e: log(f"  WARN  Cortana: {e}")`,
+    wo_visual_fx:`    try:\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Explorer\\\\VisualEffects','/v','VisualFXSetting','/t','REG_DWORD','/d','2','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKCU\\\\Control Panel\\\\Desktop','/v','UserPreferencesMask','/t','REG_BINARY','/d','9012038010000000','/f'],capture_output=True)\n        log("  OK    Visual FX — optimized for performance"); total+=1\n    except Exception as e: log(f"  WARN  VisualFX: {e}")`,
+    wo_hibernate:`    try:\n        subprocess.run(['powercfg','/hibernate','off'],capture_output=True)\n        log("  OK    Hibernation — disabled, hiberfil.sys removed"); total+=1\n    except Exception as e: log(f"  WARN  Hibernate: {e}")`,
+    wo_superfetch:`    try:\n        subprocess.run(['sc','config','SysMain','start=','disabled'],capture_output=True)\n        subprocess.run(['sc','stop','SysMain'],capture_output=True)\n        log("  OK    SysMain/Superfetch — killed"); total+=1\n    except Exception as e: log(f"  WARN  SysMain: {e}")`,
+    wo_search_index:`    try:\n        subprocess.run(['sc','config','WSearch','start=','disabled'],capture_output=True)\n        subprocess.run(['sc','stop','WSearch'],capture_output=True)\n        log("  OK    Windows Search Indexer — suspended"); total+=1\n    except Exception as e: log(f"  WARN  WSearch: {e}")`,
+    wo_autoplay:`    try:\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Explorer\\\\AutoplayHandlers','/v','DisableAutoplay','/t','REG_DWORD','/d','1','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer','/v','NoDriveTypeAutoRun','/t','REG_DWORD','/d','255','/f'],capture_output=True)\n        log("  OK    Autoplay — terminated"); total+=1\n    except Exception as e: log(f"  WARN  Autoplay: {e}")`,
+    wo_error_report:`    try:\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\Windows Error Reporting','/v','Disabled','/t','REG_DWORD','/d','1','/f'],capture_output=True)\n        subprocess.run(['sc','config','WerSvc','start=','disabled'],capture_output=True)\n        log("  OK    Error Reporting — blacked out"); total+=1\n    except Exception as e: log(f"  WARN  WER: {e}")`,
+    wo_delivery_opt:`    try:\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\DeliveryOptimization','/v','DODownloadMode','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Delivery Optimization — peer upload stopped"); total+=1\n    except Exception as e: log(f"  WARN  DelivOpt: {e}")`,
+    wo_timeline:`    try:\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System','/v','EnableActivityFeed','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKLM\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System','/v','PublishUserActivities','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Activity Timeline — purged"); total+=1\n    except Exception as e: log(f"  WARN  Timeline: {e}")`,
+    wo_lockscreen_ads:`    try:\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\ContentDeliveryManager','/v','RotatingLockScreenOverlayEnabled','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\ContentDeliveryManager','/v','SubscribedContent-338387Enabled','/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Lock screen ads — killed"); total+=1\n    except Exception as e: log(f"  WARN  LockAds: {e}")`,
+    wo_start_ads:`    try:\n        for v in ['SystemPaneSuggestionsEnabled','SubscribedContent-338388Enabled','SubscribedContent-310093Enabled','SoftLandingEnabled']:\n            subprocess.run(['reg','add','HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\ContentDeliveryManager','/v',v,'/t','REG_DWORD','/d','0','/f'],capture_output=True)\n        log("  OK    Start menu ads — flatlined"); total+=1\n    except Exception as e: log(f"  WARN  StartAds: {e}")`,
+    wo_ram_flush:`    try:\n        log("  INFO  Flushing RAM standby list...")\n        r=subprocess.run(['powershell','-command','[System.GC]::Collect(); [System.GC]::WaitForPendingFinalizers()'],capture_output=True,text=True)\n        subprocess.run(['rundll32.exe','advapi32.dll,ProcessIdleTasks'],capture_output=True)\n        log("  OK    RAM standby list — flushed"); total+=1\n    except Exception as e: log(f"  WARN  RAM: {e}")`,
+  };
 
-  const allMaps={sys:sysMap,browser:browserMap,registry:regMap,privacy:privMap,startup:suMap};
-  const gDisplay={sys:'JUNK PURGE',browser:'BROWSER WIPE',registry:'REGISTRY BURN',privacy:'GHOST MODE',startup:'BOOT OVERRIDE'};
+  const allMaps={sys:sysMap,browser:browserMap,registry:regMap,privacy:privMap,startup:suMap,winopt:woMap};
+  const gDisplay={sys:'JUNK PURGE',browser:'BROWSER WIPE',registry:'REGISTRY BURN',privacy:'GHOST MODE',startup:'BOOT OVERRIDE',winopt:'WIN OPTIMIZER'};
   let taskCount=0,cats=new Set(),totalTasks=totalArmed()||1;
 
   if(useBackup&&SEL.registry.size>0){
@@ -1860,8 +2194,64 @@ if __name__ == '__main__':
   const finalScript=script.join('\n');
   const blob=new Blob([finalScript],{type:'text/plain'});
   const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');a.href=url;a.download='sysclean_v4.py';
+  const a=document.createElement('a');a.href=url;a.download='sysclean_v5.py';
   document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+
+  // Generate build.bat if selected
+  if(deployMode==='bat'){
+    const batLines=[
+      `@echo off`,
+      `title NETCLEAN v5.0 — BUILD SEQUENCE`,
+      `color 0E`,
+      `echo.`,
+      `echo  ╔══════════════════════════════════╗`,
+      `echo  ║  NETCLEAN v5.0 — BUILD SEQUENCE  ║`,
+      `echo  ║  Compiling sysclean_v5.py → .exe  ║`,
+      `echo  ╚══════════════════════════════════╝`,
+      `echo.`,
+      `echo [1/4] Checking Python installation...`,
+      `python --version >nul 2>&1`,
+      `if errorlevel 1 (`,
+      `    echo [INFO] Python not found. Installing Python 3.11...`,
+      `    winget install -e --id Python.Python.3.11 --silent --accept-package-agreements --accept-source-agreements`,
+      `    echo [OK]   Python installed.`,
+      `) else (`,
+      `    echo [OK]   Python detected.`,
+      `)`,
+      `echo.`,
+      `echo [2/4] Installing PyInstaller...`,
+      `python -m pip install pyinstaller --quiet`,
+      `echo [OK]   PyInstaller ready.`,
+      `echo.`,
+      `echo [3/4] Compiling sysclean_v5.py to .exe...`,
+      `python -m PyInstaller --onefile --noconsole --name sysclean_v5 sysclean_v5.py`,
+      `echo [OK]   Build complete — sysclean_v5.exe in dist\\`,
+      `echo.`,
+      autoRun ? `echo [4/4] Launching exe...\n    start "" "dist\\sysclean_v5.exe"` : `echo [4/4] Done. Find sysclean_v5.exe in the dist\\ folder.`,
+    ];
+    if(cleanupPy){
+      batLines.push(
+        `echo.`,
+        `echo [CLEANUP] Uninstalling PyInstaller...`,
+        `python -m pip uninstall pyinstaller -y --quiet`,
+        `echo [CLEANUP] Removing Python...`,
+        `winget uninstall -e --id Python.Python.3.11 --silent >nul 2>&1`,
+        `echo [OK]   Python removed.`,
+      );
+    }
+    batLines.push(
+      `echo.`,
+      `echo  Night City runs clean, choom.`,
+      `pause`,
+    );
+    const batContent=batLines.join('\r\n');
+    const batBlob=new Blob([batContent],{type:'text/plain'});
+    const batUrl=URL.createObjectURL(batBlob);
+    const b=document.createElement('a');b.href=batUrl;b.download='build.bat';
+    document.body.appendChild(b);b.click();document.body.removeChild(b);URL.revokeObjectURL(batUrl);
+    log('▸ build.bat deployed — double-click to compile .exe','lw');
+    document.getElementById('script-filename').textContent='sysclean_v5.py + build.bat';
+  }
 
   const lc=finalScript.split('\n').length;
   document.getElementById('s-tasks').textContent=taskCount;
@@ -1871,7 +2261,7 @@ if __name__ == '__main__':
 
   log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━','lsk');
   log(`⚡ BREACH COMPILED — ${lc} lines · ${taskCount} protocols · ${cats.size} modules`,'ldn');
-  log('sysclean_v4.py deployed to your machine — run as Admin','li');
+  log(deployMode==='bat'?'sysclean_v5.py + build.bat deployed — run build.bat to compile .exe':'sysclean_v5.py deployed — double-click to run (UAC auto-elevation enabled)','li');
   log('Night City runs a little cleaner now, choom.','lok');
 
   prog.classList.remove('on');
