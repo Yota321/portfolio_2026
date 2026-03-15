@@ -441,7 +441,7 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 
 /* ══ LOADER ══ */
 #loader{position:fixed;inset:0;background:#0a0a0a;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(20px,4vh,40px)}
-#loader.out{background:transparent;transition:background .01s ease .65s;pointer-events:none}
+#loader.out{opacity:0;transition:opacity .3s ease;pointer-events:none}
 .ld-s{position:relative;display:inline-block;line-height:1;z-index:10000}
 .ld-b{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,108px);letter-spacing:.12em;color:rgba(237,233,224,.07);user-select:none}
 .ld-f{position:absolute;inset:0;font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,108px);letter-spacing:.12em;color:#ede9e0;clip-path:inset(0 100% 0 0);transition:clip-path .04s linear,color .4s ease;user-select:none}
@@ -1794,11 +1794,15 @@ setAccent(curH);
             // 4. fade site in behind
             site.classList.add('visible');
 
-            // 5. once animation done: hide loader text, show real nav logo
+            // 5. text has landed — fade loader text out
             setTimeout(()=>{
               loader.classList.add('out');
               loader.style.pointerEvents = 'none';
-              if(logo) logo.classList.add('visible');
+
+              // 6. only AFTER loader is fully gone, show real nav logo
+              setTimeout(()=>{
+                if(logo) logo.classList.add('visible');
+              }, 350); // matches #loader.out opacity transition
 
               // reveal rest of page
               const curtain=document.getElementById('hero-curtain');
