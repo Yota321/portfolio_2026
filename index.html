@@ -1602,7 +1602,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
     <div class="hero-cta rv" style="transition-delay:.28s">
       <a href="#works" class="btn btn-p">View Work →</a>
-      <a href="#connect" class="btn btn-g">Let's Connect ↗</a>
+      <a href="#connect" class="btn btn-g" onclick="gtag('event','cta_click',{label:'hero_connect'})">Let's Connect ↗</a>
     </div>
 
   </div>
@@ -1738,7 +1738,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
     <!-- ROW 1: solo — Run Your Story -->
     <div class="wi-row solo rv">
-      <a href="run-your-story.html" class="wi">
+      <a href="run-your-story.html" class="wi" onclick="gtag('event','project_click',{project:'Run Your Story'})">
         <div class="wi-img-wrap">
           <img src="page1_5.png" alt="Run Your Story" class="wi-media" style="view-transition-name:rys-hero"/>
           <div class="wi-overlay"></div>
@@ -1763,7 +1763,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
     <!-- ROW 2: pair — Forge + Marvel × A24 -->
     <div class="wi-row pair rv" style="transition-delay:.06s">
 
-      <a href="forge.html" class="wi">
+      <a href="forge.html" class="wi" onclick="gtag('event','project_click',{project:'Forge'})">
         <div class="wi-img-wrap">
           <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:forge-hero">
             <source src="page2_9.mp4" type="video/mp4"/>
@@ -1786,7 +1786,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
         </div>
       </a>
 
-      <a href="marvel-a24.html" class="wi">
+      <a href="marvel-a24.html" class="wi" onclick="gtag('event','project_click',{project:'Marvel x A24'})">
         <div class="wi-img-wrap">
           <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:marvel-hero">
             <source src="page3_9.mp4" type="video/mp4"/>
@@ -1814,7 +1814,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
     <!-- ROW 3: pair — RaazMD + Other Work -->
     <div class="wi-row pair rv" style="transition-delay:.12s">
 
-      <a href="raazmd.html" class="wi">
+      <a href="raazmd.html" class="wi" onclick="gtag('event','project_click',{project:'RaazMD'})">
         <div class="wi-img-wrap">
           <img src="page4_1.png" alt="RaazMD" class="wi-media" style="view-transition-name:raazmd-hero"/>
           <div class="wi-overlay"></div>
@@ -1835,7 +1835,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
         </div>
       </a>
 
-      <a href="other-work.html" class="wi">
+      <a href="other-work.html" class="wi" onclick="gtag('event','project_click',{project:'Other Work'})">
         <div class="wi-img-wrap">
           <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:otherwork-hero">
             <source src="page5_1.mp4" type="video/mp4"/>
@@ -1869,25 +1869,29 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
   <h2 class="connect-hl rv" style="transition-delay:.08s">Let's<br><span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Connect.</span></span></h2>
   <p class="connect-sub rv" style="transition-delay:.14s">Recruiter, studio, or just someone with an interesting idea. I want to hear about it.</p>
   <div class="c-grid">
-    <a href="https://mail.google.com/mail/?view=cm&to=sayanahamed06@gmail.com" target="_blank" rel="noopener" class="c-card rv">
+    <a href="https://mail.google.com/mail/?view=cm&to=sayanahamed06@gmail.com" target="_blank" rel="noopener" class="c-card rv" onclick="gtag('event','contact_click',{method:'email'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">Email</div><div class="c-role">Direct Contact</div><div class="c-handle"><span class="__cf_email__" data-cfemail="c2b1a3bba3aca3aaa3afa7a6f2f482a5afa3abaeeca1adaf">[email&#160;protected]</span></div></div>
     </a>
-    <a href="https://wa.me/917001820537" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.05s">
+    <a href="https://wa.me/917001820537" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.05s" onclick="gtag('event','contact_click',{method:'whatsapp'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">WhatsApp</div><div class="c-role">Quick Message</div><div class="c-handle">+91 70018 20537</div></div>
     </a>
-    <a href="https://in.linkedin.com/in/golam-sayon-ahamed-568913253" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.1s">
+    <a href="https://in.linkedin.com/in/golam-sayon-ahamed-568913253" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.1s" onclick="gtag('event','contact_click',{method:'linkedin'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">LinkedIn</div><div class="c-role">Professional</div><div class="c-handle">golam-sayon-ahamed</div></div>
     </a>
-    <a href="https://www.behance.net/sayanbox" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.15s">
+    <a href="https://www.behance.net/sayanbox" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.15s" onclick="gtag('event','contact_click',{method:'behance'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">Behance</div><div class="c-role">Portfolio</div><div class="c-handle">sayanbox</div></div>
     </a>
-    <a href="https://github.com/Yota321" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.2s">
+    <a href="https://github.com/Yota321" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.2s" onclick="gtag('event','contact_click',{method:'github'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">GitHub</div><div class="c-role">Code &amp; Projects</div><div class="c-handle">Yota321</div></div>
+    </a>
+    <a href="resume.pdf" download="GS_Ahamed_Resume.pdf" class="c-card rv" style="transition-delay:.25s" onclick="gtag('event','resume_download',{method:'direct'})">
+      <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><span class="c-arr">↓</span></div>
+      <div><div class="c-name">Resume</div><div class="c-role">Download PDF</div><div class="c-handle">GS_Ahamed_Resume.pdf</div></div>
     </a>
   </div>
 </section>
