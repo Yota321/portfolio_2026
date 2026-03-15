@@ -34,6 +34,9 @@
 <!-- ══ THEME COLOR (browser chrome) ══ -->
 <meta name="theme-color" content="#0a0a0a"/>
 
+<!-- ══ VIEW TRANSITION ══ -->
+<meta name="view-transition" content="same-origin"/>
+
 <!-- ══ FAVICON — inline SVG, no file upload needed ══ -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' letter-spacing='-0.5' fill='%23ede9e0'>GS</text></svg>"/>
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='80' font-weight='700' letter-spacing='-2' fill='%23ede9e0'>GS</text></svg>"/>
@@ -503,7 +506,7 @@ html::-webkit-scrollbar{display:none}
    - small dots at each theme position
 ══ */
 #theme-toggle-btn{
-  position:fixed;left:18px;bottom:18px;
+  position:fixed;left:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);
   z-index:600;
   width:44px;height:44px;border-radius:50%;
   background:var(--glass2);
@@ -521,7 +524,7 @@ html::-webkit-scrollbar{display:none}
 
 /* the slider pill */
 #theme-bar{
-  position:fixed;left:18px;bottom:74px;
+  position:fixed;left:clamp(16px,3vw,28px);bottom:74px;
   z-index:599;
   display:flex;flex-direction:column;align-items:center;
   background:var(--glass2);
@@ -1124,6 +1127,12 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 .f-links{display:flex;gap:16px}
 .f-links a{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:var(--mid)}
+
+/* ══ SCROLL TOP ══ */
+#scroll-top{position:fixed;bottom:clamp(16px,3vw,28px);right:clamp(16px,3vw,28px);width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:none;z-index:150;opacity:0;pointer-events:none;transition:opacity .3s,background .2s,border-color .2s,transform .2s;color:var(--mid)}
+#scroll-top.visible{opacity:1;pointer-events:auto}
+#scroll-top:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-3px)}
+@media(hover:none),(max-width:640px){#scroll-top{cursor:pointer}}
 </style>
 </head>
 <body>
@@ -1402,7 +1411,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
     <div class="wi-row solo rv">
       <a href="run-your-story.html" class="wi">
         <div class="wi-img-wrap">
-          <img src="page1_5.png" alt="Run Your Story" class="wi-media"/>
+          <img src="page1_5.png" alt="Run Your Story" class="wi-media" style="view-transition-name:rys-hero"/>
           <div class="wi-overlay"></div>
         </div>
         <div class="wi-info">
@@ -1427,7 +1436,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
       <a href="forge.html" class="wi">
         <div class="wi-img-wrap">
-          <video class="wi-media" autoplay muted loop playsinline>
+          <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:forge-hero">
             <source src="page2_9.mp4" type="video/mp4"/>
           </video>
           <div class="wi-overlay"></div>
@@ -1450,7 +1459,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
       <a href="marvel-a24.html" class="wi">
         <div class="wi-img-wrap">
-          <video class="wi-media" autoplay muted loop playsinline>
+          <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:marvel-hero">
             <source src="page3_9.mp4" type="video/mp4"/>
           </video>
           <div class="wi-overlay"></div>
@@ -1478,7 +1487,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
       <a href="raazmd.html" class="wi">
         <div class="wi-img-wrap">
-          <img src="page4_1.png" alt="RaazMD" class="wi-media"/>
+          <img src="page4_1.png" alt="RaazMD" class="wi-media" style="view-transition-name:raazmd-hero"/>
           <div class="wi-overlay"></div>
         </div>
         <div class="wi-info">
@@ -1499,7 +1508,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 
       <a href="other-work.html" class="wi">
         <div class="wi-img-wrap">
-          <video class="wi-media" autoplay muted loop playsinline>
+          <video class="wi-media" autoplay muted loop playsinline style="view-transition-name:otherwork-hero">
             <source src="page5_1.mp4" type="video/mp4"/>
           </video>
           <div class="wi-overlay"></div>
@@ -1924,6 +1933,17 @@ window.addEventListener('scroll',()=>{
   window.addEventListener('load', () => { setTimeout(checkAll, 300); setTimeout(checkAll, 900); });
   setTimeout(checkAll, 500);
 })();
+
+/* ── SCROLL TO TOP ── */
+const scrollTopBtn = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+}, {passive:true});
 </script>
+
+<button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 </body>
 </html>
