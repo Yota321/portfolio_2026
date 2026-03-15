@@ -1,215 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Run Your Story — G.S.Ahamed</title>
-<meta name="description" content="Run Your Story — A concept campaign reframing running as personal meaning. Brand, Digital, OOH by G.S. Ahamed."/>
+
+<!-- ══ PRIMARY META ══ -->
+<title>Run Your Story — Campaign Design · G.S.Ahamed</title>
+<meta name="description" content="Run Your Story — A Puma campaign concept built around everyday runners, not elite athletes. Brand, poster series, OOH, and social activation by G.S.Ahamed."/>
+<meta name="author" content="Golam Sayon Ahamed"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.sayanahamed.online/run-your-story.html"/>
+<meta name="keywords" content="Run Your Story, Puma campaign concept, brand campaign design, campaign design Bangalore, graphic design portfolio, G.S.Ahamed, Sayon Ahamed, OOH design, poster series design, brand identity design"/>
+
+<!-- ══ OPEN GRAPH ══ -->
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="G.S.Ahamed Portfolio"/>
+<meta property="og:title" content="Run Your Story — Campaign Design · G.S.Ahamed"/>
+<meta property="og:description" content="A Puma campaign concept built around everyday runners. Not elite athletes. Real people and what running actually means to them."/>
+<meta property="og:url" content="https://www.sayanahamed.online/run-your-story.html"/>
+<meta property="og:image" content="https://www.sayanahamed.online/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="en_IN"/>
+
+<!-- ══ TWITTER / X ══ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Run Your Story — Campaign Design · G.S.Ahamed"/>
+<meta name="twitter:description" content="A Puma campaign concept built around everyday runners. Not elite athletes."/>
+<meta name="twitter:image" content="https://www.sayanahamed.online/og-image.jpg"/>
+
+<!-- ══ STRUCTURED DATA ══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Run Your Story",
+  "description": "A Puma campaign concept built around everyday runners. Brand, poster series, OOH, and social activation.",
+  "url": "https://www.sayanahamed.online/run-your-story.html",
+  "image": "https://www.sayanahamed.online/og-image.jpg",
+  "creator": {
+    "@type": "Person",
+    "name": "Golam Sayon Ahamed",
+    "url": "https://www.sayanahamed.online/"
+  },
+  "genre": "Brand Campaign Design",
+  "keywords": "campaign design, brand identity, OOH, poster series, Puma concept"
+}
+</script>
+
+<!-- ══ THEME COLOR ══ -->
+<meta name="theme-color" content="#0a0a0a"/>
+
+<!-- ══ FAVICON ══ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' letter-spacing='-0.5' fill='%23ede9e0'>GS</text></svg>"/>
+
+<!-- ══ GA4 ══ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJD2MSVYRS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LJD2MSVYRS');</script>
+
+<!-- ══ FONTS ══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* ══ ACCENT SYSTEM ══ */
 :root{
-  --bg:#0a0a0a;
-  --bg2:#111;
-  --surface:#181818;
-  --border:rgba(255,255,255,0.07);
-  --white:#ede9e0;
-  --dim:rgba(237,233,224,0.4);
-  --mid:rgba(237,233,224,0.55);
-  --accent:#e85d26;
-  --gold:#c8a96e;
+  --a-h:20;--a-s:78%;--a-l:50%;
+  --accent:   hsl(var(--a-h),var(--a-s),var(--a-l));
+  --accent-d: hsl(var(--a-h),var(--a-s),calc(var(--a-l) - 9%));
+  --accent-15:hsla(var(--a-h),var(--a-s),var(--a-l),.15);
+  --accent-08:hsla(var(--a-h),var(--a-s),var(--a-l),.08);
+  --accent-25:hsla(var(--a-h),var(--a-s),var(--a-l),.25);
 }
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
+[data-theme="dark"]{--bg:#0a0a0a;--bg2:#111;--surface:#181818;--text:#ede9e0;--mid:rgba(237,233,224,.60);--dim:rgba(237,233,224,.36);--faint:rgba(237,233,224,.16);--border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);--glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.08);--shadow:rgba(0,0,0,.65);--gold:#c8a96e;--panel:#0e0e0e;--ptxt:#ede9e0;--pacc:var(--accent);--pdim:rgba(237,233,224,.55);--pbdr:rgba(255,255,255,.08)}
+[data-theme="light"]{--bg:#f5f0e3;--bg2:#ede8d8;--surface:#e6e0d0;--text:#111111;--mid:rgba(17,17,17,.68);--dim:rgba(17,17,17,.48);--faint:rgba(17,17,17,.22);--border:rgba(29,30,20,.10);--border2:rgba(29,30,20,.20);--glass:rgba(255,255,255,.50);--glass2:rgba(255,255,255,.72);--shadow:rgba(40,30,10,.16);--gold:#6b4e16;--panel:#1d2d1a;--ptxt:#e8f0e5;--pacc:#e8960a;--pdim:rgba(232,240,229,.72);--pbdr:rgba(255,255,255,.10)}
+[data-theme="midnight"]{--bg:#060b14;--bg2:#0c1525;--surface:#111e33;--text:#d8eaf8;--mid:rgba(216,234,248,.70);--dim:rgba(216,234,248,.48);--faint:rgba(216,234,248,.22);--border:rgba(100,180,255,.09);--border2:rgba(100,180,255,.18);--glass:rgba(100,180,255,.06);--glass2:rgba(100,180,255,.12);--shadow:rgba(0,0,0,.7);--gold:#7eb8d4;--panel:#050a13;--ptxt:#d8eaf8;--pacc:var(--accent);--pdim:rgba(216,234,248,.60);--pbdr:rgba(100,180,255,.14)}
+[data-theme="paper"]{--bg:#f2ece0;--bg2:#e8e0cf;--surface:#dfd5c0;--text:#1a0a2e;--mid:rgba(26,10,46,.70);--dim:rgba(26,10,46,.50);--faint:rgba(26,10,46,.22);--border:rgba(26,10,46,.11);--border2:rgba(26,10,46,.20);--glass:rgba(255,255,255,.55);--glass2:rgba(255,255,255,.78);--shadow:rgba(26,10,46,.18);--gold:#7c3aed;--panel:#1a0a2e;--ptxt:#ede8f8;--pacc:#a855f7;--pdim:rgba(237,232,248,.72);--pbdr:rgba(168,85,247,.20)}
+[data-theme="forest"]{--bg:#0e1410;--bg2:#141d16;--surface:#1a2b1c;--text:#d4e8d0;--mid:rgba(212,232,208,.70);--dim:rgba(212,232,208,.48);--faint:rgba(212,232,208,.22);--border:rgba(100,200,100,.09);--border2:rgba(100,200,100,.18);--glass:rgba(100,200,100,.06);--glass2:rgba(100,200,100,.12);--shadow:rgba(0,0,0,.65);--gold:#86c888;--panel:#0e1a10;--ptxt:#d4e8d0;--pacc:var(--accent);--pdim:rgba(212,232,208,.55);--pbdr:rgba(100,200,100,.14)}
+[data-theme="chalk"]{--bg:#ffffff;--bg2:#f4f4f4;--surface:#e8e8e8;--text:#0d0d0d;--mid:rgba(13,13,13,.72);--dim:rgba(13,13,13,.50);--faint:rgba(13,13,13,.22);--border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.16);--glass:rgba(0,0,0,.04);--glass2:rgba(0,0,0,.08);--shadow:rgba(0,0,0,.14);--gold:#444;--panel:#111111;--ptxt:#e8e8e8;--pacc:var(--accent);--pdim:rgba(232,232,232,.70);--pbdr:rgba(255,255,255,.12)}
+[data-theme="dusk"]{--bg:#100810;--bg2:#18101a;--surface:#22162a;--text:#f0dce8;--mid:rgba(240,220,232,.70);--dim:rgba(240,220,232,.48);--faint:rgba(240,220,232,.22);--border:rgba(200,100,180,.09);--border2:rgba(200,100,180,.18);--glass:rgba(200,100,180,.06);--glass2:rgba(200,100,180,.12);--shadow:rgba(0,0,0,.68);--gold:#d4a0c0;--panel:#0c060c;--ptxt:#f0dce8;--pacc:var(--accent);--pdim:rgba(240,220,232,.60);--pbdr:rgba(200,100,180,.14)}
+[data-theme="sand"]{--bg:#f7f0e6;--bg2:#ede4d3;--surface:#e0d5c0;--text:#2d1a0e;--mid:rgba(45,26,14,.65);--dim:rgba(45,26,14,.45);--faint:rgba(45,26,14,.20);--border:rgba(45,26,14,.10);--border2:rgba(45,26,14,.18);--glass:rgba(255,255,255,.55);--glass2:rgba(255,255,255,.75);--shadow:rgba(45,26,14,.18);--gold:#c0622a;--panel:#2d1a0e;--ptxt:#f5e8d8;--pacc:#e8520a;--pdim:rgba(245,232,216,.72);--pbdr:rgba(232,82,10,.18)}
+
+/* ══ RESET ══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px;scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar{display:none}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none;transition:background .5s,color .5s}
+a,button,[role="button"]{cursor:none!important}
+@media(hover:none),(max-width:640px){body,a,button,[role="button"]{cursor:auto!important}}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E")}
 ::selection{background:var(--accent);color:#fff}
 
-#cur{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s}
-#cur-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(232,93,38,.45);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease}
-body:has(a:hover,button:hover) #cur{width:16px;height:16px}
+/* ══ CURSOR ══ */
+#cur{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .4s,opacity .2s}
+#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--accent-25);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+body.cur-h #cur{width:16px;height:16px;background:var(--text);mix-blend-mode:difference}
+body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
+@media(hover:none),(max-width:640px){#cur,#cur-ring{display:none!important}}
 
-.rev{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
-.rev.in{opacity:1;transform:none}
-.rev-l{opacity:0;transform:translateX(-36px);transition:opacity .75s ease,transform .75s ease}
-.rev-l.in{opacity:1;transform:none}
-.rev-r{opacity:0;transform:translateX(36px);transition:opacity .75s ease,transform .75s ease}
-.rev-r.in{opacity:1;transform:none}
+/* ══ SCROLL REVEAL ══ */
+.rv,.rv-l,.rv-r{opacity:0;transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv{transform:translateY(38px)}
+.rv-l{transform:translateX(-38px)}
+.rv-r{transform:translateX(38px)}
+.rv.in,.rv-l.in,.rv-r.in{opacity:1;transform:none}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:clamp(14px,2.2vh,22px) clamp(20px,5vw,60px);background:rgba(10,10,10,.85);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,20px);letter-spacing:.16em;color:var(--white);text-decoration:none}
-.nav-back{display:flex;align-items:center;gap:8px;font-size:clamp(9px,1vw,11px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
-.nav-back:hover{color:var(--white)}
+/* ══ SCROLL PROGRESS ══ */
+#spb{position:fixed;top:0;left:0;height:2px;width:0%;background:var(--accent);z-index:9998;pointer-events:none;transition:background .5s}
+
+/* ══ NAV ══ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:clamp(12px,2vh,18px) clamp(20px,5.5vw,64px);background:var(--glass);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--border);transition:background .5s,border-color .5s}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(13px,1.6vw,17px);letter-spacing:.2em;color:var(--text);text-decoration:none;transition:opacity .2s}
+.nav-logo:hover{opacity:.7}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:clamp(9px,1vw,11px);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--text)}
 .nav-back svg{transition:transform .25s}
 .nav-back:hover svg{transform:translateX(-3px)}
 
-/* HERO */
+/* ══ THEME TOGGLE ══ */
+#theme-toggle-btn{position:fixed;left:18px;bottom:18px;z-index:600;width:44px;height:44px;border-radius:50%;background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border2);box-shadow:0 4px 20px var(--shadow);display:flex;align-items:center;justify-content:center;cursor:none;transition:background .3s,border-color .3s,transform .2s}
+@media(hover:none),(max-width:640px){#theme-toggle-btn{cursor:pointer}}
+#theme-toggle-btn:hover{transform:scale(1.1)}
+#theme-toggle-btn svg{width:17px;height:17px;color:var(--text);transition:color .5s,transform .4s}
+#theme-bar{position:fixed;left:18px;bottom:74px;z-index:599;display:flex;flex-direction:column;align-items:center;background:var(--glass2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border2);border-radius:30px;padding:14px 0;box-shadow:0 8px 40px var(--shadow);width:44px;opacity:0;pointer-events:none;transform:translateY(10px) scale(.92);transition:opacity .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1),background .5s,border-color .5s;user-select:none;touch-action:none}
+#theme-bar.open{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+#tb-track{width:8px;height:180px;border-radius:8px;position:relative;cursor:pointer;background:linear-gradient(180deg,#f5f0e3 0%,#86c888 18%,#c8a96e 38%,#a855f7 55%,#e85d26 75%,#0a0a0a 100%);box-shadow:inset 0 1px 3px rgba(0,0,0,.3)}
+.tb-stop{position:absolute;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.9);border:1.5px solid rgba(0,0,0,.25);box-shadow:0 1px 4px rgba(0,0,0,.35);pointer-events:none}
+.tb-stop.active-stop{width:13px;height:13px;background:#fff;box-shadow:0 0 0 3px var(--accent)}
+#tb-thumb{position:absolute;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff;border:2.5px solid var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.5);cursor:grab;z-index:2;transition:border-color .3s}
+#tb-thumb:active{cursor:grabbing}
+#tb-label{position:absolute;left:calc(100% + 12px);background:var(--surface);border:1px solid var(--border2);border-radius:6px;padding:4px 10px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;top:50%;transform:translateY(-50%)}
+#theme-bar.open #tb-label{opacity:1}
+
+/* ══ HERO ══ */
 .cs-hero{position:relative;min-height:90svh;display:flex;align-items:flex-end;padding:clamp(100px,16vh,160px) clamp(20px,6vw,80px) clamp(50px,8vh,80px);overflow:hidden}
-.cs-hero-img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.38;filter:grayscale(20%)}
-.cs-hero-gradient{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 0%,rgba(10,10,10,.65) 50%,rgba(10,10,10,.2) 100%)}
-/* ghost text */
+.cs-hero-img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center 35%;opacity:.42;filter:grayscale(15%);transition:filter 1s}
+[data-theme="light"] .cs-hero-img,[data-theme="chalk"] .cs-hero-img,[data-theme="paper"] .cs-hero-img,[data-theme="sand"] .cs-hero-img{opacity:.32;filter:grayscale(20%) brightness(.92)}
+.cs-hero-gradient{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 0%,rgba(var(--bg-rgb,10,10,10),.65) 50%,rgba(var(--bg-rgb,10,10,10),.2) 100%)}
 .cs-hero-ghost{position:absolute;right:-2%;bottom:-6%;z-index:1;font-family:'Bebas Neue',sans-serif;font-size:clamp(100px,22vw,300px);color:rgba(255,255,255,0.025);letter-spacing:-.02em;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
-/* orb */
-.cs-hero-orb{position:absolute;width:clamp(300px,50vw,600px);height:clamp(300px,50vw,600px);border-radius:50%;background:radial-gradient(circle,rgba(232,93,38,.07) 0%,transparent 70%);top:10%;left:20%;animation:orb 8s ease-in-out infinite;pointer-events:none;z-index:1}
+[data-theme="light"] .cs-hero-ghost,[data-theme="chalk"] .cs-hero-ghost,[data-theme="paper"] .cs-hero-ghost,[data-theme="sand"] .cs-hero-ghost{color:rgba(0,0,0,.04)}
+.cs-hero-orb{position:absolute;width:clamp(300px,50vw,600px);height:clamp(300px,50vw,600px);border-radius:50%;background:radial-gradient(circle,var(--accent-08) 0%,transparent 70%);top:10%;left:20%;animation:orb 8s ease-in-out infinite;pointer-events:none;z-index:1}
 @keyframes orb{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
 .cs-hero-content{position:relative;z-index:3;max-width:780px}
 .cs-eyebrow{display:flex;align-items:center;gap:clamp(12px,2vw,20px);margin-bottom:clamp(16px,3vh,28px);flex-wrap:wrap}
-/* pill — matches main page */
-.cs-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,93,38,.35);background:rgba(232,93,38,.08);color:var(--accent);font-size:clamp(8px,.9vw,10px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:30px}
-.cs-year{font-size:clamp(8px,.9vw,10px);letter-spacing:.25em;text-transform:uppercase;color:var(--dim);font-family:'Cormorant Garamond',serif;font-style:italic}
-.cs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,13vw,170px);line-height:.86;letter-spacing:.02em;color:var(--white);margin-bottom:clamp(18px,3vh,30px)}
-.cs-title .t-stroke{-webkit-text-stroke:1.5px var(--white);color:transparent}
-.cs-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;color:var(--mid);letter-spacing:.04em;font-style:italic;max-width:480px;line-height:1.5}
+.cs-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--accent-25);background:var(--accent-08);color:var(--accent);font-size:clamp(8px,.9vw,10px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;border-radius:30px;transition:border-color .5s,background .5s,color .5s}
+.cs-year{font-size:clamp(8px,.9vw,10px);letter-spacing:.25em;text-transform:uppercase;color:var(--dim);font-family:'Cormorant Garamond',serif;font-style:italic;transition:color .5s}
+.cs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,13vw,170px);line-height:.86;letter-spacing:.02em;color:var(--text);margin-bottom:clamp(18px,3vh,30px);transition:color .5s}
+.cs-title .t-stroke{-webkit-text-stroke:1.5px var(--text);color:transparent;transition:-webkit-text-stroke .5s}
+.cs-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;color:var(--mid);letter-spacing:.04em;font-style:italic;max-width:480px;line-height:1.5;transition:color .5s}
 
-/* MARQUEE (after meta strip) */
-.cs-marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 0;overflow:hidden;background:var(--bg2)}
+/* ══ META STRIP ══ */
+.cs-meta{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);padding:clamp(18px,3vh,28px) clamp(20px,6vw,80px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,4vw,40px);transition:background .5s,border-color .5s}
+.meta-lbl{font-size:clamp(8px,.85vw,9.5px);letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px;transition:color .5s}
+.meta-val{font-size:clamp(11px,1.1vw,13px);font-weight:300;color:var(--mid);line-height:1.6;transition:color .5s}
+@media(max-width:700px){.cs-meta{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.cs-meta{grid-template-columns:1fr}}
+
+/* ══ MARQUEE ══ */
+.cs-marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 0;overflow:hidden;background:var(--bg2);transition:background .5s,border-color .5s}
 .cs-marquee:hover .cs-marquee-inner{animation-play-state:paused}
 .cs-marquee-inner{display:flex;gap:clamp(30px,5vw,60px);white-space:nowrap;animation:mq 28s linear infinite;width:max-content}
-.cs-mi{font-family:'Bebas Neue',sans-serif;font-size:clamp(11px,1.3vw,13px);letter-spacing:.25em;color:var(--dim);display:flex;align-items:center;gap:clamp(14px,2vw,24px);transition:color .2s ease;cursor:default}
+.cs-mi{font-family:'Bebas Neue',sans-serif;font-size:clamp(11px,1.3vw,13px);letter-spacing:.25em;color:var(--dim);display:flex;align-items:center;gap:clamp(14px,2vw,24px);transition:color .2s;cursor:default}
 .cs-mi:hover{color:var(--accent)}
 .cs-mi::after{content:'✦';color:var(--accent);font-size:7px}
 @keyframes mq{to{transform:translateX(-50%)}}
 
-/* META STRIP */
-.cs-meta{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);padding:clamp(18px,3vh,28px) clamp(20px,6vw,80px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,4vw,40px)}
-.meta-lbl{font-size:clamp(8px,.85vw,9.5px);letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px}
-.meta-val{font-size:clamp(11px,1.1vw,13px);font-weight:300;color:var(--mid);line-height:1.6}
-@media(max-width:700px){.cs-meta{grid-template-columns:1fr 1fr}}
-@media(max-width:420px){.cs-meta{grid-template-columns:1fr}}
-
-/* BODY */
+/* ══ BODY ══ */
 .cs-body{padding:clamp(60px,10vh,120px) clamp(20px,6vw,80px);max-width:1100px;margin:0 auto}
-
-.s-label{display:block;font-size:clamp(8px,.85vw,10px);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:clamp(14px,2.5vh,24px)}
-
+.s-label{display:block;font-size:clamp(8px,.85vw,10px);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:clamp(14px,2.5vh,24px);transition:color .5s}
 .two-col{display:grid;grid-template-columns:clamp(160px,22vw,260px) 1fr;gap:clamp(30px,6vw,100px);align-items:start}
 .two-col-sticky{position:sticky;top:clamp(80px,12vh,110px)}
-.two-col-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:.9;letter-spacing:.03em;color:var(--white)}
-.two-col-heading span{color:var(--gold);display:block}
-.body-text{font-size:clamp(13px,1.3vw,15px);font-weight:300;line-height:1.9;color:var(--mid)}
+.two-col-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:.9;letter-spacing:.03em;color:var(--text);transition:color .5s}
+.two-col-heading span{color:var(--accent);display:block;transition:color .5s}
+.body-text{font-size:clamp(13px,1.3vw,15px);font-weight:300;line-height:1.9;color:var(--mid);transition:color .5s}
 .body-text+.body-text{margin-top:clamp(16px,2.5vh,24px)}
-.body-text strong{color:var(--white);font-weight:500}
+.body-text strong{color:var(--text);font-weight:500;transition:color .5s}
 @media(max-width:780px){.two-col{grid-template-columns:1fr}.two-col-sticky{position:static}}
+.div{border:none;border-top:1px solid var(--border);margin:clamp(50px,8vh,100px) clamp(20px,6vw,80px);transition:border-color .5s}
 
-.div{border:none;border-top:1px solid var(--border);margin:clamp(50px,8vh,100px) clamp(20px,6vw,80px)}
-
-/* IMAGES */
-.img-full{width:100%;display:block;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.img-full img{width:100%;display:block;object-fit:cover;object-position:center center}
+/* ══ IMAGES ══ */
+.img-full{width:100%;display:block;border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:border-color .5s}
+.img-full img{width:100%;display:block;object-fit:cover;object-position:center}
 .img-contained{padding:0 clamp(20px,6vw,80px);margin:clamp(30px,5vh,60px) 0}
-.img-contained img{width:100%;display:block;border-radius:4px}
-
-/* POSTER GRID */
-.poster-grid{padding:0 clamp(20px,6vw,80px);margin-top:clamp(30px,5vh,60px);margin-bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,24px)}
-.poster-grid img{width:100%;display:block;border-radius:2px;aspect-ratio:210/297;object-fit:cover}
-/* caption sits right under posters with a tight gap, then mockup has its own margin */
-.caption{padding:0 clamp(20px,6vw,80px);margin-top:clamp(10px,1.5vh,14px);margin-bottom:0;font-size:clamp(9px,.9vw,10.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px}
-.caption::before{content:'';width:20px;height:1px;background:var(--border);flex-shrink:0}
+.img-contained img{width:100%;display:block;border-radius:8px}
+.poster-grid{padding:0 clamp(20px,6vw,80px);margin-top:clamp(30px,5vh,60px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,24px)}
+.poster-grid img{width:100%;display:block;border-radius:4px;aspect-ratio:210/297;object-fit:cover}
+.caption{padding:0 clamp(20px,6vw,80px);margin-top:clamp(10px,1.5vh,14px);font-size:clamp(9px,.9vw,10.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;transition:color .5s}
+.caption::before{content:'';width:20px;height:1px;background:var(--border);flex-shrink:0;transition:background .5s}
 @media(max-width:600px){.poster-grid{grid-template-columns:1fr}.poster-grid img{max-width:340px;margin:0 auto}}
 
-/* CELLS */
-.cells{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:clamp(30px,5vh,50px)}
-.cell{background:var(--bg);padding:clamp(22px,3.5vh,38px) clamp(20px,3vw,34px);transition:background .25s}
+/* ══ CELLS ══ */
+.cells{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:clamp(30px,5vh,50px);transition:background .5s,border-color .5s}
+.cell{background:var(--bg);padding:clamp(22px,3.5vh,38px) clamp(20px,3vw,34px);transition:background .25s,background .5s}
 .cell:hover{background:var(--surface)}
 .cell.full{grid-column:1/-1}
-.cell-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:14px}
-.cell-t{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,1.8vw,21px);font-weight:400;color:var(--white);margin-bottom:10px;line-height:1.3}
-.cell-b{font-size:clamp(12px,1.1vw,13.5px);font-weight:300;line-height:1.85;color:var(--mid)}
+.cell-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:14px;transition:color .5s}
+.cell-t{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,1.8vw,21px);font-weight:400;color:var(--text);margin-bottom:10px;line-height:1.3;transition:color .5s}
+.cell-b{font-size:clamp(12px,1.1vw,13.5px);font-weight:300;line-height:1.85;color:var(--mid);transition:color .5s}
 @media(max-width:600px){.cells{grid-template-columns:1fr}.cell.full{grid-column:1}}
 
-/* FLOW — matches main page work-list style */
+/* ══ PROCESS STEPS ══ */
+.process-steps{display:flex;flex-direction:column;gap:0;margin-top:clamp(24px,4vh,40px)}
+.process-step{display:grid;grid-template-columns:clamp(32px,4vw,48px) 1fr;gap:clamp(16px,3vw,32px);align-items:start;padding:clamp(20px,3vh,30px) 0;border-bottom:1px solid var(--border);position:relative;transition:padding-left .3s,border-color .5s}
+.process-step:first-child{border-top:1px solid var(--border)}
+.process-step:hover{padding-left:clamp(6px,1vw,12px)}
+.ps-n{font-family:'Cormorant Garamond',serif;font-size:clamp(11px,1.2vw,13px);color:var(--dim);font-style:italic;padding-top:4px;transition:color .2s}
+.process-step:hover .ps-n{color:var(--accent)}
+.ps-t{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.8vw,34px);letter-spacing:.04em;color:var(--text);line-height:1;margin-bottom:6px;transition:color .5s}
+.ps-b{font-size:clamp(12px,1.1vw,13.5px);font-weight:300;color:var(--mid);line-height:1.8;transition:color .5s}
+
+/* ══ FLOW LIST ══ */
 .flow-list{display:flex;flex-direction:column;margin-top:clamp(24px,4vh,40px)}
-.flow-item{display:grid;grid-template-columns:clamp(40px,5vw,56px) 1fr;gap:clamp(16px,3vw,32px);align-items:start;padding:clamp(18px,3vh,28px) 0;border-bottom:1px solid var(--border);position:relative;transition:padding-left .3s ease}
+.flow-item{display:grid;grid-template-columns:clamp(40px,5vw,56px) 1fr;gap:clamp(16px,3vw,32px);align-items:start;padding:clamp(18px,3vh,28px) 0;border-bottom:1px solid var(--border);position:relative;transition:padding-left .3s,border-color .5s}
 .flow-item:first-child{border-top:1px solid var(--border)}
 .flow-item:hover{padding-left:clamp(6px,1vw,12px)}
-.flow-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(232,93,38,.05),transparent);transition:width .35s ease}
-.flow-item:hover::before{width:100%}
 .flow-n{font-family:'Cormorant Garamond',serif;font-size:clamp(11px,1.2vw,13px);color:var(--dim);font-style:italic;transition:color .2s;padding-top:4px}
 .flow-item:hover .flow-n{color:var(--accent)}
-.flow-t{font-size:clamp(18px,2.8vw,36px);font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;color:var(--white);line-height:1;margin-bottom:6px}
-.flow-b{font-size:clamp(11.5px,1.1vw,13px);font-weight:300;color:var(--mid);line-height:1.75}
+.flow-t{font-size:clamp(18px,2.8vw,36px);font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;color:var(--text);line-height:1;margin-bottom:6px;transition:color .5s}
+.flow-b{font-size:clamp(11.5px,1.1vw,13px);font-weight:300;color:var(--mid);line-height:1.75;transition:color .5s}
 
-/* PULL QUOTE */
-.pull-quote{padding:clamp(50px,8vh,90px) clamp(20px,6vw,80px);background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center}
-.pq-mark{font-family:'Cormorant Garamond',serif;font-size:clamp(60px,10vw,120px);color:rgba(200,169,110,.12);line-height:.6;margin-bottom:clamp(20px,4vh,40px);display:block}
-.pq-text{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;color:var(--white);max-width:720px;margin:0 auto;line-height:1.5;letter-spacing:.02em}
-.pq-attr{margin-top:clamp(18px,3vh,28px);font-size:clamp(9px,.9vw,10.5px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+/* ══ PULL QUOTE ══ */
+.pull-quote{padding:clamp(50px,8vh,90px) clamp(20px,6vw,80px);background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;transition:background .5s,border-color .5s}
+.pq-mark{font-family:'Cormorant Garamond',serif;font-size:clamp(60px,10vw,120px);color:var(--accent-15);line-height:.6;margin-bottom:clamp(20px,4vh,40px);display:block}
+.pq-text{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;color:var(--text);max-width:720px;margin:0 auto;line-height:1.5;letter-spacing:.02em;transition:color .5s}
+.pq-attr{margin-top:clamp(18px,3vh,28px);font-size:clamp(9px,.9vw,10.5px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold);transition:color .5s}
 
-/* IG */
+/* ══ OUTCOMES ══ */
+.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:clamp(30px,5vh,50px);transition:background .5s,border-color .5s}
+@media(max-width:640px){.outcomes-grid{grid-template-columns:1fr}}
+.outcome-card{background:var(--surface);padding:clamp(22px,3.5vh,36px) clamp(20px,3vw,32px);transition:background .25s,background .5s}
+.outcome-card:hover{background:var(--bg2)}
+.oc-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);line-height:1;color:var(--accent);letter-spacing:.02em;margin-bottom:8px;transition:color .5s}
+.oc-label{font-size:clamp(8px,.85vw,9.5px);letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;transition:color .5s}
+.oc-desc{font-size:clamp(12px,1.1vw,13.5px);font-weight:300;line-height:1.8;color:var(--mid);transition:color .5s}
+
+/* ══ IG ══ */
 .ig-wrap{padding:0 clamp(20px,6vw,80px);margin:clamp(40px,6vh,80px) 0;display:flex;justify-content:center}
 .ig-wrap img{max-width:460px;width:100%;display:block;border-radius:12px}
 
-/* NEXT PROJECT */
-.next-project{border-top:1px solid var(--border);background:var(--bg2);padding:clamp(50px,8vh,100px) clamp(20px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,40px);text-decoration:none;transition:background .3s;position:relative;overflow:hidden}
-.next-project::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,rgba(232,93,38,.05),transparent);transition:width .5s ease}
+/* ══ NEXT PROJECT ══ */
+.next-project{border-top:1px solid var(--border);background:var(--bg2);padding:clamp(50px,8vh,100px) clamp(20px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,40px);text-decoration:none;transition:background .3s,background .5s,border-color .5s;position:relative;overflow:hidden}
+.next-project::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--accent-08),transparent);transition:width .5s}
 .next-project:hover::before{width:100%}
 .next-project:hover .np-arrow{transform:translate(6px,-6px)}
-.np-pre{font-size:clamp(8px,.85vw,10px);letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
-.np-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,8vw,100px);line-height:.88;letter-spacing:.03em;color:var(--white)}
-.np-title span{color:var(--accent)}
-.np-tag{display:inline-block;margin-top:10px;font-size:clamp(8px,.85vw,9px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,110,.25);padding:3px 10px;border-radius:3px}
-.np-arrow{font-size:clamp(28px,5vw,56px);color:var(--accent);transition:transform .3s;flex-shrink:0;opacity:.6}
+.np-pre{font-size:clamp(8px,.85vw,10px);letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-bottom:10px;transition:color .5s}
+.np-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,8vw,100px);line-height:.88;letter-spacing:.03em;color:var(--text);transition:color .5s}
+.np-title span{color:var(--accent);transition:color .5s}
+.np-tag{display:inline-block;margin-top:10px;font-size:clamp(8px,.85vw,9px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid var(--accent-25);padding:3px 10px;border-radius:3px;transition:color .5s,border-color .5s}
+.np-arrow{font-size:clamp(28px,5vw,56px);color:var(--accent);transition:transform .3s,color .5s;flex-shrink:0;opacity:.6}
 
-/* SCROLL TOP */
-#scroll-top{position:fixed;bottom:clamp(20px,4vh,36px);right:clamp(20px,4vw,36px);width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:150;opacity:0;pointer-events:none;transition:opacity .3s,background .2s,border-color .2s,transform .2s;color:var(--mid)}
+/* ══ SCROLL TOP ══ */
+#scroll-top{position:fixed;bottom:clamp(20px,4vh,36px);right:clamp(20px,4vw,36px);width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:none;z-index:150;opacity:0;pointer-events:none;transition:opacity .3s,background .2s,border-color .2s,transform .2s;color:var(--mid)}
 #scroll-top.visible{opacity:1;pointer-events:auto}
 #scroll-top:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-3px)}
+@media(hover:none),(max-width:640px){#scroll-top{cursor:pointer}}
 
-/* FOOTER */
-footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--bg)}
-.f-logo{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.15em;color:rgba(255,255,255,.14)}
-.f-copy{font-size:10.5px;color:rgba(255,255,255,.14);letter-spacing:.07em}
-.f-links{display:flex;gap:20px}
-.f-links a{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.18);text-decoration:none;transition:color .2s}
-.f-links a:hover{color:rgba(255,255,255,.45)}
+/* ══ FOOTER ══ */
+footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--bg);transition:background .5s,border-color .5s}
+.f-logo{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.16em;color:var(--faint);transition:color .5s}
+.f-copy{font-size:9.5px;color:var(--faint);letter-spacing:.07em;transition:color .5s}
+.f-links{display:flex;gap:16px}
+.f-links a{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--mid)}
 
+/* ══ MOBILE ══ */
 @media(max-width:640px){
-  body{cursor:auto}
-  #cur,#cur-ring{display:none}
-
-  /* hero */
   .cs-hero{min-height:65svh;padding:80px 20px 36px}
   .cs-hero-ghost{display:none}
-
-  /* collapse all section padding */
   .cs-body{padding:clamp(36px,6vh,60px) 20px}
   .div{margin:clamp(28px,5vh,48px) 20px}
-
-  /* two-col collapses cleanly */
   .two-col{gap:16px}
   .two-col-sticky{margin-bottom:4px}
   .two-col-heading{font-size:clamp(36px,10vw,52px)}
-
-  /* cells stack tighter */
   .cells{margin-top:20px}
   .cell{padding:18px 16px}
-
-  /* pull quote tight */
   .pull-quote{padding:36px 20px}
   .pq-mark{font-size:clamp(40px,12vw,72px);margin-bottom:16px}
   .pq-text{font-size:clamp(17px,5vw,22px)}
-
-  /* images */
   .poster-grid{padding:0 20px;margin-top:20px}
   .img-contained{padding:0 20px;margin:20px 0}
-  .img-full img{max-height:260px}
   .caption{padding:0 20px;margin-top:8px}
   .ig-wrap{padding:0 20px;margin:20px 0}
-
-  /* flow list */
   .flow-t{font-size:clamp(18px,5vw,26px)}
   .flow-item{padding:16px 0}
-
-  /* next project */
   .next-project{padding:36px 20px;flex-direction:column;align-items:flex-start;gap:12px}
-  .np-arrow{font-size:clamp(24px,8vw,40px)}
-
-  /* meta strip */
   .cs-meta{padding:18px 20px;gap:16px}
-
-  /* marquee — hide on very small screens if needed */
-  .cs-marquee{display:block}
+  .outcomes-grid{margin-top:20px}
 }
 </style>
 </head>
@@ -217,10 +295,27 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <div id="cur"></div>
 <div id="cur-ring"></div>
+<div id="spb"></div>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle-btn" aria-label="Toggle theme picker">
+  <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+<div id="theme-bar" role="group" aria-label="Choose theme">
+  <div id="tb-track">
+    <div id="tb-thumb"></div>
+    <div class="tb-stop" id="stop-0"></div><div class="tb-stop" id="stop-1"></div>
+    <div class="tb-stop" id="stop-2"></div><div class="tb-stop" id="stop-3"></div>
+    <div class="tb-stop" id="stop-4"></div><div class="tb-stop" id="stop-5"></div>
+    <div class="tb-stop" id="stop-6"></div><div class="tb-stop" id="stop-7"></div>
+  </div>
+  <div id="tb-label">Dark</div>
+</div>
 
 <!-- NAV -->
 <header class="nav">
-  <a href="index.html" class="nav-logo">G.S. Ahamed</a>
+  <a href="index.html" class="nav-logo">G.S.Ahamed</a>
   <a href="index.html#works" class="nav-back">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
     Back to Work
@@ -234,14 +329,14 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
   <img src="page1_5.png" alt="Run Your Story billboard" class="cs-hero-img"/>
   <div class="cs-hero-gradient"></div>
   <div class="cs-hero-content">
-    <div class="cs-eyebrow rev">
+    <div class="cs-eyebrow rv">
       <span class="cs-tag">Campaign &amp; Brand Concept</span>
       <span class="cs-year">Concept · 2024 / 25</span>
     </div>
-    <h1 class="cs-title rev" style="transition-delay:.08s">
+    <h1 class="cs-title rv" style="transition-delay:.08s">
       Run Your<br><span class="t-stroke">Story</span>
     </h1>
-    <p class="cs-subtitle rev" style="transition-delay:.16s">
+    <p class="cs-subtitle rv" style="transition-delay:.16s">
       A campaign built around real runners and what running actually means to them.
     </p>
   </div>
@@ -249,19 +344,19 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <!-- META STRIP -->
 <div class="cs-meta">
-  <div class="meta-item rev">
+  <div class="meta-item rv">
     <div class="meta-lbl">Brand</div>
     <div class="meta-val">Puma<br><span style="font-size:clamp(9px,.9vw,10.5px);color:var(--dim);opacity:.7">Concept — Not affiliated</span></div>
   </div>
-  <div class="meta-item rev" style="transition-delay:.06s">
+  <div class="meta-item rv" style="transition-delay:.06s">
     <div class="meta-lbl">Tools</div>
     <div class="meta-val">Photoshop<br>Figma</div>
   </div>
-  <div class="meta-item rev" style="transition-delay:.12s">
+  <div class="meta-item rv" style="transition-delay:.12s">
     <div class="meta-lbl">Scope</div>
     <div class="meta-val">Concept Development<br>Visual Direction<br>Poster System<br>Landing Page</div>
   </div>
-  <div class="meta-item rev" style="transition-delay:.18s">
+  <div class="meta-item rv" style="transition-delay:.18s">
     <div class="meta-lbl">Platform</div>
     <div class="meta-val">OOH · Billboards and Posters<br>Instagram<br>Website</div>
   </div>
@@ -287,13 +382,13 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">01 — Concept</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">The<span>Idea.</span></h2>
+      <span class="s-label rv-l">01 — Concept</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">The<span>Idea.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">Most sports campaigns are built around speed, elite performance, and aspirational athletes. Run Your Story goes the other way. It reframes running as something personal: <strong>identity, coping, routine, self-expression.</strong> The everyday runner, not the elite one.</p>
-      <p class="body-text rev" style="transition-delay:.08s">The insight behind it is simple. People connect more with brands that see them than brands that sell to them. By putting real runners and their reasons front and centre, the campaign builds trust before it ever introduces a product. I tried to follow Puma's visual language closely while making the concept feel genuinely human rather than commercially polished.</p>
-      <div class="cells rev" style="transition-delay:.14s">
+      <p class="body-text rv">Most sports campaigns are built around speed, elite performance, and aspirational athletes. Run Your Story goes the other way. It reframes running as something personal: <strong>identity, coping, routine, self-expression.</strong> The everyday runner, not the elite one.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The insight behind it is simple. People connect more with brands that see them than brands that sell to them. By putting real runners and their reasons front and centre, the campaign builds trust before it ever introduces a product. I tried to follow Puma's visual language closely while making the concept feel genuinely human rather than commercially polished.</p>
+      <div class="cells rv" style="transition-delay:.14s">
         <div class="cell">
           <div class="cell-lbl">Target Audience</div>
           <div class="cell-t">Everyday Runners, 18 to 40</div>
@@ -311,52 +406,104 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <hr class="div"/>
 
-<!-- 02 POSTER SERIES -->
+<!-- 02 PROCESS -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">02 — Poster Series</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Poster<span>Series.</span></h2>
+      <span class="s-label rv-l">02 — Process</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">How I<span>Got Here.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">Each poster represents a different relationship with running. Small personal details like a name, an age, and how long someone has been running make each subject feel real without turning them into a profile. Nothing is over-explained.</p>
-      <p class="body-text rev" style="transition-delay:.08s">The visual language leans into silhouettes, natural light, motion blur, and imperfect framing. These weren't accidental choices. They mirror how running actually feels, not how it's usually staged for advertising. The typography stays simple. The copy stays short. Each poster holds one idea, one moment, one feeling.</p>
+      <p class="body-text rv">I wanted to make a campaign for Puma that had nothing to do with being fast. Puma already had the performance angle covered. What I kept noticing was that nobody was making ads for the person who runs at 6am not because they're training for anything but because it's the only quiet part of their day. That felt like a real gap.</p>
+      <p class="body-text rv" style="transition-delay:.06s">I started by writing down every reason I could think of why a normal person runs. Not race times. Not weight. Things like clearing your head, processing something difficult, proving something to yourself, or just needing to be outside. There were more reasons than I expected. That list became the brief.</p>
+      <div class="process-steps rv" style="transition-delay:.1s">
+        <div class="process-step">
+          <span class="ps-n">01</span>
+          <div>
+            <div class="ps-t">Questioning the Category</div>
+            <p class="ps-b">Every sports brand was selling performance. I kept asking what the category was missing. The answer was simple: the person who isn't competing with anyone.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-n">02</span>
+          <div>
+            <div class="ps-t">Finding the Real Brief</div>
+            <p class="ps-b">I started with runners, not visuals. I wrote down every reason someone runs that has nothing to do with sport. That list of motivations became the campaign's foundation.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-n">03</span>
+          <div>
+            <div class="ps-t">Choosing Restraint</div>
+            <p class="ps-b">The first instinct was to add more. More copy, more polish, more explanation. I kept stripping it back. One person, one line, one moment. The less I explained, the more it landed.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-n">04</span>
+          <div>
+            <div class="ps-t">Building the System</div>
+            <p class="ps-b">Once the poster language was right, everything else followed. Instagram, billboards, the landing page. Each piece extends the same logic rather than starting over with a new visual approach.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-n">05</span>
+          <div>
+            <div class="ps-t">Product at the End, Not the Start</div>
+            <p class="ps-b">I deliberately held the product back until the campaign had earned it. The shoes appear as part of the runner's story, not the point of it. That sequencing was the whole idea.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="poster-grid rev">
+<hr class="div"/>
+
+<!-- 03 POSTER SERIES -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">03 — Poster Series</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Poster<span>Series.</span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Each poster represents a different relationship with running. Small personal details like a name, an age, and how long someone has been running make each subject feel real without turning them into a profile. Nothing is over-explained.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The visual language leans into silhouettes, natural light, motion blur, and imperfect framing. These weren't accidental choices. They mirror how running actually feels, not how it's usually staged for advertising. The typography stays simple. The copy stays short. Each poster holds one idea, one moment, one feeling.</p>
+    </div>
+  </div>
+</div>
+
+<div class="poster-grid rv">
   <img src="page1_1.png" alt="Run Your Story — Poster 1"/>
   <img src="page1_2.png" alt="Run Your Story — Poster 2"/>
   <img src="page1_3.png" alt="Run Your Story — Poster 3"/>
 </div>
-<div class="caption rev">Poster series · A4, three different runners, three different reasons</div>
+<div class="caption rv">Poster series · A4, three different runners, three different reasons</div>
 
-<div class="img-contained rev" style="margin-top:clamp(40px,7vh,80px)">
-  <img src="page1_7.png" alt="Three posters displayed together as a mockup"/>
+<div class="img-contained rv" style="margin-top:clamp(40px,7vh,80px)">
+  <img src="page1_7.png" alt="Three posters displayed together"/>
 </div>
-<div class="caption rev" style="margin-bottom:clamp(40px,6vh,80px)">How the series reads side by side in the open</div>
+<div class="caption rv" style="margin-bottom:clamp(40px,6vh,80px)">How the series reads side by side</div>
 
-<!-- PULL QUOTE -->
 <div class="pull-quote">
-  <span class="pq-mark rev">"</span>
-  <p class="pq-text rev" style="transition-delay:.08s">The strongest part wasn't the visuals or the layouts. It was the restraint. Letting real people carry the story meant resisting the urge to over-design or over-explain.</p>
-  <p class="pq-attr rev" style="transition-delay:.16s">Reflection on the project</p>
+  <span class="pq-mark rv">"</span>
+  <p class="pq-text rv" style="transition-delay:.08s">The strongest part wasn't the visuals or the layouts. It was the restraint. Letting real people carry the story meant resisting the urge to over-design or over-explain.</p>
+  <p class="pq-attr rv" style="transition-delay:.16s">Reflection on the project</p>
 </div>
 
 <hr class="div"/>
 
-<!-- 03 VISUAL DIRECTION -->
+<!-- 04 VISUAL DIRECTION -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">03 — Visual Direction</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Visual<span>Direction.</span></h2>
+      <span class="s-label rv-l">04 — Visual Direction</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Visual<span>Direction.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">The visual language was built around four deliberate choices: <strong>silhouettes, natural light, motion blur, and imperfect framing.</strong> Each one was a direct response to how running is usually shown in advertising. Polished, posed, and synthetic.</p>
-      <p class="body-text rev" style="transition-delay:.08s">Typography is simple and confident. Copy is short and restrained. Colour stays high-contrast for outdoor readability. Every choice was made in service of emotional clarity, not aesthetic novelty.</p>
-      <div class="cells rev" style="transition-delay:.14s">
+      <p class="body-text rv">The visual language was built around four deliberate choices: <strong>silhouettes, natural light, motion blur, and imperfect framing.</strong> Each one was a direct response to how running is usually shown in advertising. Polished, posed, and synthetic.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Typography is simple and confident. Copy is short and restrained. Colour stays high-contrast for outdoor readability. Every choice was made in service of emotional clarity, not aesthetic novelty.</p>
+      <div class="cells rv" style="transition-delay:.14s">
         <div class="cell">
           <div class="cell-lbl">Silhouettes</div>
           <div class="cell-t">Universal Without Being Generic</div>
@@ -384,84 +531,84 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <hr class="div"/>
 
-<!-- 04 INSTAGRAM -->
+<!-- 05 INSTAGRAM -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">04 — Social</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Instagram<span>Activation.</span></h2>
+      <span class="s-label rv-l">05 — Social</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Instagram<span>Activation.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">Instagram extends the poster system rather than introducing a new visual direction. Users join through <strong>#RunYourStory</strong>, sharing their own reasons for running. Selected stories get elevated into official campaign visuals and featured alongside the brand's own content.</p>
-      <p class="body-text rev" style="transition-delay:.08s">The brand intentionally steps back and lets the runner lead. The engagement visuals shown here are conceptual, designed to show how user content would sit naturally within the campaign's visual language in-feed.</p>
+      <p class="body-text rv">Instagram extends the poster system rather than introducing a new visual direction. Users join through <strong>#RunYourStory</strong>, sharing their own reasons for running. Selected stories get elevated into official campaign visuals and featured alongside the brand's own content.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The brand intentionally steps back and lets the runner lead. The engagement visuals shown here are conceptual, designed to show how user content would sit naturally within the campaign's visual language in-feed.</p>
     </div>
   </div>
 </div>
 
-<div class="ig-wrap rev">
+<div class="ig-wrap rv">
   <img src="page1_4.png" alt="Instagram activation mockup"/>
 </div>
-<div class="caption rev">Instagram feed mockup · how user stories integrate into campaign content</div>
+<div class="caption rv">Instagram feed mockup · how user stories integrate into campaign content</div>
 
 <hr class="div"/>
 
-<!-- 05 OOH -->
+<!-- 06 OOH -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">05 — Out of Home</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Out of<span>Home.</span></h2>
+      <span class="s-label rv-l">06 — Out of Home</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Out of<span>Home.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">Billboards were designed around one rule: one line, one image, immediate emotional clarity. The scale of outdoor advertising demands fast readability. Nothing competes with itself.</p>
-      <p class="body-text rev" style="transition-delay:.08s">Placing everyday runners at billboard scale reinforces the campaign's core belief. Seeing someone who looks like you, running for reasons like yours, at that size in a public space. That's something a product ad can't replicate.</p>
+      <p class="body-text rv">Billboards were designed around one rule: one line, one image, immediate emotional clarity. The scale of outdoor advertising demands fast readability. Nothing competes with itself.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Placing everyday runners at billboard scale reinforces the campaign's core belief. Seeing someone who looks like you, running for reasons like yours, at that size in a public space. That's something a product ad can't replicate.</p>
     </div>
   </div>
 </div>
 
-<div class="img-full rev">
+<div class="img-full rv">
   <img src="page1_5.png" alt="Run Your Story wide billboard" style="width:100%;display:block;height:auto;object-fit:unset"/>
 </div>
-<div class="caption rev" style="padding-top:clamp(10px,1.5vh,16px);padding-bottom:0">Wide billboard · "RUN YOUR STORY. Every run finds its own path."</div>
+<div class="caption rv" style="padding-top:clamp(10px,1.5vh,16px)">Wide billboard · "RUN YOUR STORY. Every run finds its own path."</div>
 
-<div class="img-contained rev" style="margin-top:clamp(30px,5vh,60px)">
+<div class="img-contained rv" style="margin-top:clamp(30px,5vh,60px)">
   <img src="page1_6.png" alt="Environmental billboard mockup"/>
 </div>
-<div class="caption rev">Environmental billboard · the campaign at street scale</div>
+<div class="caption rv">Environmental billboard · the campaign at street scale</div>
 
 <hr class="div"/>
 
-<!-- 06 PRODUCT INTEGRATION -->
+<!-- 07 PRODUCT INTEGRATION -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">06 — Integration</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Product<span>Integration.</span></h2>
+      <span class="s-label rv-l">07 — Integration</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Product<span>Integration.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">After establishing an emotional connection through the campaign, the product enters as a natural continuation, not an interruption. The audience connects with the moment first. The shoes arrive as part of that experience.</p>
-      <p class="body-text rev" style="transition-delay:.08s">This mirrors how effective sports brands operate: guiding attention from emotion to action without breaking immersion. The transition from story to product doesn't feel like an advertisement because it earns its place in the narrative first.</p>
+      <p class="body-text rv">After establishing an emotional connection through the campaign, the product enters as a natural continuation, not an interruption. The audience connects with the moment first. The shoes arrive as part of that experience.</p>
+      <p class="body-text rv" style="transition-delay:.08s">This mirrors how effective sports brands operate: guiding attention from emotion to action without breaking immersion. The transition from story to product doesn't feel like an advertisement because it earns its place in the narrative first.</p>
     </div>
   </div>
 </div>
 
-<div class="img-contained rev">
+<div class="img-contained rv">
   <img src="page1_8.png" alt="Website landing page, story-led product integration"/>
 </div>
-<div class="caption rev">Landing page · product entering after the story has been established</div>
+<div class="caption rv">Landing page · product entering after the story has been established</div>
 
 <hr class="div"/>
 
-<!-- 07 CAMPAIGN FLOW -->
+<!-- 08 CAMPAIGN FLOW -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">07 — System</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">How It<span>Works.</span></h2>
+      <span class="s-label rv-l">08 — System</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">How It<span>Works.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">The campaign was designed as a loop, not a funnel. Each touchpoint feeds the next. The system reinforces itself across physical, digital, and social environments without any single piece needing to carry the full weight.</p>
-      <div class="flow-list rev" style="transition-delay:.1s">
+      <p class="body-text rv">The campaign was designed as a loop, not a funnel. Each touchpoint feeds the next. The system reinforces itself across physical, digital, and social environments without any single piece needing to carry the full weight.</p>
+      <div class="flow-list rv" style="transition-delay:.1s">
         <div class="flow-item">
           <span class="flow-n">01</span>
           <div>
@@ -504,35 +651,68 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
 
 <hr class="div"/>
 
-<!-- 08 REFLECTION -->
+<!-- 09 OUTCOMES -->
 <div class="cs-body">
   <div class="two-col">
     <div class="two-col-sticky">
-      <span class="s-label rev-l">08 — Reflection</span>
-      <h2 class="two-col-heading rev-l" style="transition-delay:.08s">Looking<span>Back.</span></h2>
+      <span class="s-label rv-l">09 — Outcomes</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">What It<span>Showed.</span></h2>
     </div>
     <div>
-      <p class="body-text rev">This project taught me more about what to leave out than what to put in. Letting real people carry the message meant resisting the designer's instinct to add, refine, and polish everything into something unrecognisable.</p>
-      <p class="body-text rev" style="transition-delay:.08s">The work that made me most uncomfortable at the time, the imperfect framing, the minimal copy, the restraint, turned out to be the most honest. That shifted how I approach everything since.</p>
-      <p class="body-text rev" style="transition-delay:.14s">What I'd push further: the user participation concept. Community-generated campaign posters is a genuinely strong idea and deserves a more fully realised digital system behind it.</p>
+      <p class="body-text rv">This is a concept project, so there are no live metrics. But designing it as if it were real, with proper media channels, a participation mechanic, and a system that feeds itself, made clear what the campaign could actually do if it ran.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The most useful thing it proved was that emotional campaigns and product campaigns don't have to be separate. You can build trust and sell something in the same system. You just have to earn the second part first.</p>
+      <div class="outcomes-grid rv" style="transition-delay:.12s">
+        <div class="outcome-card">
+          <div class="oc-num">3×</div>
+          <div class="oc-label">Touchpoint Depth</div>
+          <p class="oc-desc">OOH, social, and digital working as one system rather than three separate executions. Each piece points somewhere.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="oc-num">UGC</div>
+          <div class="oc-label">Participation Mechanic</div>
+          <p class="oc-desc">#RunYourStory turns the audience into contributors. Real people as campaign assets rather than passive viewers.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="oc-num">0→1</div>
+          <div class="oc-label">Trust Before Product</div>
+          <p class="oc-desc">Emotional connection built before a single product is shown. The campaign earns the right to sell rather than leading with it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div"/>
+
+<!-- 10 REFLECTION -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">10 — Reflection</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Looking<span>Back.</span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">This project taught me more about what to leave out than what to put in. Letting real people carry the message meant resisting the designer's instinct to add, refine, and polish everything into something unrecognisable.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The work that made me most uncomfortable at the time, the imperfect framing, the minimal copy, the restraint, turned out to be the most honest. That shifted how I approach everything since.</p>
+      <p class="body-text rv" style="transition-delay:.14s">What I'd push further: the user participation concept. Community-generated campaign posters is a genuinely strong idea and deserves a more fully realised digital system behind it.</p>
     </div>
   </div>
 </div>
 
 <!-- NEXT PROJECT -->
 <a href="forge.html" class="next-project">
-  <div class="rev">
+  <div class="rv">
     <p class="np-pre">Next Project</p>
     <div class="np-title">Forge<span>.</span></div>
     <span class="np-tag">UI/UX &amp; Platform Design</span>
   </div>
-  <span class="np-arrow rev-r">↗</span>
+  <span class="np-arrow rv-r">↗</span>
 </a>
 
 <!-- FOOTER -->
 <footer>
-  <span class="f-logo">G.S. Ahamed</span>
-  <span class="f-copy">© 2025 Golam Sayon Ahamed · Bangalore, India</span>
+  <span class="f-logo">G.S.Ahamed</span>
+  <span class="f-copy">© 2026 Golam Sayon Ahamed · Bangalore, India</span>
   <div class="f-links">
     <a href="index.html">Home</a>
     <a href="index.html#works">Work</a>
@@ -540,45 +720,115 @@ footer{padding:clamp(20px,3.5vh,30px) clamp(20px,6vw,80px);border-top:1px solid 
   </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
 <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
 <script>
-/* CURSOR */
-const cur=document.getElementById('cur');
-const ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX;my=e.clientY;
-  cur.style.left=mx+'px';cur.style.top=my+'px';
-});
-(function loop(){
-  rx+=(mx-rx)*.12;ry+=(my-ry)*.12;
-  ring.style.left=rx+'px';ring.style.top=ry+'px';
-  requestAnimationFrame(loop);
+/* ── THEME SYSTEM ── */
+(function(){
+  const THEMES=[
+    {id:0,th:'light',  h:155,s:'62%',l:'42%',label:'Cream'},
+    {id:1,th:'chalk',  h:20, s:'78%',l:'50%',label:'Chalk'},
+    {id:2,th:'sand',   h:20, s:'78%',l:'50%',label:'Sand'},
+    {id:3,th:'paper',  h:278,s:'60%',l:'56%',label:'Paper'},
+    {id:4,th:'forest', h:140,s:'55%',l:'48%',label:'Forest'},
+    {id:5,th:'midnight',h:196,s:'84%',l:'52%',label:'Midnight'},
+    {id:6,th:'dusk',   h:310,s:'62%',l:'58%',label:'Dusk'},
+    {id:7,th:'dark',   h:20, s:'78%',l:'50%',label:'Dark'},
+  ];
+  const html=document.documentElement,bar=document.getElementById('theme-bar'),
+        btn=document.getElementById('theme-toggle-btn'),track=document.getElementById('tb-track'),
+        thumb=document.getElementById('tb-thumb'),label=document.getElementById('tb-label'),
+        iconSun=document.getElementById('theme-icon-sun'),iconMoon=document.getElementById('theme-icon-moon');
+  if(!bar||!btn||!track||!thumb) return;
+  let isOpen=false,activeIdx=7,dragging=false;
+  function posForIdx(i){return i/(THEMES.length-1)}
+  function applyTheme(idx){
+    activeIdx=idx;const t=THEMES[idx];
+    html.setAttribute('data-theme',t.th);
+    const r=document.documentElement;
+    r.style.setProperty('--a-h',t.h);r.style.setProperty('--a-s',t.s);r.style.setProperty('--a-l',t.l);
+    if(label) label.textContent=t.label;
+    placeThumb(posForIdx(idx));
+    document.querySelectorAll('.tb-stop').forEach((s,i)=>s.classList.toggle('active-stop',i===idx));
+    const isDark=['dark','midnight','forest','dusk'].includes(t.th);
+    if(iconSun) iconSun.style.display=isDark?'none':'block';
+    if(iconMoon) iconMoon.style.display=isDark?'block':'none';
+    let m=document.querySelector('meta[name="theme-color"]');
+    if(!m){m=document.createElement('meta');m.name='theme-color';document.head.appendChild(m);}
+    m.content=isDark?'#0a0a0a':'#f5f0e3';
+    localStorage.setItem('gsa-theme-idx',idx);
+  }
+  function placeThumb(pos){
+    const th=track.offsetHeight,tw=thumb.offsetHeight;
+    thumb.style.top=(pos*(th-tw)+tw/2)+'px';
+  }
+  function positionStops(){
+    THEMES.forEach((t,i)=>{
+      const stop=document.getElementById('stop-'+i);if(!stop) return;
+      const pos=posForIdx(i),th=track.offsetHeight,tw=thumb.offsetHeight;
+      const px=pos*(th-tw)+tw/2;
+      stop.style.top=px+'px';stop.style.transform='translate(-50%,-50%)';
+    });
+  }
+  function getIdxFromY(clientY){
+    const rect=track.getBoundingClientRect(),tw=thumb.offsetHeight;
+    const usable=rect.height-tw;
+    return Math.round(Math.max(0,Math.min(1,(clientY-rect.top-tw/2)/usable))*(THEMES.length-1));
+  }
+  btn.addEventListener('click',()=>{isOpen=!isOpen;bar.classList.toggle('open',isOpen);btn.classList.toggle('bar-open',isOpen)});
+  document.addEventListener('click',e=>{if(isOpen&&!bar.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){isOpen=false;bar.classList.remove('open');btn.classList.remove('bar-open')}});
+  track.addEventListener('click',e=>{if(dragging) return;e.stopPropagation();applyTheme(getIdxFromY(e.clientY))});
+  function onDragStart(e){dragging=true;e.preventDefault();document.addEventListener('mousemove',onDragMove);document.addEventListener('mouseup',onDragEnd);document.addEventListener('touchmove',onDragMoveT,{passive:false});document.addEventListener('touchend',onDragEnd)}
+  function onDragMove(e){if(!dragging) return;applyTheme(getIdxFromY(e.clientY))}
+  function onDragMoveT(e){if(!dragging) return;e.preventDefault();applyTheme(getIdxFromY(e.touches[0].clientY))}
+  function onDragEnd(){dragging=false;document.removeEventListener('mousemove',onDragMove);document.removeEventListener('mouseup',onDragEnd);document.removeEventListener('touchmove',onDragMoveT);document.removeEventListener('touchend',onDragEnd)}
+  thumb.addEventListener('mousedown',onDragStart);
+  thumb.addEventListener('touchstart',onDragStart,{passive:false});
+  requestAnimationFrame(()=>{
+    const saved=parseInt(localStorage.getItem('gsa-theme-idx')??'7');
+    applyTheme(isNaN(saved)?7:Math.max(0,Math.min(7,saved)));
+    positionStops();
+  });
+  window.addEventListener('resize',()=>{placeThumb(posForIdx(activeIdx));positionStops()});
 })();
 
-/* SCROLL REVEAL */
+/* ── SCROLL REVEAL ── */
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-},{threshold:0.08});
-document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>io.observe(el));
+},{threshold:0.07});
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>io.observe(el));
 
-/* SCROLL TO TOP */
-const scrollBtn=document.getElementById('scroll-top');
+/* ── SCROLL PROGRESS ── */
 window.addEventListener('scroll',()=>{
-  scrollBtn.classList.toggle('visible',window.scrollY>400);
+  const h=document.documentElement;
+  document.getElementById('spb').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight))*100)+'%';
 },{passive:true});
 
-/* MARQUEE TOUCH PAUSE */
-const marqueeEl=document.querySelector('.cs-marquee');
-const marqueeInner=document.querySelector('.cs-marquee-inner');
+/* ── SCROLL TO TOP ── */
+const scrollBtn=document.getElementById('scroll-top');
+window.addEventListener('scroll',()=>{scrollBtn.classList.toggle('visible',window.scrollY>400)},{passive:true});
+
+/* ── MARQUEE TOUCH PAUSE ── */
+const marqueeEl=document.querySelector('.cs-marquee'),marqueeInner=document.querySelector('.cs-marquee-inner');
 if(marqueeEl&&marqueeInner){
   marqueeEl.addEventListener('touchstart',()=>{marqueeInner.style.animationPlayState='paused'},{passive:true});
   marqueeEl.addEventListener('touchend',()=>{marqueeInner.style.animationPlayState='running'},{passive:true});
 }
+
+/* ── CURSOR ── */
+(function(){
+  const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+  if(!cur||!ring||!window.matchMedia('(hover:hover)').matches) return;
+  let mx=0,my=0,rx=0,ry=0,raf=null;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';if(!raf) raf=requestAnimationFrame(loop);},{passive:true});
+  function loop(){raf=null;rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx.toFixed(1)+'px';ring.style.top=ry.toFixed(1)+'px';if(Math.abs(mx-rx)>.3||Math.abs(my-ry)>.3) raf=requestAnimationFrame(loop);}
+  document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,[role="button"]')) document.body.classList.add('cur-h');});
+  document.addEventListener('mouseout',e=>{if(e.target.closest('a,button,[role="button"]')) document.body.classList.remove('cur-h');});
+  document.addEventListener('mouseleave',()=>{cur.style.opacity='0';ring.style.opacity='0';});
+  document.addEventListener('mouseenter',()=>{cur.style.opacity='1';ring.style.opacity='1';});
+})();
 </script>
 </body>
 </html>
