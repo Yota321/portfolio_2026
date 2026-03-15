@@ -440,16 +440,20 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 @media(hover:none),(max-width:640px){#cur,#cur-ring{display:none!important}}
 
 /* ══ LOADER ══ */
-#loader{position:fixed;inset:0;background:#0a0a0a;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(20px,4vh,40px);transition:transform 1.4s cubic-bezier(.76,0,.24,1)}
-#loader.out{transform:translateY(-100%)}
-.ld-s{position:relative;display:inline-block;line-height:1}
+#loader{position:fixed;inset:0;background:#0a0a0a;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(20px,4vh,40px)}
+#loader.out{background:transparent;transition:background .01s ease .65s;pointer-events:none}
+.ld-s{position:relative;display:inline-block;line-height:1;z-index:10000}
 .ld-b{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,108px);letter-spacing:.12em;color:rgba(237,233,224,.07);user-select:none}
-.ld-f{position:absolute;inset:0;font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,108px);letter-spacing:.12em;color:#ede9e0;clip-path:inset(0 100% 0 0);transition:clip-path .04s linear;user-select:none}
-.ld-bw{width:clamp(180px,30vw,280px);display:flex;flex-direction:column;gap:8px}
+.ld-f{position:absolute;inset:0;font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,10vw,108px);letter-spacing:.12em;color:#ede9e0;clip-path:inset(0 100% 0 0);transition:clip-path .04s linear,color .4s ease;user-select:none}
+.ld-bw{width:clamp(180px,30vw,280px);display:flex;flex-direction:column;gap:8px;transition:opacity .25s}
+.ld-bw.hide{opacity:0}
 .ld-t{height:1px;background:rgba(255,255,255,.07);position:relative;overflow:hidden}
 #ld-bar{position:absolute;inset:0 100% 0 0;background:linear-gradient(90deg,var(--accent),#c8a96e)}
 .ld-m{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.24em;color:rgba(255,255,255,.16);font-weight:300}
 #ld-pct{color:rgba(255,255,255,.32)}
+/* loader background — fades out separately from the text */
+#loader-bg{position:fixed;inset:0;background:#0a0a0a;z-index:9998;transition:opacity .55s cubic-bezier(.76,0,.24,1)}
+#loader-bg.out{opacity:0;pointer-events:none}
 #site{opacity:0;transition:opacity .9s ease .1s}
 #site.visible{opacity:1}
 
@@ -1136,6 +1140,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 </div>
 
 <!-- LOADER -->
+<div id="loader-bg"></div>
 <div id="loader">
   <div class="ld-s">
     <div class="ld-b">G.S.AHAMED</div>
@@ -1736,6 +1741,7 @@ setAccent(curH);
 (function(){
   const fill=document.getElementById('ld-fill'),bar=document.getElementById('ld-bar'),
         pct=document.getElementById('ld-pct'),loader=document.getElementById('loader'),
+        loaderBg=document.getElementById('loader-bg'),
         site=document.getElementById('site');
   const DUR=2400,HOLD=400,STEP=1000/60;let e=0;
   const ease=t=>t<.5?2*t*t:-1+(4-2*t)*t;
@@ -1745,25 +1751,68 @@ setAccent(curH);
     bar.style.right=(100-p).toFixed(2)+'%';
     pct.textContent=Math.round(p)+'%';
     if(t>=1){
-      clearInterval(tick);fill.style.clipPath='inset(0 0% 0 0)';bar.style.right='0%';pct.textContent='100%';
+      clearInterval(tick);
+      fill.style.clipPath='inset(0 0% 0 0)';
+      bar.style.right='0%';
+      pct.textContent='100%';
+
       setTimeout(()=>{
-        loader.classList.add('out');site.classList.add('visible');
-        // fade nav logo into its corner position after loader slides away
+        // hide progress bar
+        const bw = loader.querySelector('.ld-bw');
+        if(bw) bw.classList.add('hide');
+
         setTimeout(()=>{
-          const logo=document.getElementById('nav-logo-btn');
-          if(logo) logo.classList.add('visible');
-        },400);
-        setTimeout(()=>{
-          const curtain=document.getElementById('hero-curtain');
-          const img=document.getElementById('hero-atmos-img');
-          if(curtain) curtain.classList.add('lifted');
-          if(img) setTimeout(()=>{
-            img.style.transition='opacity 1.4s ease,transform 2s cubic-bezier(.16,1,.3,1),filter 1.8s ease';
-            img.classList.add('revealed');
-          },160);
-          initReveal();initLetters();
-        },80);
-      },HOLD);
+          const ldText = loader.querySelector('.ld-s');
+          const ldFill = document.getElementById('ld-fill');
+          const logo   = document.getElementById('nav-logo-btn');
+
+          if(ldText && logo){
+            const from = ldText.getBoundingClientRect();
+            const to   = logo.getBoundingClientRect();
+
+            // scale to match nav logo size
+            const scale = Math.min(to.width/from.width, to.height/from.height);
+
+            // translate from current center position to nav logo corner
+            const tx = to.left - from.left;
+            const ty = to.top  - from.top;
+
+            // 1. slide text to top-left corner
+            ldText.style.transition = 'transform .65s cubic-bezier(.76,0,.24,1)';
+            ldText.style.transformOrigin = 'left top';
+            ldText.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`;
+
+            // 2. simultaneously fade bg away
+            if(loaderBg) loaderBg.classList.add('out');
+
+            // 3. colour transition: white → nav text colour
+            if(ldFill){
+              ldFill.style.transition = 'clip-path .04s linear, color .5s ease .2s';
+              ldFill.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#ede9e0';
+            }
+
+            // 4. fade site in behind
+            site.classList.add('visible');
+
+            // 5. once animation done: hide loader text, show real nav logo
+            setTimeout(()=>{
+              loader.classList.add('out');
+              loader.style.pointerEvents = 'none';
+              if(logo) logo.classList.add('visible');
+
+              // reveal rest of page
+              const curtain=document.getElementById('hero-curtain');
+              const img=document.getElementById('hero-atmos-img');
+              if(curtain) curtain.classList.add('lifted');
+              if(img) setTimeout(()=>{
+                img.style.transition='opacity 1.4s ease,transform 2s cubic-bezier(.16,1,.3,1),filter 1.8s ease';
+                img.classList.add('revealed');
+              },160);
+              initReveal();initLetters();
+            }, 700);
+          }
+        }, 200);
+      }, HOLD);
     }
   },STEP);
 })();
