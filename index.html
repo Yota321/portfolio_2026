@@ -206,27 +206,27 @@
   --pbdr:    rgba(100,180,255,.14);
 }
 
-/* ══ THEME 3: PAPER — off-white paper texture + deep purple ══ */
+/* ══ THEME 3: PAPER — aged paper + vivid purple ══ */
 [data-theme="paper"]{
-  --bg:      #f2ece0;
-  --bg2:     #e8e0cf;
-  --surface: #dfd5c0;
-  --text:    #1a0a2e;
-  --mid:     rgba(26,10,46,.70);
-  --dim:     rgba(26,10,46,.50);
-  --faint:   rgba(26,10,46,.22);
-  --border:  rgba(26,10,46,.11);
-  --border2: rgba(26,10,46,.20);
-  --glass:   rgba(255,255,255,.55);
-  --glass2:  rgba(255,255,255,.78);
-  --shadow:  rgba(26,10,46,.18);
-  --bg-rgb:  242,236,224;
-  --gold:    #7c3aed;
-  --panel:   #1a0a2e;
-  --ptxt:    #ede8f8;
-  --pacc:    #a855f7;
-  --pdim:    rgba(237,232,248,.72);
-  --pbdr:    rgba(168,85,247,.20);
+  --bg:      #ede5d8;
+  --bg2:     #e2d9c8;
+  --surface: #d4c9b0;
+  --text:    #1a0832;
+  --mid:     rgba(26,8,50,.72);
+  --dim:     rgba(26,8,50,.52);
+  --faint:   rgba(26,8,50,.24);
+  --border:  rgba(26,8,50,.12);
+  --border2: rgba(26,8,50,.22);
+  --glass:   rgba(255,255,255,.52);
+  --glass2:  rgba(255,255,255,.76);
+  --shadow:  rgba(26,8,50,.22);
+  --bg-rgb:  237,229,216;
+  --gold:    #6d28d9;
+  --panel:   #130620;
+  --ptxt:    #f0eaff;
+  --pacc:    #9333ea;
+  --pdim:    rgba(240,234,255,.72);
+  --pbdr:    rgba(147,51,234,.22);
   --glass-panel:  rgba(255,255,255,.07);
   --glass2-panel: rgba(255,255,255,.13);
 }
@@ -325,67 +325,370 @@
   --glass2-panel: rgba(255,255,255,.13);
 }
 
-/* ══ PAPER TEXTURE — fibrous, warm, directional ══ */
-[data-theme="paper"] body::before{
+/* ══ THEME 8: TERRACOTTA — warm clay + navy (inspired by Kelly Riva poster) ══ */
+[data-theme="terracotta"]{
+  --bg:      #f0e8e0;
+  --bg2:     #e8ddd4;
+  --surface: #d8cfc4;
+  --text:    #1c2b4a;
+  --mid:     rgba(28,43,74,.68);
+  --dim:     rgba(28,43,74,.48);
+  --faint:   rgba(28,43,74,.22);
+  --border:  rgba(28,43,74,.10);
+  --border2: rgba(28,43,74,.18);
+  --glass:   rgba(255,255,255,.52);
+  --glass2:  rgba(255,255,255,.74);
+  --shadow:  rgba(28,43,74,.18);
+  --bg-rgb:  240,232,224;
+  --gold:    #c45c38;
+  --panel:   #1c2b4a;
+  --ptxt:    #f0e8e0;
+  --pacc:    #e8722a;
+  --pdim:    rgba(240,232,224,.72);
+  --pbdr:    rgba(232,114,42,.18);
+  --glass-panel:  rgba(255,255,255,.08);
+  --glass2-panel: rgba(255,255,255,.14);
+}
+
+/* ══ THEME 9: GRID — warm off-white + olive (Elaine desktop portfolio) ══ */
+[data-theme="grid"]{
+  --bg:      #f2edd8;
+  --bg2:     #e8e2c8;
+  --surface: #ddd7be;
+  --text:    #2a2a1e;
+  --mid:     rgba(42,42,30,.68);
+  --dim:     rgba(42,42,30,.48);
+  --faint:   rgba(42,42,30,.22);
+  --border:  rgba(42,42,30,.10);
+  --border2: rgba(42,42,30,.18);
+  --glass:   rgba(255,255,255,.48);
+  --glass2:  rgba(255,255,255,.70);
+  --shadow:  rgba(42,42,30,.16);
+  --bg-rgb:  242,237,216;
+  --gold:    #6b7c3a;
+  --panel:   #4a5228;
+  --ptxt:    #f2edd8;
+  --pacc:    #8a9e42;
+  --pdim:    rgba(242,237,216,.72);
+  --pbdr:    rgba(138,158,66,.18);
+  --glass-panel:  rgba(255,255,255,.09);
+  --glass2-panel: rgba(255,255,255,.16);
+}
+
+/* ══ THEME 10: NOIR — near-black + electric lime (Shaurya poster) ══ */
+[data-theme="noir"]{
+  --bg:      #0d0d0d;
+  --bg2:     #141414;
+  --surface: #1c1c1c;
+  --text:    #f0f0f0;
+  --mid:     rgba(240,240,240,.62);
+  --dim:     rgba(240,240,240,.38);
+  --faint:   rgba(240,240,240,.18);
+  --border:  rgba(255,255,255,.07);
+  --border2: rgba(255,255,255,.13);
+  --glass:   rgba(255,255,255,.04);
+  --glass2:  rgba(255,255,255,.08);
+  --shadow:  rgba(0,0,0,.70);
+  --bg-rgb:  13,13,13;
+  --gold:    #b8e832;
+  --panel:   #080808;
+  --ptxt:    #f0f0f0;
+  --pacc:    #b8e832;
+  --pdim:    rgba(240,240,240,.55);
+  --pbdr:    rgba(184,232,50,.14);
+  --glass-panel:  rgba(255,255,255,.04);
+  --glass2-panel: rgba(255,255,255,.08);
+}
+
+/* ══ THEME 11: NAVY — deep navy + pink (editorial clean) ══ */
+[data-theme="navy"]{
+  --bg:      #0d1b2e;
+  --bg2:     #142338;
+  --surface: #1c2e48;
+  --text:    #e8eef8;
+  --mid:     rgba(232,238,248,.62);
+  --dim:     rgba(232,238,248,.40);
+  --faint:   rgba(232,238,248,.18);
+  --border:  rgba(232,238,248,.08);
+  --border2: rgba(232,238,248,.14);
+  --glass:   rgba(232,238,248,.05);
+  --glass2:  rgba(232,238,248,.10);
+  --shadow:  rgba(0,0,0,.65);
+  --bg-rgb:  13,27,46;
+  --gold:    #f472b6;
+  --panel:   #080f1a;
+  --ptxt:    #fce7f3;
+  --pacc:    #ec4899;
+  --pdim:    rgba(252,231,243,.60);
+  --pbdr:    rgba(236,72,153,.16);
+  --glass-panel:  rgba(255,255,255,.05);
+  --glass2-panel: rgba(255,255,255,.09);
+}
+
+/* ══ THEME 12: SKETCH — pure white + black ink (Rushabh portfolio) ══ */
+[data-theme="sketch"]{
+  --bg:      #fafafa;
+  --bg2:     #f0f0f0;
+  --surface: #e4e4e4;
+  --text:    #0a0a0a;
+  --mid:     rgba(10,10,10,.68);
+  --dim:     rgba(10,10,10,.45);
+  --faint:   rgba(10,10,10,.20);
+  --border:  rgba(0,0,0,.08);
+  --border2: rgba(0,0,0,.14);
+  --glass:   rgba(0,0,0,.03);
+  --glass2:  rgba(0,0,0,.06);
+  --shadow:  rgba(0,0,0,.10);
+  --bg-rgb:  250,250,250;
+  --gold:    #0a0a0a;
+  --panel:   #0a0a0a;
+  --ptxt:    #fafafa;
+  --pacc:    #fafafa;
+  --pdim:    rgba(250,250,250,.72);
+  --pbdr:    rgba(255,255,255,.10);
+  --glass-panel:  rgba(255,255,255,.05);
+  --glass2-panel: rgba(255,255,255,.10);
+}
+
+/* ══ THEME 13: EMBER — deep charcoal + burnt orange (task list card) ══ */
+[data-theme="ember"]{
+  --bg:      #f7ede4;
+  --bg2:     #eee0d3;
+  --surface: #e2d0bf;
+  --text:    #1a0f0a;
+  --mid:     rgba(26,15,10,.68);
+  --dim:     rgba(26,15,10,.48);
+  --faint:   rgba(26,15,10,.22);
+  --border:  rgba(26,15,10,.10);
+  --border2: rgba(26,15,10,.18);
+  --glass:   rgba(255,255,255,.50);
+  --glass2:  rgba(255,255,255,.72);
+  --shadow:  rgba(26,15,10,.18);
+  --bg-rgb:  247,237,228;
+  --gold:    #c4622a;
+  --panel:   #1a0f0a;
+  --ptxt:    #f7ede4;
+  --pacc:    #d4602a;
+  --pdim:    rgba(247,237,228,.72);
+  --pbdr:    rgba(212,96,42,.18);
+  --glass-panel:  rgba(255,255,255,.07);
+  --glass2-panel: rgba(255,255,255,.13);
+}
+/* ══ THEME 14: APPLE — light glass surfaces, ultra-refined white/grey ══ */
+[data-theme="studio"]{
+  --bg:      #f5f5f7;
+  --bg2:     #ececee;
+  --surface: #dddde0;
+  --text:    #1d1d1f;
+  --mid:     rgba(29,29,31,.65);
+  --dim:     rgba(29,29,31,.42);
+  --faint:   rgba(29,29,31,.18);
+  --border:  rgba(0,0,0,.06);
+  --border2: rgba(0,0,0,.11);
+  --glass:   rgba(255,255,255,.72);
+  --glass2:  rgba(255,255,255,.88);
+  --shadow:  rgba(0,0,0,.08);
+  --bg-rgb:  245,245,247;
+  --gold:    #0071e3;
+  --panel:   #1d1d1f;
+  --ptxt:    #f5f5f7;
+  --pacc:    #0071e3;
+  --pdim:    rgba(245,245,247,.75);
+  --pbdr:    rgba(0,113,227,.15);
+  --glass-panel:  rgba(255,255,255,.08);
+  --glass2-panel: rgba(255,255,255,.14);
+}
+
+/* ══ THEME 15: THINH — warm cream + bold red (Vietnamese poster energy) ══ */
+[data-theme="tokyo"]{
+  --bg:      #f5ede0;
+  --bg2:     #ece3d4;
+  --surface: #dfd6c4;
+  --text:    #0a0505;
+  --mid:     rgba(10,5,5,.68);
+  --dim:     rgba(10,5,5,.48);
+  --faint:   rgba(10,5,5,.22);
+  --border:  rgba(10,5,5,.10);
+  --border2: rgba(10,5,5,.18);
+  --glass:   rgba(255,255,255,.52);
+  --glass2:  rgba(255,255,255,.74);
+  --shadow:  rgba(10,5,5,.18);
+  --bg-rgb:  245,237,224;
+  --gold:    #b81c1c;
+  --panel:   #8a1414;
+  --ptxt:    #f5ede0;
+  --pacc:    #d42020;
+  --pdim:    rgba(245,237,224,.72);
+  --pbdr:    rgba(212,32,32,.20);
+  --glass-panel:  rgba(255,255,255,.09);
+  --glass2-panel: rgba(255,255,255,.16);
+}
   content:'';
   position:fixed;inset:0;
   pointer-events:none;
   z-index:9994;
-  /* Layer 1: fine horizontal fiber lines */
   background-image:
     repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 3px,
-      rgba(26,10,46,.018) 3px,
-      rgba(26,10,46,.018) 4px
+      transparent 2px,
+      rgba(26,8,50,.03) 2px,
+      rgba(26,8,50,.03) 3px
     ),
     repeating-linear-gradient(
-      90deg,
+      88deg,
       transparent,
-      transparent 8px,
-      rgba(26,10,46,.008) 8px,
-      rgba(26,10,46,.008) 9px
+      transparent 5px,
+      rgba(26,8,50,.012) 5px,
+      rgba(26,8,50,.012) 6px
     ),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.3' numOctaves='5' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23f)' opacity='.55'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85 0.25' numOctaves='5' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23f)' opacity='.7'/%3E%3C/svg%3E");
   background-repeat:repeat,repeat,repeat;
-  background-size:auto,auto,340px 340px;
-  opacity:.7;
+  background-size:auto,auto,320px 320px;
+  opacity:.55;
   mix-blend-mode:multiply;
 }
-/* edge vignette + worn corners for paper */
 [data-theme="paper"] body::after{
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.022'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at 0% 0%, rgba(26,10,46,.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 100% 0%, rgba(26,10,46,.04) 0%, transparent 45%),
-    radial-gradient(ellipse at 100% 100%, rgba(26,10,46,.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 0% 100%, rgba(26,10,46,.05) 0%, transparent 45%),
-    radial-gradient(ellipse at center, transparent 45%, rgba(26,10,46,.05) 100%);
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 0% 0%,   rgba(26,8,50,.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%,  rgba(26,8,50,.07) 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 100%,rgba(26,8,50,.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%,  rgba(26,8,50,.08) 0%, transparent 45%),
+    radial-gradient(ellipse at center, transparent 40%, rgba(26,8,50,.07) 100%);
 }
 
-/* ══ SAND TEXTURE — coarse grit, warm grain ══ */
+/* ══ SAND TEXTURE — visible gritty warm grain ══ */
 [data-theme="sand"] body::before{
   content:'';
   position:fixed;inset:0;
   pointer-events:none;
   z-index:9994;
-  /* Layer: coarse sandy grain with slight directionality */
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.65 0.45' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.9'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='14' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23h)' opacity='1'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.7 0.5' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='14' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23h)' opacity='1'/%3E%3C/svg%3E");
   background-repeat:repeat,repeat;
-  background-size:220px 220px, 140px 140px;
-  opacity:.07;
+  background-size:200px 200px, 120px 120px;
+  opacity:.11;
   mix-blend-mode:multiply;
 }
 [data-theme="sand"] body::after{
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"),
-    radial-gradient(ellipse at center, transparent 40%, rgba(45,26,14,.07) 100%);
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at center, transparent 35%, rgba(45,26,14,.09) 100%);
 }
 
-/* ══ HEADLINE PILL — flipped bg/text (Variant 1) ══ */
+/* ══ CHALK TEXTURE — subtle light paper feel ══ */
+[data-theme="chalk"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9994;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65 0.5' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='350' height='350' filter='url(%23c)' opacity='.6'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  background-size:280px 280px;
+  opacity:.06;
+  mix-blend-mode:multiply;
+}
+
+/* ══ FOREST TEXTURE — organic leaf vein pattern ══ */
+/* ══ FOREST — deep green ambient glows, like bioluminescence ══ */
+[data-theme="forest"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9993;
+  background:
+    radial-gradient(ellipse 60% 40% at 15% 25%, rgba(34,120,34,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 55% at 85% 70%, rgba(20,100,40,.14) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 35% at 50% 5%,  rgba(60,160,60,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 50% at 5% 80%,  rgba(30,110,50,.12) 0%, transparent 60%);
+}
+[data-theme="forest"] body::after{
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
+}
+
+/* ══ TERRACOTTA TEXTURE — warm grain only ══ */
+[data-theme="terracotta"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9994;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75 0.55' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23t)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  background-size:200px 200px;
+  opacity:.07;
+  mix-blend-mode:multiply;
+}
+
+/* ══ EMBER — fire glow orbs in background ══ */
+[data-theme="ember"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9993;
+  background:
+    radial-gradient(ellipse 55% 38% at 80% 90%, rgba(220,80,20,.16) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 10% 85%, rgba(200,60,10,.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 30% at 50% 100%,rgba(240,100,30,.10) 0%, transparent 55%),
+    radial-gradient(ellipse 30% 40% at 90% 40%, rgba(180,50,10,.08) 0%, transparent 50%);
+}
+[data-theme="ember"] body::after{
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
+}
+
+/* ══ APPLE — frosted glass shimmer ══ */
+[data-theme="studio"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9993;
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 10%, rgba(0,113,227,.05) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 80% 80%, rgba(52,199,89,.04) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 60% 30%, rgba(255,159,10,.03) 0%, transparent 50%);
+}
+
+/* ══ THINH — warm cream grain ══ */
+[data-theme="tokyo"] body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9994;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='th'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7 0.5' numOctaves='3' seed='22' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23th)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  background-size:220px 220px;
+  opacity:.06;
+  mix-blend-mode:multiply;
+}
+/* ══ GRID TEXTURE — crosshatch graph paper ══ */
+[data-theme="grid"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;
+  background-image:
+    linear-gradient(rgba(42,42,30,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,30,.08) 1px, transparent 1px),
+    linear-gradient(rgba(42,42,30,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,42,30,.04) 1px, transparent 1px);
+  background-size:40px 40px, 40px 40px, 8px 8px, 8px 8px;
+}
+
+/* ══ SKETCH TEXTURE — fine paper grain ══ */
+[data-theme="sketch"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.7' numOctaves='4' seed='19' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23s)' opacity='.5'/%3E%3C/svg%3E");
+  background-repeat:repeat;background-size:220px 220px;opacity:.05;mix-blend-mode:multiply;
+}
+[data-theme="sketch"] body::after{
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.02'/%3E%3C/svg%3E");
+}
+
+
+/* ══ HEADLINE PILL ══ */
 .h-pill{
   display:inline-block;
   background:var(--text);
@@ -394,13 +697,21 @@
   border-radius:4px;
   font-style:italic;
   line-height:inherit;
-  /* ensure it inherits the headline font size exactly */
   font-size:inherit;
   font-family:inherit;
   font-weight:inherit;
   letter-spacing:inherit;
   transition:background .5s,color .5s;
 }
+/* on light themes where --text is very dark and --bg is near-white, this works fine.
+   on dark themes --text is cream and --bg is near-black — also fine.
+   Only problem: Sketch/Apple/Chalk where both are near-white or near-black.
+   Override those specifically: */
+[data-theme="sketch"] .h-pill,
+[data-theme="studio"]  .h-pill,
+[data-theme="chalk"]  .h-pill{background:#0a0a0a;color:#ffffff}
+[data-theme="noir"]   .h-pill{background:#b8e832;color:#0d0d0d}
+[data-theme="tokyo"]  .h-pill{background:#d42020;color:#ffffff}
 
 /* ══ SCROLL-WIPE em — section headers (Variant 3) ══ */
 .sec-h .wipe-wrap{
@@ -422,9 +733,10 @@
   z-index:1;
   color:var(--accent);
   font-style:normal;
-  transition:color .12s ease .28s,color .5s; /* colour flips after wipe passes */
+  transition:color .12s ease .28s,color .5s;
 }
-.sec-h .wipe-wrap.wiped .wipe-text{color:var(--bg)}
+/* always white on the accent block — works regardless of theme bg colour */
+.sec-h .wipe-wrap.wiped .wipe-text{color:#fff}
 
 /* ══ RESET ══ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -546,20 +858,30 @@ html::-webkit-scrollbar{display:none}
   transform:translateY(0) scale(1);
 }
 
-/* track — gradient from top (cream/light) to bottom (dark/orange) */
+/* track — top=Cream, bottom=Dark, 16 stops */
 #tb-track{
   width:8px;
-  height:180px;
+  height:240px;
   border-radius:8px;
   position:relative;
   cursor:pointer;
   background:linear-gradient(180deg,
-    #f5f0e3 0%,
-    #86c888 18%,
-    #c8a96e 38%,
-    #a855f7 55%,
-    #e85d26 75%,
-    #0a0a0a 100%
+    #f5f0e3 0%,     /* Cream */
+    #f5f5f7 6%,     /* Apple */
+    #fafafa 12%,    /* Chalk */
+    #f5f5f5 19%,    /* Sketch */
+    #f2edd8 25%,    /* Grid */
+    #f5ede0 31%,    /* Thinh */
+    #f7f0e6 37%,    /* Sand */
+    #f0e8e0 43%,    /* Terra */
+    #f7ede4 50%,    /* Ember */
+    #ede5d8 56%,    /* Paper */
+    #0e1410 62%,    /* Forest */
+    #060b14 68%,    /* Midnight */
+    #0d1b2e 74%,    /* Navy */
+    #100810 81%,    /* Dusk */
+    #0d0d0d 88%,    /* Noir */
+    #0a0a0a 100%    /* Dark */
   );
   box-shadow:inset 0 1px 3px rgba(0,0,0,.3);
 }
@@ -1102,7 +1424,7 @@ html::-webkit-scrollbar{display:none}
   transition:color .12s ease .3s; /* flips after box passes */
 }
 .connect-hl .wipe-wrap.wiped .wipe-text{
-  color:var(--panel);           /* flips to panel bg — text reads as cut-out inside accent box */
+  color:#fff; /* white always reads on any accent colour */
 }
 .connect-sub{margin-top:clamp(22px,3.5vh,36px);max-width:400px;font-size:clamp(12.5px,1.3vw,14px);font-weight:300;line-height:1.9;color:var(--pdim)}
 .c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--pbdr);border:1px solid var(--pbdr);border-radius:12px;overflow:hidden;margin-top:clamp(36px,5.5vh,64px)}
@@ -1186,7 +1508,6 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 <div id="theme-bar" role="group" aria-label="Choose theme">
   <div id="tb-track">
     <div id="tb-thumb"></div>
-    <!-- stop dots at each theme position (set by JS) -->
     <div class="tb-stop" id="stop-0"></div>
     <div class="tb-stop" id="stop-1"></div>
     <div class="tb-stop" id="stop-2"></div>
@@ -1195,6 +1516,14 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
     <div class="tb-stop" id="stop-5"></div>
     <div class="tb-stop" id="stop-6"></div>
     <div class="tb-stop" id="stop-7"></div>
+    <div class="tb-stop" id="stop-8"></div>
+    <div class="tb-stop" id="stop-9"></div>
+    <div class="tb-stop" id="stop-10"></div>
+    <div class="tb-stop" id="stop-11"></div>
+    <div class="tb-stop" id="stop-12"></div>
+    <div class="tb-stop" id="stop-13"></div>
+    <div class="tb-stop" id="stop-14"></div>
+    <div class="tb-stop" id="stop-15"></div>
   </div>
   <div id="tb-label">Dark</div>
 </div>
@@ -1596,14 +1925,24 @@ setAccent(curH);
   // 8 themes ordered: light end (top) → dark end (bottom)
   // track gradient matches: cream → sage → gold → purple → orange → black
   const THEMES = [
-    {id:0, th:'light',    h:155, s:'62%', l:'42%', label:'Cream'},    // pos 0/7
-    {id:1, th:'chalk',    h:20,  s:'78%', l:'50%', label:'Chalk'},    // pos 1/7
-    {id:2, th:'sand',     h:20,  s:'78%', l:'50%', label:'Sand'},     // pos 2/7
-    {id:3, th:'paper',    h:278, s:'60%', l:'56%', label:'Paper'},    // pos 3/7
-    {id:4, th:'forest',   h:140, s:'55%', l:'48%', label:'Forest'},   // pos 4/7
-    {id:5, th:'midnight', h:196, s:'84%', l:'52%', label:'Midnight'}, // pos 5/7
-    {id:6, th:'dusk',     h:310, s:'62%', l:'58%', label:'Dusk'},     // pos 6/7
-    {id:7, th:'dark',     h:20,  s:'78%', l:'50%', label:'Dark'},     // pos 7/7
+    // ── LIGHT END (top) ──
+    {id:0,  th:'light',      h:155, s:'62%', l:'42%', label:'Cream'},
+    {id:1,  th:'studio',      h:211, s:'100%',l:'50%', label:'Studio'},
+    {id:2,  th:'chalk',      h:20,  s:'78%', l:'50%', label:'Chalk'},
+    {id:3,  th:'sketch',     h:0,   s:'0%',  l:'10%', label:'Sketch'},
+    {id:4,  th:'grid',       h:72,  s:'38%', l:'36%', label:'Grid'},
+    {id:5,  th:'tokyo',      h:4,   s:'78%', l:'45%', label:'Tokyo'},
+    {id:6,  th:'sand',       h:28,  s:'65%', l:'48%', label:'Sand'},
+    {id:7,  th:'terracotta', h:18,  s:'70%', l:'48%', label:'Terra'},
+    {id:8,  th:'ember',      h:22,  s:'72%', l:'46%', label:'Ember'},
+    {id:9,  th:'paper',      h:278, s:'60%', l:'56%', label:'Paper'},
+    // ── DARK END (bottom) ──
+    {id:10, th:'forest',     h:140, s:'55%', l:'48%', label:'Forest'},
+    {id:11, th:'midnight',   h:196, s:'84%', l:'52%', label:'Midnight'},
+    {id:12, th:'navy',       h:322, s:'80%', l:'58%', label:'Navy'},
+    {id:13, th:'dusk',       h:310, s:'62%', l:'58%', label:'Dusk'},
+    {id:14, th:'noir',       h:76,  s:'78%', l:'55%', label:'Noir'},
+    {id:15, th:'dark',       h:20,  s:'78%', l:'50%', label:'Dark'},
   ];
 
   const html   = document.documentElement;
@@ -1637,7 +1976,7 @@ setAccent(curH);
     // mark active stop
     document.querySelectorAll('.tb-stop').forEach((s,i)=>s.classList.toggle('active-stop',i===idx));
     // icon
-    const isDark = ['dark','midnight','forest','dusk'].includes(t.th);
+    const isDark = ['dark','midnight','forest','dusk','noir','navy'].includes(t.th);
     if(iconSun) iconSun.style.display = isDark ? 'none' : 'block';
     if(iconMoon) iconMoon.style.display = isDark ? 'block' : 'none';
     // meta
@@ -1730,7 +2069,13 @@ setAccent(curH);
   // restore + position stops after layout
   requestAnimationFrame(() => {
     const saved = parseInt(localStorage.getItem('gsa-theme-idx') ?? '7');
-    applyTheme(isNaN(saved) ? 7 : Math.max(0,Math.min(7,saved)));
+    // If no saved preference, use OS theme preference
+    const hasSaved = localStorage.getItem('gsa-theme-idx') !== null;
+    let defaultIdx = 15; // Dark
+    if (!hasSaved) {
+      defaultIdx = window.matchMedia('(prefers-color-scheme: dark)').matches ? 15 : 0;
+    }
+    applyTheme(isNaN(saved) ? defaultIdx : Math.max(0,Math.min(15,saved)));
     positionStops();
   });
 
@@ -1742,7 +2087,7 @@ setAccent(curH);
   // mobile nav quick toggle
   const mobBtn = document.getElementById('theme-btn-mob');
   if (mobBtn) mobBtn.addEventListener('click', () => {
-    applyTheme(activeIdx < 4 ? 7 : 0);
+    applyTheme(activeIdx < 10 ? 15 : 0);
   });
 })();
 
@@ -1935,9 +2280,9 @@ window.addEventListener('scroll',()=>{
 })();
 
 /* ── SCROLL TO TOP ── */
-const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
-  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  const scrollTopBtn = document.getElementById('scroll-top');
+  if(scrollTopBtn) scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
 }, {passive:true});
 </script>
 
