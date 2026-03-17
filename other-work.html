@@ -228,7 +228,7 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 
 /* ══ IMAGES — clickable lightbox ══ */
 .img-contained{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0}
-.img-contained img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important}
+.img-contained img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important}
 .img-contained img:hover{transform:scale(1.005);box-shadow:0 20px 60px var(--shadow)}
 .caption{padding:0 clamp(24px,6vw,80px);margin-top:clamp(8px,1.2vh,12px);font-size:clamp(9px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;transition:color .5s}
 .caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0;transition:background .5s}
@@ -236,18 +236,18 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 /* ══ 16:9 VIDEO ══ */
 .video-wrap-16{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0}
 .video-inner-16{position:relative;width:100%;border-radius:10px;overflow:hidden;background:var(--surface);border:1px solid var(--border);box-shadow:0 40px 80px var(--shadow);transition:border-color .5s}
-.video-inner-16 video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.video-inner-16 video{width:100%;height:auto;display:block;object-fit:contain}
 @media(max-width:640px){.video-wrap-16{padding:0 20px}}
 
 /* ══ 2-COL IMAGE GRID ══ */
 .img-grid-2{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.8vw,20px)}
-.img-grid-2 img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover;transition:border-color .5s,transform .3s;cursor:zoom-in!important}
+.img-grid-2 img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);object-fit:cover;transition:border-color .5s,transform .3s;cursor:zoom-in!important}
 .img-grid-2 img:hover{transform:scale(1.01)}
 @media(max-width:640px){.img-grid-2{grid-template-columns:1fr;padding:0 20px}}
 
 /* ══ 3-COL IMAGE GRID ══ */
 .img-grid-3{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.8vw,20px)}
-.img-grid-3 img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);aspect-ratio:16/9;object-fit:cover;transition:border-color .5s,transform .3s;cursor:zoom-in!important}
+.img-grid-3 img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);object-fit:cover;transition:border-color .5s,transform .3s;cursor:zoom-in!important}
 .img-grid-3 img:hover{transform:scale(1.01)}
 @media(max-width:700px){.img-grid-3{grid-template-columns:1fr 1fr;padding:0 20px}}
 @media(max-width:480px){.img-grid-3{grid-template-columns:1fr}}
@@ -467,7 +467,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 <div class="video-wrap-16 rv">
   <div class="video-inner-16">
     <video autoplay muted loop playsinline>
-      <source src="Other/page5_2.mp4" type="video/mp4"/>
+      <source src="Other/page5_1.mp4" type="video/mp4"/>
     </video>
   </div>
 </div>
