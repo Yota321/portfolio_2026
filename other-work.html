@@ -319,12 +319,27 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 .f-links a{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:var(--mid)}
 
-/* ══ LIGHTBOX ══ */
-#lightbox{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:24px;backdrop-filter:blur(8px)}
+/* ══ COLOUR SWATCHES ══ */
+.colour-swatches{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;flex-wrap:wrap;gap:12px}
+.swatch{display:flex;flex-direction:column;gap:8px;flex:1;min-width:120px}
+.swatch-block{height:80px;border-radius:8px;border:1px solid var(--border);transition:border-color .5s}
+.swatch-hex{font-size:clamp(9px,.85vw,10.5px);letter-spacing:.12em;color:var(--dim);font-family:'Cormorant Garamond',serif;transition:color .5s}
+.swatch-name{font-size:clamp(8px,.8vw,9.5px);letter-spacing:.2em;text-transform:uppercase;color:var(--faint);transition:color .5s}
+@media(max-width:640px){.colour-swatches{padding:0 20px;gap:8px}.swatch{min-width:80px}.swatch-block{height:60px}}
+
+/* ══ GIF GRID — side by side desktop, stacked mobile ══ */
+.gif-grid{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,40px);align-items:center;justify-items:center}
+.gif-item{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;max-width:320px}
+.gif-item img{width:100%;height:auto;display:block;image-rendering:pixelated;cursor:zoom-in!important}
+.gif-label{font-size:clamp(8px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);transition:color .5s}
+@media(max-width:640px){.gif-grid{grid-template-columns:1fr;padding:0 20px}.gif-item{max-width:260px}}
+
+/* ══ LIGHTBOX with pinch zoom ══ */
+#lightbox{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:24px;backdrop-filter:blur(8px);touch-action:none}
 #lightbox.open{opacity:1;pointer-events:auto}
-#lightbox img{max-width:100%;max-height:90svh;border-radius:8px;object-fit:contain;transform:scale(.94);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+#lightbox img{max-width:100%;max-height:90svh;border-radius:8px;object-fit:contain;transform:scale(.94);transition:transform .3s cubic-bezier(.16,1,.3,1);touch-action:pinch-zoom;cursor:zoom-in}
 #lightbox.open img{transform:scale(1)}
-#lb-close{position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+#lb-close{position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;z-index:2}
 #lb-close:hover{background:rgba(255,255,255,.22)}
 
 /* ══ MOBILE ══ */
@@ -406,7 +421,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 
 <!-- META -->
 <div class="cs-meta">
-  <div class="rv"><div class="meta-lbl">Tools</div><div class="meta-val">HTML · CSS · JS<br>Unity<br>Photoshop</div></div>
+  <div class="rv"><div class="meta-lbl">Tools</div><div class="meta-val">HTML · CSS · JS<br>Unreal Engine<br>Photoshop</div></div>
   <div class="rv" style="transition-delay:.06s"><div class="meta-lbl">Scope</div><div class="meta-val">Visual Systems<br>Front-end<br>Brand Identity<br>Game Art</div></div>
   <div class="rv" style="transition-delay:.12s"><div class="meta-lbl">Platform</div><div class="meta-val">Digital<br>Print<br>Interactive<br>Web &amp; Game</div></div>
   <div class="rv" style="transition-delay:.18s"><div class="meta-lbl">Type</div><div class="meta-val">Self-Initiated<br>Learning Projects<br>Experiments</div></div>
@@ -415,8 +430,8 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 <!-- MARQUEE -->
 <div class="cs-marquee" aria-hidden="true">
   <div class="cs-marquee-inner">
-    <span class="cs-mi">Roast Ritual</span><span class="cs-mi">EclipNex</span><span class="cs-mi">Pixel Art</span><span class="cs-mi">HTML CSS JS</span><span class="cs-mi">Unity</span><span class="cs-mi">Brand Identity</span><span class="cs-mi">Game Art</span><span class="cs-mi">Front-end</span><span class="cs-mi">Speculative Design</span><span class="cs-mi">Motion</span>
-    <span class="cs-mi">Roast Ritual</span><span class="cs-mi">EclipNex</span><span class="cs-mi">Pixel Art</span><span class="cs-mi">HTML CSS JS</span><span class="cs-mi">Unity</span><span class="cs-mi">Brand Identity</span><span class="cs-mi">Game Art</span><span class="cs-mi">Front-end</span><span class="cs-mi">Speculative Design</span><span class="cs-mi">Motion</span>
+    <span class="cs-mi">Roast Ritual</span><span class="cs-mi">EclipNex</span><span class="cs-mi">Pixel Art</span><span class="cs-mi">HTML CSS JS</span><span class="cs-mi">Unreal Engine</span><span class="cs-mi">Brand Identity</span><span class="cs-mi">Game Art</span><span class="cs-mi">Front-end</span><span class="cs-mi">Speculative Design</span><span class="cs-mi">Guitar</span>
+    <span class="cs-mi">Roast Ritual</span><span class="cs-mi">EclipNex</span><span class="cs-mi">Pixel Art</span><span class="cs-mi">HTML CSS JS</span><span class="cs-mi">Unreal Engine</span><span class="cs-mi">Brand Identity</span><span class="cs-mi">Game Art</span><span class="cs-mi">Front-end</span><span class="cs-mi">Speculative Design</span><span class="cs-mi">Guitar</span>
   </div>
 </div>
 
@@ -466,15 +481,15 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 
 <div class="video-wrap-16 rv">
   <div class="video-inner-16">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline title="Roast Ritual website by Golam Sayon Ahamed — homepage design and layout">
       <source src="Other/page5_1.mp4" type="video/mp4"/>
     </video>
   </div>
 </div>
 <div class="video-wrap-16 rv">
   <div class="video-inner-16">
-    <video autoplay muted loop playsinline>
-      <source src="Other/page5_3.mp4" type="video/mp4"/>
+    <video autoplay muted loop playsinline title="Roast Ritual website by Golam Sayon Ahamed — scrolling interaction and inner pages">
+      <source src="Other/page5_2.mp4" type="video/mp4"/>
     </video>
   </div>
 </div>
@@ -523,20 +538,53 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="img-contained rv">
-  <img loading="lazy" src="Other/page5_4.png" alt="EclipNex logo system by Golam Sayon Ahamed — speculative space brand identity, multiple logo variants including wordmark and icon" data-lightbox/>
+  <img loading="lazy" src="Other/page5_3.png" alt="EclipNex logo system sheet by Golam Sayon Ahamed — three variants on cream background: standalone icon, logo with ECLIPNEX wordmark, and full-scale typemark" data-lightbox/>
 </div>
 <div class="img-contained rv">
-  <img loading="lazy" src="Other/page5_5.png" alt="EclipNex brand identity by Golam Sayon Ahamed — full visual system for fictional space exploration and tourism company" data-lightbox/>
+  <img loading="lazy" src="Other/page5_4.png" alt="EclipNex brand details by Golam Sayon Ahamed — geometric spacecraft logo on black background with overlapping orbital rings and Beyond The Horizon tagline" data-lightbox/>
 </div>
+<div class="img-contained rv">
+  <img loading="lazy" src="Other/page5_5.png" alt="EclipNex brand story by Golam Sayon Ahamed — About page showing the name origin from Eclipse and Nexus, space visual, and brand vision statement" data-lightbox/>
+</div>
+
+<div class="colour-swatches rv">
+  <div class="swatch">
+    <div class="swatch-block" style="background:#D66049;border-color:rgba(0,0,0,.08)"></div>
+    <div class="swatch-hex">#D66049</div>
+    <div class="swatch-name">Primary</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#222222;border-color:rgba(255,255,255,.08)"></div>
+    <div class="swatch-hex">#222222</div>
+    <div class="swatch-name">Dark</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#0e3c52;border-color:rgba(255,255,255,.08)"></div>
+    <div class="swatch-hex">#0E3C52</div>
+    <div class="swatch-name">Deep Blue</div>
+  </div>
+  <div class="swatch">
+    <div class="swatch-block" style="background:#4b7b92;border-color:rgba(255,255,255,.08)"></div>
+    <div class="swatch-hex">#4B7B92</div>
+    <div class="swatch-name">Mid Blue</div>
+  </div>
+</div>
+<div class="caption rv">EclipNex · brand colour palette</div>
+
+<div class="img-contained rv">
+  <img loading="lazy" src="Other/page5_17.png" alt="EclipNex typography system by Golam Sayon Ahamed — typeface selection, hierarchy, and type rules for the brand" data-lightbox/>
+</div>
+<div class="caption rv">EclipNex · typography</div>
+
+<div class="img-contained rv">
+  <img loading="lazy" src="Other/page5_6.png" alt="EclipNex scientist space suit design by Golam Sayon Ahamed — character design for the brand world, merging scientific utility with visual identity" data-lightbox/>
+</div>
+<div class="caption rv">EclipNex · scientist space suit design</div>
 <div class="img-grid-2 rv">
-  <img loading="lazy" src="Other/page5_6.png" alt="EclipNex colour palette and typography by Golam Sayon Ahamed — scientific credibility through restrained colour and type logic" data-lightbox/>
-  <img loading="lazy" src="Other/page5_7.png" alt="EclipNex poster design by Golam Sayon Ahamed — speculative space brand campaign poster showing exploration and ambition" data-lightbox/>
+  <img loading="lazy" src="Other/page5_7.png" alt="EclipNex poster by Golam Sayon Ahamed — A4 campaign poster for speculative space exploration brand" data-lightbox style="aspect-ratio:210/297;object-fit:cover"/>
+  <img loading="lazy" src="Other/page5_16.png" alt="EclipNex poster by Golam Sayon Ahamed — A4 campaign poster variant showing a different visual direction within the same brand system" data-lightbox style="aspect-ratio:210/297;object-fit:cover"/>
 </div>
-<div class="img-grid-2 rv">
-  <img loading="lazy" src="Other/page5_8.png" alt="EclipNex merchandise by Golam Sayon Ahamed — physical brand touchpoints extending the visual system to apparel and objects" data-lightbox/>
-  <img loading="lazy" src="Other/page5_9.png" alt="EclipNex digital application by Golam Sayon Ahamed — UI concept for web and mobile showing how the brand translates to screen" data-lightbox/>
-</div>
-<div class="caption rv">EclipNex · brand identity, colour, typography, posters, and merchandise</div>
+<div class="caption rv">EclipNex · campaign posters</div>
 
 <div class="link-cards rv" style="margin-top:clamp(24px,4vh,40px)">
   <a href="https://drive.google.com/file/d/1kaF-h_mwTchLVOm7AqPAtiPtAnaqaAcs/view?usp=drivesdk" target="_blank" rel="noopener" class="link-card" onclick="gtag('event','external_link',{label:'eclipnex_brand_manual'})">
@@ -562,7 +610,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
     </div>
     <div>
       <p class="body-text rv">This one started because I wanted to know what it felt like to design for motion rather than static output.</p>
-      <p class="body-text rv" style="transition-delay:.08s">Pixel art characters, weapons, environment elements, a basic Unity scene. Nothing polished. Nothing finished. The goal was understanding visual consistency at a small scale, how assets read when they move, and how composition changes when the canvas is 16 pixels wide instead of 1600.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Pixel art characters, weapons, environment assets, and an Unreal Engine scene. Nothing polished. Nothing finished. The goal was understanding visual consistency at a small scale, how assets read when they move, and how composition changes when the canvas is 16 pixels wide instead of 1600.</p>
       <p class="body-text rv" style="transition-delay:.14s">Seeing my own designs inside a game engine changed how I think about animation and scale in a way that looking at references never did. I also recorded and composed the background music on guitar. That had nothing to do with visual design and everything to do with the fact that I wanted to try it.</p>
       <p class="body-text rv" style="transition-delay:.2s"><strong>I am a beginner at game development.</strong> That is the point.</p>
     </div>
@@ -570,14 +618,37 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="img-contained rv">
-  <img loading="lazy" src="Other/page5_10.png" alt="Pixel art game environment by Golam Sayon Ahamed — side scrolling scene with character, foreground elements, and atmospheric background" data-lightbox/>
+  <img loading="lazy" src="Other/page5_8.png" alt="Pixel art character sketch to final by Golam Sayon Ahamed — showing design process from rough concept to finished warrior and witch characters" data-lightbox/>
 </div>
-<div class="img-grid-3 rv">
-  <img loading="lazy" src="Other/page5_11.png" alt="Pixel art character by Golam Sayon Ahamed — 8-bit style game character design with animation frames" data-lightbox/>
-  <img loading="lazy" src="Other/page5_12.png" alt="Pixel art weapons by Golam Sayon Ahamed — 8-bit style weapon assets designed for game use" data-lightbox/>
-  <img loading="lazy" src="Other/page5_13.png" alt="Unity scene by Golam Sayon Ahamed — basic game scene setup with pixel art assets placed inside the Unity engine" data-lightbox/>
+<div class="caption rv">Character design · sketch to final</div>
+
+<div class="img-contained rv">
+  <img loading="lazy" src="Other/page5_9.png" alt="Pixel art game background environment by Golam Sayon Ahamed — atmospheric scene with layered depth for side-scrolling game" data-lightbox/>
 </div>
-<div class="caption rv">Game art · pixel characters, weapons, environment, and Unity scene</div>
+<div class="caption rv">Background · environment design</div>
+
+<div class="gif-grid rv">
+  <div class="gif-item">
+    <img loading="lazy" src="Other/page5_10.gif" alt="Warrior character pixel art animation by Golam Sayon Ahamed — 8-bit style animated sprite with transparent background" data-lightbox/>
+    <span class="gif-label">Warrior</span>
+  </div>
+  <div class="gif-item">
+    <img loading="lazy" src="Other/page5_11.gif" alt="Witch character pixel art animation by Golam Sayon Ahamed — 8-bit style animated sprite with transparent background" data-lightbox/>
+    <span class="gif-label">Witch</span>
+  </div>
+</div>
+<div class="caption rv">Characters · animated sprites</div>
+
+<div class="img-grid-2 rv">
+  <img loading="lazy" src="Other/page5_12.gif" alt="Fire sword pixel art animation by Golam Sayon Ahamed — animated weapon asset with flame effect" data-lightbox/>
+  <img loading="lazy" src="Other/page5_13.gif" alt="Chest pixel art animation by Golam Sayon Ahamed — animated loot chest opening sequence" data-lightbox/>
+</div>
+<div class="caption rv">Assets · fire sword and chest animations</div>
+
+<div class="img-contained rv">
+  <img loading="lazy" src="Other/page5_15.png" alt="Unreal Engine scene screenshot by Golam Sayon Ahamed — pixel art assets placed and tested inside the game engine environment" data-lightbox/>
+</div>
+<div class="caption rv">Unreal Engine · assets in engine</div>
 
 <div class="pull-quote">
   <span class="pq-mark rv">"</span>
@@ -606,7 +677,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
     </button>
     <div class="ap-info">
       <div class="ap-title">Game Theme</div>
-      <div class="ap-sub">Composed &amp; recorded on guitar · G.S.Ahamed</div>
+      <div class="ap-sub">Composed &amp; recorded on guitar · Golam Sayon Ahamed</div>
       <div class="ap-progress" id="ap-progress">
         <div class="ap-bar" id="ap-bar"></div>
       </div>
@@ -762,22 +833,51 @@ if(mqEl&&mqIn){mqEl.addEventListener('touchstart',()=>{mqIn.style.animationPlayS
   setTimeout(checkAll,500);
 })();
 
-/* ── LIGHTBOX ── */
+/* ── LIGHTBOX with pinch zoom ── */
 (function(){
   const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbClose=document.getElementById('lb-close');
   function open(src,alt){
     lbImg.src=src;lbImg.alt=alt||'';
+    lbImg.style.transform='scale(1)';
     lb.classList.add('open');
     document.body.style.overflow='hidden';
     gtag('event','image_zoom',{src:src});
   }
-  function close(){lb.classList.remove('open');document.body.style.overflow='';lbImg.src='';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';setTimeout(()=>{lbImg.src='';},300);}
   document.querySelectorAll('img[data-lightbox]').forEach(img=>{
     img.addEventListener('click',()=>open(img.src,img.alt));
   });
   lbClose.addEventListener('click',close);
-  lb.addEventListener('click',e=>{if(e.target===lb) close();});
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target===lbImg) close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
+
+  /* pinch zoom */
+  let scale=1,lastDist=0,startScale=1;
+  lbImg.addEventListener('touchstart',e=>{
+    if(e.touches.length===2){
+      lastDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+      startScale=scale;
+      e.preventDefault();
+    }
+  },{passive:false});
+  lbImg.addEventListener('touchmove',e=>{
+    if(e.touches.length===2){
+      const dist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+      scale=Math.min(4,Math.max(1,startScale*(dist/lastDist)));
+      lbImg.style.transform=`scale(${scale})`;
+      e.preventDefault();
+    }
+  },{passive:false});
+  lbImg.addEventListener('touchend',e=>{
+    if(e.touches.length<2&&scale<=1.05){scale=1;lbImg.style.transform='scale(1)';}
+  });
+  /* double tap to reset zoom */
+  let lastTap=0;
+  lbImg.addEventListener('click',e=>{
+    const now=Date.now();
+    if(now-lastTap<300){scale=1;lbImg.style.transform='scale(1)';}
+    lastTap=now;
+  });
 })();
 
 /* ── AUDIO PLAYER ── */
