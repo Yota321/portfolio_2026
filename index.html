@@ -1503,7 +1503,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 <nav class="nav">
   <a href="#hero" class="nav-logo" id="nav-logo-btn">G.S.Ahamed</a>
   <ul class="nav-links">
-    <li><a href="blog.html">Blog</a></li>
+    <li><a href="blog.html" onclick="gtag('event','blog_click',{location:'nav'})">Blog</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#works">Work</a></li>
     <li><a href="#connect">Contact</a></li>
@@ -1546,7 +1546,7 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 <!-- MOBILE NAV -->
 <nav class="nav-mobile" id="nav-mobile">
   <ul>
-    <li><a href="blog.html" class="mob-link">Blog</a></li>
+    <li><a href="blog.html" class="mob-link" onclick="gtag('event','blog_click',{location:'mobile_nav'})">Blog</a></li>
     <li><a href="#about" class="mob-link">About</a></li>
     <li><a href="#works" class="mob-link">Work</a></li>
     <li><a href="#connect" class="mob-link">Contact</a></li>
