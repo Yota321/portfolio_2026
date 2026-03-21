@@ -175,7 +175,14 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .post-intro{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2vw,22px);font-weight:300;font-style:italic;color:var(--text);line-height:1.65;margin-bottom:clamp(28px,4.5vh,44px);transition:color .5s}
 .post-divider{width:32px;height:1px;background:var(--accent-25);margin:clamp(28px,4.5vh,44px) 0}
 .post-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.8vw,34px);letter-spacing:.04em;color:var(--text);margin-bottom:clamp(14px,2.2vh,20px);margin-top:clamp(6px,1vh,10px);transition:color .5s}
-.post-img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);margin:clamp(28px,4.5vh,44px) 0 clamp(8px,1.2vh,12px);transition:border-color .5s}
+.post-img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);margin:clamp(28px,4.5vh,44px) 0 clamp(8px,1.2vh,12px);transition:border-color .5s,transform .25s,box-shadow .25s;cursor:zoom-in}
+.post-img:hover{transform:scale(1.005);box-shadow:0 8px 40px var(--shadow)}
+#lb{position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,0);display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none;transition:background .3s cubic-bezier(.16,1,.3,1)}
+#lb.open{background:rgba(0,0,0,.88);pointer-events:auto;cursor:zoom-out}
+#lb img{max-width:100%;max-height:90vh;border-radius:10px;border:1px solid rgba(255,255,255,.1);object-fit:contain;opacity:0;transform:scale(.92);transition:opacity .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1);pointer-events:none;box-shadow:0 24px 80px rgba(0,0,0,.7)}
+#lb.open img{opacity:1;transform:scale(1)}
+#lb-close{position:absolute;top:clamp(14px,2.2vh,22px);right:clamp(16px,3vw,28px);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(237,233,224,.7);font-size:16px;transition:background .2s,color .2s,transform .2s}
+#lb-close:hover{background:rgba(255,255,255,.16);color:#fff;transform:scale(1.08)}
 .post-img-caption{font-size:clamp(9px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;margin-bottom:clamp(28px,4.5vh,44px);transition:color .5s}
 .post-img-caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0}
 .post-res{display:flex;flex-direction:column;gap:0;margin:clamp(16px,2.5vh,24px) 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .5s}
@@ -559,10 +566,22 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 <p>Games take up a lot of my time. Some are just for playing with friends. Valorant. Marvel Rivals. Easy to jump into, easy to get people on. Not my all-time favorites, but accessibility matters. I&rsquo;d rather play something average with friends than something great alone. (That was almost profound. Moving on.)</p>
 <p>Lore-wise and world-building-wise, both Genshin and League of Legends are genuinely some of the richest out there. If you watched Arcane, you got a small taste. It goes way deeper. Story-wise, my all-time favorite is <a href="https://store.steampowered.com/app/1222140/" target="_blank" rel="noopener">Detroit: Become Human</a>. That game does something to you.</p>
 <p>Gameplay-wise, nothing touches FromSoftware. Dark Souls. Sekiro. Bloodborne. Elden Ring. That style just <em>clicks</em> for me. And if I had to pick one game that does everything: story, lore, world-building, gameplay, all combined, it&rsquo;s <a href="https://store.steampowered.com/app/1245620/" target="_blank" rel="noopener">Elden Ring</a>. I&rsquo;ve completed it seven times. Seven. I think that says everything.</p>
+<p>Also waiting on Danganronpa V4. Still. Quietly. Patiently. Sort of.</p>
+<div class="post-divider"></div>
+
+<div class="post-h">Anime. A Separate Thing.</div>
+<p>I have been watching anime for a long time. Before it was mainstream. FMAB is still my answer if anyone asks for one. But the honest answer is I cannot pick anymore. Code Geass for writing. Fire Force for animation. Horimiya for romance. Fairy Tail for when I need comfort. Psycho-Pass when I want to feel unsettled in a good way.</p>
+<p>And then there is JoJo&rsquo;s Bizarre Adventure. Every part is basically a different anime. Different art style, different tone, different protagonist. All of them are great. But Steel Ball Run specifically, Part 7, the manga, deserves its own conversation entirely. It is not just the best part of JoJo. It is one of the best stories written in manga form. Gyro and Johnny&rsquo;s dynamic. The alternate American West setting. The way it builds. It deserves to be animated and it deserves the budget and I will be thinking about it until that day comes.</p>
 <div class="post-divider"></div>
 
 <div class="post-h">Zombies, Specifically</div>
 <p>I really like zombie stuff. Games, shows, movies, comics, if there are zombies, I&rsquo;ve probably consumed it. The Walking Dead. The Last of Us. Resident Evil. World War Z. And it&rsquo;s not really about the zombies. It&rsquo;s about what people become when everything normal is gone. Who they decide to be when nothing is telling them who to be anymore. That&rsquo;s the actually interesting part.</p>
+<div class="post-divider"></div>
+
+<div class="post-h">Beyblade. Let It Rip.</div>
+<p>This one deserves its own section. After school, before anything else, there was Beyblade. We would just find a spot, set up the launcher, and go at it. Everyone thought their blade was the strongest. Everyone had their own technique. Everyone was absolutely convinced they could summon their bit beast if they believed hard enough.</p>
+<p>I genuinely felt like I could call Pegasus. Not joking. Not even a little. That launcher would pull back and something about the sound of it spinning just felt like something was happening. Like if I believed it enough the stadium would crack and Pegasus would show up.</p>
+<p>It did not show up. But we kept going anyway. Those afternoons after school were just different. No phones, no streaming, just blades and very serious trash talk between kids who were way too invested in spinning tops.</p>
 <div class="post-divider"></div>
 
 <div class="post-h">Two Characters. Both Named Benjamin.</div>
@@ -587,8 +606,9 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 <div class="post-divider"></div>
 
 <div class="post-h">Movies. The Specific Kind.</div>
-<p>I watch a lot of different things but certain categories just <em>stick</em>. Mind-bending stuff, specifically. <a href="https://www.imdb.com/title/tt1375666/" target="_blank" rel="noopener">Inception</a> is one of my all-time favorites, the architecture of that story is just insane. <a href="https://www.imdb.com/title/tt2397535/" target="_blank" rel="noopener">Predestination</a> is another one that genuinely broke my brain the first time. If you haven&rsquo;t seen it, don&rsquo;t look it up, just watch it.</p>
-<p>Then the horror side. <a href="https://www.imdb.com/title/tt0387564/" target="_blank" rel="noopener">Saw series</a> and <a href="https://www.imdb.com/title/tt0195714/" target="_blank" rel="noopener">Final Destination</a> have a special place. And <a href="https://www.imdb.com/title/tt5753856/" target="_blank" rel="noopener">Dark</a>, which I watched three times, the last entirely in German. Did I understand everything? No. Was it still incredible? Yes, obviously. There&rsquo;s something about watching it in the original language. Even when you&rsquo;re missing half the dialogue, you&rsquo;re picking up something else.</p>
+<p>I watch a lot. Harry Potter growing up. Star Wars obviously. The classic superhero era, Tobey Maguire Spider-Man, Blade, X-Men. Hellboy. The Mask. The Truman Show, which hits differently every single rewatch. Terminator.</p>
+<p>Mind-bending stuff specifically is where I really go. <a href="https://www.imdb.com/title/tt1375666/" target="_blank" rel="noopener">Inception</a> is one of my all-time favorites, the architecture of that story is just insane. <a href="https://www.imdb.com/title/tt2397535/" target="_blank" rel="noopener">Predestination</a> genuinely broke my brain the first time. Don&rsquo;t look it up. Just watch it.</p>
+<p>And <a href="https://www.imdb.com/title/tt5311514/" target="_blank" rel="noopener">A Silent Voice</a>. That one made me cry the most out of anything I have ever watched. Movie, show, anime, anything. Nothing else comes close. There is something about how it handles guilt and redemption that just gets to you in a very specific way. I do not think I was fully prepared for it the first time.</p>
 <div class="post-divider"></div>
 
 <div id="p3-timeline-wrap" style="margin:clamp(28px,4.5vh,44px) 0">
@@ -598,6 +618,12 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
   </div>
 </div>
 
+<div class="post-divider"></div>
+
+<div class="post-h">Time Travel, Specifically</div>
+<p>Like zombies, this one gets its own section. Time travel done well is one of my favourite things in any medium. And I mean <em>done well</em>. It can go very wrong very fast. One inconsistency and the whole thing falls apart.</p>
+<p><a href="https://www.imdb.com/title/tt5753856/" target="_blank" rel="noopener">Dark</a> is the gold standard. Three seasons, multiple timelines, every detail connects. <a href="https://anilist.co/anime/9253" target="_blank" rel="noopener">Steins;Gate</a> is the best time travel story written in anime form, nothing is close. <a href="https://anilist.co/anime/21647" target="_blank" rel="noopener">Orange</a> is letters from the future and somehow it makes you feel everything. <a href="https://anilist.co/anime/21234" target="_blank" rel="noopener">Erased</a> had me gone in six episodes. <a href="https://anilist.co/anime/120120" target="_blank" rel="noopener">Tokyo Revengers</a> is go back, fix everything, make it worse, repeat. <a href="https://www.imdb.com/title/tt0436992/" target="_blank" rel="noopener">Dr. Who</a> is basically just infinite time travel with infinite consequences. Terminator started the whole thing for me. And Loki in the MCU handled the multiverse better than most films actually did.</p>
+<p>Time travel as a concept is my favourite fictional device. It can always go bad if you are not careful with it. And when it goes wrong it really goes wrong. But when it works it is genuinely unlike anything else.</p>
 <div class="post-divider"></div>
 
 <div class="post-h">The YouTube Rabbit Holes That Feed The Writing</div>
@@ -658,6 +684,7 @@ const P3_TL=[
 ];
 const P3_ALL='All';
 const P3_MEDIA=[
+  // Games
   {e:'🗡️',n:'Elden Ring',c:'Games',t:'Seven completions. Still not done with it.',u:'https://store.steampowered.com/app/1245620/'},
   {e:'🤖',n:'Detroit: Become Human',c:'Games',t:'Best story in any game. Full stop.',u:'https://store.steampowered.com/app/1222140/'},
   {e:'🌊',n:'Genshin Impact',c:'Games',t:'The lore goes impossibly deep.',u:'https://genshin.hoyoverse.com'},
@@ -673,6 +700,8 @@ const P3_MEDIA=[
   {e:'🎭',n:'Persona 5 Royal',c:'Games',t:'Style. Story. Music. All of it is perfect.',u:'https://store.steampowered.com/app/1687950/'},
   {e:'🌿',n:'Where Winds Meet',c:'Games',t:'Wuxia open world. Underrated and gorgeous.',u:'https://store.steampowered.com/app/2646760/'},
   {e:'🤝',n:'It Takes Two',c:'Games',t:'Best co-op game made. Nothing comes close.',u:'https://store.steampowered.com/app/1426210/'},
+  {e:'🔪',n:'Danganronpa',c:'Games',t:'Still waiting for V4. Hoping they actually make it.',u:'https://store.steampowered.com/app/413410/'},
+  // Anime
   {e:'⚗️',n:'Fullmetal Alchemist: Brotherhood',c:'Anime',t:'The one anime I always come back to.',u:'https://anilist.co/anime/5114'},
   {e:'🔫',n:'Sakamoto Days',c:'Anime',t:'I cosplayed this. Enough said.',u:'https://anilist.co/anime/177709'},
   {e:'🍀',n:'Black Clover',c:'Anime',t:'Asta\'s stubbornness is contagious.',u:'https://anilist.co/anime/97940'},
@@ -687,20 +716,59 @@ const P3_MEDIA=[
   {e:'🗿',n:'Dr. STONE',c:'Anime',t:'Making science cool since 5 billion years ago.',u:'https://anilist.co/anime/105333'},
   {e:'🏰',n:'Mushoku Tensei',c:'Anime',t:'World building that rewards patience.',u:'https://anilist.co/anime/108465'},
   {e:'⚔️',n:'Kaiju No.8',c:'Anime',t:'The action sequences are jaw dropping.',u:'https://anilist.co/anime/161645'},
+  {e:'♟️',n:'Code Geass',c:'Anime',t:'Lelouch is one of the greatest written characters ever.',u:'https://anilist.co/anime/1575'},
+  {e:'👁️',n:'JoJo\'s Bizarre Adventure',c:'Anime',t:'Every part is a different anime. All of them are great.',u:'https://anilist.co/anime/14719'},
+  {e:'😭',n:'A Silent Voice',c:'Anime',t:'The movie that made me cry the most. Nothing else comes close.',u:'https://anilist.co/anime/20954'},
+  {e:'⏰',n:'Steins;Gate',c:'Anime',t:'The best time travel story ever written.',u:'https://anilist.co/anime/9253'},
+  {e:'🏃',n:'Tokyo Revengers',c:'Anime',t:'Time travel + delinquents. Surprisingly it works.',u:'https://anilist.co/anime/120120'},
+  {e:'❄️',n:'Erased',c:'Anime',t:'Six episodes in and I was fully gone.',u:'https://anilist.co/anime/21234'},
+  // Shows
   {e:'⏳',n:'Dark',c:'Shows',t:'Watched it in German the third time. Worth it.',u:'https://www.imdb.com/title/tt5753856/'},
   {e:'🧟',n:'The Walking Dead',c:'Shows',t:'Comics hit different from the show.',u:'https://www.imdb.com/title/tt1520211/'},
   {e:'☢️',n:'Fallout (show)',c:'Shows',t:'Genuinely great. Surprised me.',u:'https://www.imdb.com/title/tt12637874/'},
   {e:'🧪',n:'Rick and Morty',c:'Shows',t:'The nihilism hits different at 2AM.',u:'https://www.imdb.com/title/tt2861424/'},
+  {e:'💥',n:'The Boys',c:'Shows',t:'What if superheroes were the problem. Exactly that.',u:'https://www.imdb.com/title/tt1190634/'},
+  {e:'🔬',n:'The Big Bang Theory',c:'Shows',t:'Watched the whole thing. Multiple times.',u:'https://www.imdb.com/title/tt0898266/'},
+  {e:'📋',n:'The Office',c:'Shows',t:'Somehow gets funnier every rewatch.',u:'https://www.imdb.com/title/tt0386676/'},
+  {e:'👽',n:'Ben 10',c:'Shows',t:'Benjamin Kirby Tennyson. Childhood locked.',u:'https://www.imdb.com/title/tt0484158/'},
+  {e:'🕷️',n:'Ultimate Spider-Man',c:'Shows',t:'Peter Benjamin Parker. Yuri Lowenthal. Full circle.',u:'https://www.imdb.com/title/tt1973505/'},
+  {e:'🐌',n:'Slugterra',c:'Shows',t:'Underrated. The slug battles were elite.',u:'https://www.imdb.com/title/tt2661376/'},
+  {e:'🌀',n:'Beyblade',c:'Shows',t:'Let it rip. No further explanation needed.',u:'https://www.imdb.com/title/tt0375651/'},
+  {e:'⚡',n:'Pokemon',c:'Shows',t:'Started here. Never really left.',u:'https://www.imdb.com/title/tt0168366/'},
+  {e:'🎪',n:'Dr. Who',c:'Shows',t:'Infinite universes, infinite timelines. Yes.',u:'https://www.imdb.com/title/tt0436992/'},
+  // Movies
   {e:'🌀',n:'Inception',c:'Movies',t:'The architecture of that story is insane.',u:'https://www.imdb.com/title/tt1375666/'},
   {e:'🔩',n:'Saw series',c:'Movies',t:'The traps get more creative every film.',u:'https://www.imdb.com/title/tt0387564/'},
   {e:'✈️',n:'Final Destination',c:'Movies',t:'You can\'t cheat death. That\'s it. That\'s the whole thing.',u:'https://www.imdb.com/title/tt0195714/'},
   {e:'🕰️',n:'Predestination',c:'Movies',t:'Don\'t look it up. Just watch it. Trust me.',u:'https://www.imdb.com/title/tt2397535/'},
+  {e:'😭',n:'A Silent Voice',c:'Movies',t:'The movie that made me cry the most. Nothing else comes close.',u:'https://www.imdb.com/title/tt5311514/'},
+  {e:'⚡',n:'Harry Potter series',c:'Movies',t:'Grew up with this. It stays.',u:'https://www.imdb.com/title/tt0241527/'},
+  {e:'🌌',n:'Star Wars',c:'Movies',t:'The lore. The universe. The lightsabers. Obviously.',u:'https://www.imdb.com/title/tt0076759/'},
+  {e:'🔴',n:'Hellboy',c:'Movies',t:'Weird, dark, fun. Exactly my kind of movie.',u:'https://www.imdb.com/title/tt0167190/'},
+  {e:'😂',n:'The Mask',c:'Movies',t:'Jim Carrey just does not miss.',u:'https://www.imdb.com/title/tt0110475/'},
+  {e:'📺',n:'The Truman Show',c:'Movies',t:'Every rewatch hits different. What even is real.',u:'https://www.imdb.com/title/tt0120382/'},
+  {e:'🤖',n:'Terminator',c:'Movies',t:'I\'ll be back. Classic.',u:'https://www.imdb.com/title/tt0088247/'},
+  {e:'🕸️',n:'Spider-Man (Tobey)',c:'Movies',t:'The original. Still the one.',u:'https://www.imdb.com/title/tt0145487/'},
+  {e:'🧛',n:'Blade',c:'Movies',t:'Coolest vampire hunter ever. No debate.',u:'https://www.imdb.com/title/tt0120611/'},
+  {e:'🧲',n:'X-Men',c:'Movies',t:'The reason I got into comics properly.',u:'https://www.imdb.com/title/tt0120903/'},
+  // Time Travel
+  {e:'⏳',n:'Dark',c:'Time Travel',t:'Watched in German the third time. Still confusing. Still perfect.',u:'https://www.imdb.com/title/tt5753856/'},
+  {e:'⏰',n:'Steins;Gate',c:'Time Travel',t:'The best time travel story ever written. Not up for debate.',u:'https://anilist.co/anime/9253'},
+  {e:'💙',n:'Orange',c:'Time Travel',t:'Letters from the future. Heartbreaking and hopeful.',u:'https://anilist.co/anime/21647'},
+  {e:'🕰️',n:'Predestination',c:'Time Travel',t:'Don\'t look it up. Just watch it.',u:'https://www.imdb.com/title/tt2397535/'},
+  {e:'🎪',n:'Dr. Who',c:'Time Travel',t:'The whole show is basically a love letter to time travel.',u:'https://www.imdb.com/title/tt0436992/'},
+  {e:'🏃',n:'Tokyo Revengers',c:'Time Travel',t:'Go back, fix things, make it worse. Repeat.',u:'https://anilist.co/anime/120120'},
+  {e:'❄️',n:'Erased',c:'Time Travel',t:'Six episodes in and I was fully gone.',u:'https://anilist.co/anime/21234'},
+  {e:'🤖',n:'Terminator',c:'Time Travel',t:'The grandfather paradox as an action film.',u:'https://www.imdb.com/title/tt0088247/'},
+  {e:'🌀',n:'Loki',c:'Time Travel',t:'TVA and variants and timelines. Very much my thing.',u:'https://www.imdb.com/title/tt9140554/'},
+  // Manga / LN
   {e:'📖',n:'Omniscient Reader\'s Viewpoint',c:'Manga/LN',t:'All-time favourite. The ending destroyed me.',u:'https://anilist.co/manga/112268'},
   {e:'👑',n:'Overlord (Light Novel)',c:'Manga/LN',t:'The novel goes much deeper than the anime.',u:'https://anilist.co/manga/85470'},
   {e:'🧊',n:'That Time I Got Reincarnated as a Slime (LN)',c:'Manga/LN',t:'How to write an OP protagonist correctly.',u:'https://anilist.co/manga/97676'},
   {e:'⚔️',n:'Attack on Titan',c:'Manga/LN',t:'Finished all 141 chapters. The ending is what it is.',u:'https://anilist.co/manga/53390'},
   {e:'🌸',n:'Horimiya',c:'Manga/LN',t:'Best romance manga. The anime did it justice.',u:'https://anilist.co/manga/44347'},
   {e:'👔',n:'Maid Sama!',c:'Manga/LN',t:'Classic. Usui is just built different.',u:'https://anilist.co/manga/36677'},
+  {e:'👁️',n:'Steel Ball Run',c:'Manga/LN',t:'Part 7 of JoJo. Deserves its own everything. The best.',u:'https://anilist.co/manga/552'},
 ];
 const P3_QUIZ=[
   {q:"It's 11 PM on a Tuesday. You're…",o:["Finally sleeping like a normal person","Starting one more episode","Reading manga or watching anime","Deep in a game telling yourself '5 more minutes'"],s:[0,1,2,3]},
@@ -754,7 +822,7 @@ function buildPost03(){
   if(!catWrap||!listWrap||catWrap.dataset.built)return;
   catWrap.dataset.built='1';
 
-  const cats=[P3_ALL,'Games','Anime','Shows','Movies','Manga/LN'];
+  const cats=[P3_ALL,'Games','Anime','Shows','Movies','Time Travel','Manga/LN'];
   let activeCat=P3_ALL;
 
   const catBtnStyle='font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(255,255,255,.07);background:transparent;color:rgba(237,233,224,.45);cursor:pointer;font-family:\'DM Sans\',sans-serif;transition:all .2s';
@@ -808,16 +876,16 @@ function buildPost03(){
       const score=answers.reduce((a,v,i)=>a+(v!==null?P3_QUIZ[i].s[v]:0),0);
       const pct=Math.round((score/total)*100);
       const v=p3Verdict(pct);
-      quizInner.innerHTML=`<div style="text-align:center;padding:8px 0"><div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,14vw,108px);letter-spacing:.02em;line-height:1;background:linear-gradient(135deg,var(--accent,#e05a2b),#c8a96e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${pct}%</div><div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:rgba(237,233,224,.7);margin-bottom:8px">${v.l}</div><div style="font-size:13.5px;color:rgba(237,233,224,.55);line-height:1.65;max-width:400px;margin:0 auto 24px;font-family:'DM Sans',sans-serif">${v.t}</div><button onclick="(function(){var qi=document.getElementById('p3-quiz-inner');if(qi){qi.dataset.built='';window._p3QuizReset&&window._p3QuizReset();}})()" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(237,233,224,.55);cursor:pointer;transition:all .2s">Try Again</button></div>`;
+      quizInner.innerHTML=`<div style="text-align:center;padding:8px 0"><div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,14vw,108px);letter-spacing:.02em;line-height:1;background:linear-gradient(135deg,var(--accent),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${pct}%</div><div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--mid);margin-bottom:8px">${v.l}</div><div style="font-size:13.5px;color:var(--mid);line-height:1.65;max-width:400px;margin:0 auto 24px;font-family:'DM Sans',sans-serif">${v.t}</div><button onclick="(function(){var qi=document.getElementById('p3-quiz-inner');if(qi){qi.dataset.built='';window._p3QuizReset&&window._p3QuizReset();}})()" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:10px 20px;border:1px solid var(--border2);background:transparent;color:var(--mid);cursor:pointer;transition:all .2s">Try Again</button></div>`;
       return;
     }
     const q=P3_QUIZ[cur];
     const prog=Math.round(((cur+(answers[cur]!==null?1:0))/P3_QUIZ.length)*100);
-    quizInner.innerHTML=`<div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(237,233,224,.4);margin-bottom:12px;font-family:'DM Sans',sans-serif">${cur+1} / ${P3_QUIZ.length}</div><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,21px);color:var(--text,#ede9e0);margin-bottom:20px;line-height:1.35">${q.q}</div><div id="p3-quiz-opts" style="display:flex;flex-direction:column;gap:7px"></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px"><button id="p3-qback" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;border:1px solid rgba(255,255,255,.07);background:transparent;color:rgba(237,233,224,.5);cursor:pointer;transition:all .2s" ${cur===0?'disabled':''}>← Back</button><div style="flex:1;height:2px;background:rgba(255,255,255,.08);position:relative;overflow:hidden"><div style="height:100%;background:var(--accent,#e05a2b);width:${prog}%;transition:width .4s cubic-bezier(.16,1,.3,1)"></div></div><button id="p3-qnext" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;border:1px solid rgba(224,90,43,.4);background:rgba(224,90,43,.1);color:#ede9e0;cursor:pointer;transition:all .2s" ${answers[cur]===null?'disabled':''}>${cur<P3_QUIZ.length-1?'Next →':'See Result'}</button></div>`;
+    quizInner.innerHTML=`<div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;font-family:'DM Sans',sans-serif">${cur+1} / ${P3_QUIZ.length}</div><div style="font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,21px);color:var(--text);margin-bottom:20px;line-height:1.35">${q.q}</div><div id="p3-quiz-opts" style="display:flex;flex-direction:column;gap:7px"></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px"><button id="p3-qback" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;border:1px solid var(--border2);background:transparent;color:var(--mid);cursor:pointer;transition:all .2s" ${cur===0?'disabled':''}>← Back</button><div style="flex:1;height:2px;background:var(--faint);position:relative;overflow:hidden"><div style="height:100%;background:var(--accent);width:${prog}%;transition:width .4s cubic-bezier(.16,1,.3,1)"></div></div><button id="p3-qnext" style="font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;border:1px solid var(--accent);background:var(--accent-08);color:var(--text);cursor:pointer;transition:all .2s" ${answers[cur]===null?'disabled':''}>${cur<P3_QUIZ.length-1?'Next →':'See Result'}</button></div>`;
     const opts=document.getElementById('p3-quiz-opts');
     q.o.forEach((o,i)=>{
       const btn=document.createElement('button');
-      btn.style.cssText=`padding:11px 16px;border:1px solid ${answers[cur]===i?'rgba(224,90,43,.6)':'rgba(255,255,255,.07)'};background:${answers[cur]===i?'rgba(224,90,43,.1)':'transparent'};color:${answers[cur]===i?'#ede9e0':'rgba(237,233,224,.6)'};font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;text-align:left;transition:all .2s;border-left-width:${answers[cur]===i?'3px':'1px'}`;
+      btn.style.cssText=`padding:11px 16px;border:1px solid ${answers[cur]===i?'var(--accent)':'var(--border2)'};background:${answers[cur]===i?'var(--accent-08)':'transparent'};color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;text-align:left;transition:all .2s;border-left-width:${answers[cur]===i?'3px':'1px'}`;
       btn.textContent=o;
       btn.addEventListener('click',()=>{answers[cur]=i;renderQuiz();});
       btn.addEventListener('mouseenter',()=>{if(answers[cur]!==i){btn.style.borderColor='rgba(224,90,43,.3)';btn.style.color='#ede9e0';btn.style.background='rgba(224,90,43,.05)';}});
@@ -1022,6 +1090,41 @@ window.addEventListener('scroll',()=>{document.getElementById('scroll-top').clas
   const start=Date.now();const fired={30:false,60:false,120:false,300:false};
   setInterval(()=>{const secs=Math.round((Date.now()-start)/1000);[30,60,120,300].forEach(s=>{if(secs>=s&&!fired[s]){gtag('event','time_on_page',{seconds:s,page:'blog'});fired[s]=true;}});},5000);
   let fi=false;['click','keydown','touchstart'].forEach(ev=>window.addEventListener(ev,()=>{if(fi)return;fi=true;gtag('event','first_interaction',{page:'blog'});},{once:true,passive:true}));
+})();
+</script>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button id="lb-close" aria-label="Close image">&#x2715;</button>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<script>
+(function(){
+  const lb=document.getElementById('lb');
+  const lbImg=document.getElementById('lb-img');
+  const lbClose=document.getElementById('lb-close');
+  if(!lb||!lbImg)return;
+
+  function openLb(src,alt){
+    lbImg.src=src;
+    lbImg.alt=alt||'';
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeLb(){
+    lb.classList.remove('open');
+    document.body.style.overflow='';
+    setTimeout(()=>{lbImg.src='';},300);
+  }
+
+  // Delegate clicks on any .post-img inside the reading view
+  document.getElementById('rv-body').addEventListener('click',e=>{
+    const img=e.target.closest('.post-img');
+    if(img){e.stopPropagation();openLb(img.src,img.alt);}
+  });
+
+  lb.addEventListener('click',e=>{if(e.target!==lbClose&&e.target!==lbImg)closeLb();});
+  lbClose.addEventListener('click',closeLb);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))closeLb();});
 })();
 </script>
 </body>
