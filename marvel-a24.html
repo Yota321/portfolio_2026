@@ -244,42 +244,47 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .merch-grid img{width:100%;display:block;border-radius:10px;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);transition:border-color .5s}
 @media(max-width:600px){.merch-grid{grid-template-columns:1fr;padding:0 20px}}
 
-/* ══ MERCH GRID — portrait poster left (full, no crop), tote bag right (fills same height, crops if needed) ══ */
+/* ══ MERCH GRID — portrait left (no crop, drives height), landscape right (fills gap, crops) ══ */
 .merch-grid-natural{
   padding:0 clamp(24px,6vw,80px);
   margin:clamp(28px,5vh,56px) 0;
-  display:grid;
-  /* left col sizes itself from the portrait image, right fills remaining space */
-  grid-template-columns:auto 1fr;
+  display:flex;
   gap:clamp(12px,2vw,24px);
   align-items:stretch;
+  height:clamp(320px,42vw,600px); /* shared height — both images match this */
 }
-/* left: portrait poster — shows fully, drives the row height */
+/* left: portrait — no crop, width scales naturally from height */
 .merch-grid-natural .mn-poster{
   display:block;
   width:auto;
-  max-width:52%;   /* never wider than half the container */
-  height:auto;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
   border-radius:10px;
   border:1px solid var(--border);
   transition:border-color .5s;
   flex-shrink:0;
 }
-/* right: tote bag — same height as poster, cropped to fill width */
+/* right: landscape — fills remaining space at same height, crops width */
 .merch-grid-natural .mn-tote{
   display:block;
-  width:100%;
+  flex:1;
+  min-width:0;
   height:100%;
-  border-radius:10px;
-  border:1px solid var(--border);
   object-fit:cover;
   object-position:center;
+  border-radius:10px;
+  border:1px solid var(--border);
   transition:border-color .5s;
 }
 @media(max-width:600px){
-  .merch-grid-natural{grid-template-columns:1fr;padding:0 20px}
-  .merch-grid-natural .mn-poster{width:100%;max-width:100%;height:auto}
-  .merch-grid-natural .mn-tote{height:auto;aspect-ratio:4/3}
+  .merch-grid-natural{
+    flex-direction:column;
+    height:auto;
+    padding:0 20px;
+  }
+  .merch-grid-natural .mn-poster{width:100%;height:auto;object-fit:unset}
+  .merch-grid-natural .mn-tote{width:100%;height:clamp(180px,50vw,260px)}
 }
 
 /* ══ SLIGHT INNER PADDING ON ALL PROJECT IMAGES & VIDEOS ══ */
