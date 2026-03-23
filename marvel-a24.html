@@ -244,21 +244,50 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .merch-grid img{width:100%;display:block;border-radius:10px;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);transition:border-color .5s}
 @media(max-width:600px){.merch-grid{grid-template-columns:1fr;padding:0 20px}}
 
-/* ══ MERCH GRID — NATURAL HEIGHT (framed poster left, tote fills right) ══ */
-.merch-grid-natural{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);align-items:stretch}
-.merch-grid-natural img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s}
-.merch-grid-natural img:first-child{height:auto;object-fit:unset;aspect-ratio:unset}
-.merch-grid-natural img:last-child{height:100%;object-fit:cover;aspect-ratio:unset}
+/* ══ MERCH GRID — portrait poster left (full, no crop), tote bag right (fills same height, crops if needed) ══ */
+.merch-grid-natural{
+  padding:0 clamp(24px,6vw,80px);
+  margin:clamp(28px,5vh,56px) 0;
+  display:grid;
+  /* left col sizes itself from the portrait image, right fills remaining space */
+  grid-template-columns:auto 1fr;
+  gap:clamp(12px,2vw,24px);
+  align-items:stretch;
+}
+/* left: portrait poster — shows fully, drives the row height */
+.merch-grid-natural .mn-poster{
+  display:block;
+  width:auto;
+  max-width:52%;   /* never wider than half the container */
+  height:auto;
+  border-radius:10px;
+  border:1px solid var(--border);
+  transition:border-color .5s;
+  flex-shrink:0;
+}
+/* right: tote bag — same height as poster, cropped to fill width */
+.merch-grid-natural .mn-tote{
+  display:block;
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  border:1px solid var(--border);
+  object-fit:cover;
+  object-position:center;
+  transition:border-color .5s;
+}
 @media(max-width:600px){
   .merch-grid-natural{grid-template-columns:1fr;padding:0 20px}
-  .merch-grid-natural img:last-child{height:auto;object-fit:cover;aspect-ratio:4/3}
+  .merch-grid-natural .mn-poster{width:100%;max-width:100%;height:auto}
+  .merch-grid-natural .mn-tote{height:auto;aspect-ratio:4/3}
 }
 
 /* ══ SLIGHT INNER PADDING ON ALL PROJECT IMAGES & VIDEOS ══ */
 .img-full img,.img-contained img,.poster-grid img,
-.merch-grid img,.merch-grid-natural img,.screen-full img{
+.merch-grid img,.screen-full img{
   padding:2px;background:var(--surface);border-radius:11px;box-sizing:border-box;
 }
+.mn-poster,.mn-tote{padding:2px;background:var(--surface);box-sizing:border-box}
 .entry-video-inner{padding:2px;background:var(--surface)}
 .entry-video-inner video{border-radius:9px}
 
@@ -559,8 +588,8 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
   <img loading="lazy" src="page3_8.png" data-lb alt="Marvel x A24 Loki DVD case mockup by Golam Sayon Ahamed — cinematic packaging consistent with the poster system"/>
 </div>
 <div class="merch-grid-natural rv">
-  <img loading="lazy" src="page3_12.png" data-lb alt="Marvel x A24 Loki poster in ribbed metal frame mockup by Golam Sayon Ahamed — physical print installation"/>
-  <img loading="lazy" src="page3_13.png" data-lb alt="Marvel x A24 tote bag merchandise by Golam Sayon Ahamed — terracotta and slate blue with MARVEL wordmark and Where Intimacy Meets Infinity tagline"/>
+  <img loading="lazy" src="page3_12.png" class="mn-poster" data-lb alt="Marvel x A24 Loki poster in ribbed metal frame mockup by Golam Sayon Ahamed — physical print installation"/>
+  <img loading="lazy" src="page3_13.png" class="mn-tote" data-lb alt="Marvel x A24 tote bag merchandise by Golam Sayon Ahamed — terracotta and slate blue with MARVEL wordmark and Where Intimacy Meets Infinity tagline"/>
 </div>
 <div class="caption rv">Merchandise · t-shirt, DVD case, framed poster, and tote bags as narrative extensions of the film identity</div>
 
