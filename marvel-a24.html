@@ -244,6 +244,37 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .merch-grid img{width:100%;display:block;border-radius:10px;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);transition:border-color .5s}
 @media(max-width:600px){.merch-grid{grid-template-columns:1fr;padding:0 20px}}
 
+/* ══ MERCH GRID — NATURAL HEIGHT (framed poster left, tote fills right) ══ */
+.merch-grid-natural{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);align-items:stretch}
+.merch-grid-natural img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s}
+.merch-grid-natural img:first-child{height:auto;object-fit:unset;aspect-ratio:unset}
+.merch-grid-natural img:last-child{height:100%;object-fit:cover;aspect-ratio:unset}
+@media(max-width:600px){
+  .merch-grid-natural{grid-template-columns:1fr;padding:0 20px}
+  .merch-grid-natural img:last-child{height:auto;object-fit:cover;aspect-ratio:4/3}
+}
+
+/* ══ SLIGHT INNER PADDING ON ALL PROJECT IMAGES & VIDEOS ══ */
+.img-full img,.img-contained img,.poster-grid img,
+.merch-grid img,.merch-grid-natural img,.screen-full img{
+  padding:5px;background:var(--surface);border-radius:12px;box-sizing:border-box;
+}
+.entry-video-inner{padding:5px;background:var(--surface)}
+.entry-video-inner video{border-radius:7px}
+
+/* ══ LIGHTBOX ══ */
+#lb{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s cubic-bezier(.16,1,.3,1);cursor:zoom-out!important}
+#lb.open{opacity:1;pointer-events:auto}
+#lb-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;cursor:default!important}
+#lb-img{max-width:90vw;max-height:90svh;width:auto;height:auto;display:block;border-radius:8px;box-shadow:0 32px 80px rgba(0,0,0,.7);transform:scale(.92);transition:transform .35s cubic-bezier(.16,1,.3,1);pointer-events:none;user-select:none}
+#lb.open #lb-img{transform:scale(1)}
+#lb-close{position:fixed;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer!important;z-index:100000;transition:background .2s,transform .2s}
+#lb-close:hover{background:rgba(255,255,255,.26);transform:scale(1.08)}
+#lb-close svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round}
+#lb-hint{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.28);pointer-events:none}
+img[data-lb]{cursor:zoom-in!important;transition:filter .2s}
+img[data-lb]:hover{filter:brightness(.85)}
+
 /* ══ STREAMING SCREEN ══ */
 .screen-full{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0}
 .screen-full img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s}
@@ -409,11 +440,11 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="img-full rv">
-  <img loading="lazy" src="page3_1.png" alt="Marvel x A24 logo lockup by Golam Sayon Ahamed — restrained typographic brand identity combining Marvel and A24 visual languages"/>
+  <img loading="lazy" src="page3_1.png" data-lb alt="Marvel x A24 logo lockup by Golam Sayon Ahamed — restrained typographic brand identity combining Marvel and A24 visual languages"/>
 </div>
 
 <div class="img-full rv">
-  <img loading="lazy" src="page3_2.png" alt="Marvel x A24 visual direction and moodboard by Golam Sayon Ahamed — tone, colour palette, and cinematic reference for brand reimagining"/>
+  <img loading="lazy" src="page3_2.png" data-lb alt="Marvel x A24 visual direction and moodboard by Golam Sayon Ahamed — tone, colour palette, and cinematic reference for brand reimagining"/>
 </div>
 <div class="caption rv">Visual direction · tone, palette, and cinematic reference</div>
 
@@ -496,15 +527,15 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="poster-grid rv">
-  <img loading="lazy" src="page3_3.png" alt="Wakanda poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Silhouette of a panther against a burning orange horizon. Tagline: A place remembered. A king reborn."/>
-  <img loading="lazy" src="page3_4.png" alt="Odinson poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Blurred ghostly figure in muted greys. Tagline: Gods cry too."/>
-  <img loading="lazy" src="page3_5.png" alt="Loki poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Lone figure in a dark green tunnel. Tagline: The many versions of you are real."/>
-  <img loading="lazy" src="page3_6.png" alt="Peter poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Grain texture portrait in warm tones."/>
+  <img loading="lazy" src="page3_3.png" data-lb alt="Wakanda poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Silhouette of a panther against a burning orange horizon. Tagline: A place remembered. A king reborn."/>
+  <img loading="lazy" src="page3_4.png" data-lb alt="Odinson poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Blurred ghostly figure in muted greys. Tagline: Gods cry too."/>
+  <img loading="lazy" src="page3_5.png" data-lb alt="Loki poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Lone figure in a dark green tunnel. Tagline: The many versions of you are real."/>
+  <img loading="lazy" src="page3_6.png" data-lb alt="Peter poster — Marvel x A24 brand concept by Golam Sayon Ahamed. Grain texture portrait in warm tones."/>
 </div>
 <div class="caption rv">Poster series · four standalone film identities within the same universe</div>
 
 <div class="img-contained rv" style="margin-top:clamp(28px,5vh,56px)">
-  <img loading="lazy" src="page3_11.png" alt="Marvel x A24 poster mockup by Golam Sayon Ahamed — Wakanda, Loki, and Odinson as framed A3 prints on a wall"/>
+  <img loading="lazy" src="page3_11.png" data-lb alt="Marvel x A24 poster mockup by Golam Sayon Ahamed — Wakanda, Loki, and Odinson as framed A3 prints on a wall"/>
 </div>
 <div class="caption rv">Environmental mockup · how the poster series reads at scale</div>
 
@@ -525,12 +556,12 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="merch-grid rv">
-  <img loading="lazy" src="page3_7.png" alt="Marvel x A24 merchandise t-shirt by Golam Sayon Ahamed — minimal typography, restrained design, no hero branding"/>
-  <img loading="lazy" src="page3_8.png" alt="Marvel x A24 Loki DVD case mockup by Golam Sayon Ahamed — cinematic packaging consistent with the poster system"/>
+  <img loading="lazy" src="page3_7.png" data-lb alt="Marvel x A24 merchandise t-shirt by Golam Sayon Ahamed — minimal typography, restrained design, no hero branding"/>
+  <img loading="lazy" src="page3_8.png" data-lb alt="Marvel x A24 Loki DVD case mockup by Golam Sayon Ahamed — cinematic packaging consistent with the poster system"/>
 </div>
-<div class="merch-grid rv">
-  <img loading="lazy" src="page3_12.png" alt="Marvel x A24 Loki poster in ribbed metal frame mockup by Golam Sayon Ahamed — physical print installation"/>
-  <img loading="lazy" src="page3_13.png" alt="Marvel x A24 tote bag merchandise by Golam Sayon Ahamed — terracotta and slate blue with MARVEL wordmark and Where Intimacy Meets Infinity tagline"/>
+<div class="merch-grid-natural rv">
+  <img loading="lazy" src="page3_12.png" data-lb alt="Marvel x A24 Loki poster in ribbed metal frame mockup by Golam Sayon Ahamed — physical print installation"/>
+  <img loading="lazy" src="page3_13.png" data-lb alt="Marvel x A24 tote bag merchandise by Golam Sayon Ahamed — terracotta and slate blue with MARVEL wordmark and Where Intimacy Meets Infinity tagline"/>
 </div>
 <div class="caption rv">Merchandise · t-shirt, DVD case, framed poster, and tote bags as narrative extensions of the film identity</div>
 
@@ -551,7 +582,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <div class="screen-full rv">
-  <img loading="lazy" src="page3_10.png" alt="Marvel x A24 conceptual streaming platform UI by Golam Sayon Ahamed — Netflix-style interface with serif typography and Odinson as featured title"/>
+  <img loading="lazy" src="page3_10.png" data-lb alt="Marvel x A24 conceptual streaming platform UI by Golam Sayon Ahamed — Netflix-style interface with serif typography and Odinson as featured title"/>
 </div>
 <div class="caption rv">Streaming platform · conceptual interface with Odinson selected</div>
 
@@ -736,6 +767,99 @@ if(mqEl&&mqIn){mqEl.addEventListener('touchstart',()=>{mqIn.style.animationPlayS
   window.addEventListener('load',()=>{setTimeout(checkAll,300);setTimeout(checkAll,900);});
   setTimeout(checkAll,500);
 })();
+
+/* ── LIGHTBOX ── */
+(function(){
+  const lb      = document.getElementById('lb');
+  const lbImg   = document.getElementById('lb-img');
+  const lbWrap  = document.getElementById('lb-img-wrap');
+  const lbClose = document.getElementById('lb-close');
+  if(!lb||!lbImg) return;
+
+  let scale = 1;
+  const MIN_SCALE = 0.5, MAX_SCALE = 5;
+
+  function setScale(v){
+    scale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, v));
+    lbWrap.style.transform = 'scale('+scale+')';
+  }
+
+  function open(src, alt){
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    scale = 1;
+    lbWrap.style.transform = 'scale(1)';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    // clear src after transition
+    setTimeout(()=>{ lbImg.src=''; }, 350);
+  }
+
+  // open on image click
+  document.querySelectorAll('img[data-lb]').forEach(img=>{
+    img.addEventListener('click', ()=> open(img.src, img.alt));
+  });
+
+  // close button
+  lbClose.addEventListener('click', close);
+
+  // click backdrop (outside image) to close
+  lb.addEventListener('click', e=>{
+    if(!lbWrap.contains(e.target)) close();
+  });
+
+  // escape key
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape') close();
+  });
+
+  // scroll wheel zoom
+  lb.addEventListener('wheel', e=>{
+    if(!lb.classList.contains('open')) return;
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 0.15 : -0.15;
+    setScale(scale + delta);
+  }, {passive: false});
+
+  // pinch-to-zoom (touch)
+  let lastDist = 0;
+  lb.addEventListener('touchstart', e=>{
+    if(e.touches.length===2){
+      lastDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+    }
+  },{passive:true});
+  lb.addEventListener('touchmove', e=>{
+    if(e.touches.length===2){
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      if(lastDist>0) setScale(scale * (dist/lastDist));
+      lastDist = dist;
+      e.preventDefault();
+    }
+  },{passive:false});
+  lb.addEventListener('touchend', ()=>{ lastDist=0; },{passive:true});
+})();
 </script>
+
+<!-- LIGHTBOX -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="lb-close" aria-label="Close">
+    <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div id="lb-img-wrap">
+    <img id="lb-img" src="" alt=""/>
+  </div>
+  <span id="lb-hint">Scroll to zoom · Click outside to close</span>
+</div>
 </body>
 </html>
