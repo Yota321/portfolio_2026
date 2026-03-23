@@ -75,7 +75,7 @@
   },
   "sameAs": [
     "https://www.sayanahamed.online/",
-    "https://www.behance.net/golamsayanahamed",
+    "https://www.behance.net/sayanbox",
     "https://github.com/Yota321",
     "https://in.linkedin.com/in/golam-sayon-ahamed-568913253"
   ],
@@ -1226,6 +1226,9 @@ html::-webkit-scrollbar{display:none}
   flex-direction:column;
   gap:clamp(28px,4vh,48px);
 }
+@media(min-width:681px){
+  .wl{padding:0 clamp(32px,6vw,112px)}
+}
 
 /* row wrappers */
 .wi-row{
@@ -1383,21 +1386,19 @@ html::-webkit-scrollbar{display:none}
   .wi-row.solo .wi-title{font-size:clamp(28px,8vw,48px)}
 }
 
-/* 01 Run Your Story + 05 Other Work — full image visible, height auto-fits */
-.wi-row.solo .wi-img-wrap,
-.wi-row.pair:last-child .wi:last-child .wi-img-wrap{
-  aspect-ratio:unset;    /* remove fixed ratio so height follows image */
+/* 01 Run Your Story — full image visible, height auto-fits */
+.wi-row.solo .wi-img-wrap{
+  aspect-ratio:unset;
   height:auto;
 }
-.wi-row.solo .wi-media,
-.wi-row.pair:last-child .wi:last-child .wi-media{
-  position:relative;     /* back to normal flow so image sets the height */
+.wi-row.solo .wi-media{
+  position:relative;
   inset:auto;
   width:100%;
   height:auto;
   display:block;
   object-fit:unset;
-  transform:none !important; /* disable hover scale — would cause layout shift */
+  transform:none !important;
 }
 .connect{background:var(--panel);transition:background .5s;overflow:visible}
 .connect .sec-tag{color:var(--pacc)}
@@ -1503,7 +1504,6 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 <nav class="nav">
   <a href="#hero" class="nav-logo" id="nav-logo-btn">G.S.Ahamed</a>
   <ul class="nav-links">
-    <li><a href="blog.html" onclick="gtag('event','blog_click',{location:'nav'})">Blog</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#works">Work</a></li>
     <li><a href="#connect">Contact</a></li>
@@ -1546,7 +1546,6 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
 <!-- MOBILE NAV -->
 <nav class="nav-mobile" id="nav-mobile">
   <ul>
-    <li><a href="blog.html" class="mob-link" onclick="gtag('event','blog_click',{location:'mobile_nav'})">Blog</a></li>
     <li><a href="#about" class="mob-link">About</a></li>
     <li><a href="#works" class="mob-link">Work</a></li>
     <li><a href="#connect" class="mob-link">Contact</a></li>
@@ -1906,9 +1905,9 @@ footer{padding:clamp(18px,3vh,26px) clamp(24px,6vw,80px);background:var(--bg);bo
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><span class="c-arr">↗</span></div>
       <div><div class="c-name">LinkedIn</div><div class="c-role">Professional</div><div class="c-handle">golam-sayon-ahamed</div></div>
     </a>
-    <a href="https://www.behance.net/golamsayanahamed" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.15s" onclick="gtag('event','contact_click',{method:'behance'})">
+    <a href="https://www.behance.net/sayanbox" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.15s" onclick="gtag('event','contact_click',{method:'behance'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="c-arr">↗</span></div>
-      <div><div class="c-name">Behance</div><div class="c-role">Portfolio</div><div class="c-handle">golamsayanahamed</div></div>
+      <div><div class="c-name">Behance</div><div class="c-role">Portfolio</div><div class="c-handle">sayanbox</div></div>
     </a>
     <a href="https://github.com/Yota321" target="_blank" rel="noopener" class="c-card rv" style="transition-delay:.2s" onclick="gtag('event','contact_click',{method:'github'})">
       <div class="c-top"><div class="c-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div><span class="c-arr">↗</span></div>
