@@ -39,6 +39,13 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' letter-spacing='-0.5' fill='%23ede9e0'>GS</text></svg>"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJD2MSVYRS"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LJD2MSVYRS');</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w0p6kyh1oi");
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
@@ -163,10 +170,10 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .rv-date{font-size:clamp(9px,.9vw,11px);letter-spacing:.14em;color:var(--dim);font-family:'Cormorant Garamond',serif;font-style:italic}
 .rv-read{font-size:clamp(8px,.82vw,9.5px);letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
 .rv-read::before{content:'·';margin-right:14px;opacity:.4}
-.rv-close{position:fixed;top:clamp(14px,2.2vh,22px);right:clamp(16px,3vw,28px);z-index:801;width:44px;height:44px;border-radius:50%;background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:none;color:var(--mid);font-size:16px;line-height:1;opacity:0;pointer-events:none;transition:background .2s,transform .2s,color .2s,opacity .3s}
-@media(hover:none),(max-width:640px){.rv-close{cursor:pointer}}
-#reading-view.open .rv-close{opacity:1;pointer-events:auto}
-.rv-close:hover{background:var(--surface);border-color:var(--text);color:var(--text);transform:scale(1.08)}
+
+
+
+
 .rv-body{max-width:660px;margin:0 auto;padding:clamp(44px,7vh,72px) clamp(24px,6vw,80px) clamp(80px,12vh,120px)}
 .rv-body p{font-size:clamp(15px,1.4vw,17px);font-weight:300;line-height:2.05;color:var(--mid);margin-bottom:clamp(18px,2.8vh,26px);transition:color .5s}
 .rv-body p strong{color:var(--text);font-weight:500}
@@ -181,8 +188,8 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 #lb.open{background:rgba(0,0,0,.88);pointer-events:auto;cursor:zoom-out}
 #lb img{max-width:100%;max-height:90vh;border-radius:10px;border:1px solid rgba(255,255,255,.1);object-fit:contain;opacity:0;transform:scale(.92);transition:opacity .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1);pointer-events:none;box-shadow:0 24px 80px rgba(0,0,0,.7)}
 #lb.open img{opacity:1;transform:scale(1)}
-#lb-close{position:absolute;top:clamp(14px,2.2vh,22px);right:clamp(16px,3vw,28px);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(237,233,224,.7);font-size:16px;transition:background .2s,color .2s,transform .2s}
-#lb-close:hover{background:rgba(255,255,255,.16);color:#fff;transform:scale(1.08)}
+#lb-close{position:absolute;top:clamp(14px,2.2vh,22px);right:clamp(16px,3vw,28px);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:none;align-items:center;justify-content:center;cursor:pointer;color:rgba(237,233,224,.7);font-size:16px;transition:background .2s,color .2s,transform .2s}
+#lb.open #lb-close{display:flex}#lb-close:hover{background:rgba(255,255,255,.16);color:#fff;transform:scale(1.08)}
 .post-img-caption{font-size:clamp(9px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;margin-bottom:clamp(28px,4.5vh,44px);transition:color .5s}
 .post-img-caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0}
 .post-res{display:flex;flex-direction:column;gap:0;margin:clamp(16px,2.5vh,24px) 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .5s}
@@ -229,7 +236,6 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 <div id="spb"></div>
 
 <div id="reading-view" role="dialog" aria-modal="true" aria-label="Blog post reader">
-  <button class="rv-close" id="rv-close-btn" aria-label="Close post">&#x2715;</button>
   <div class="rv-hero">
     <img id="rv-img" src="" alt="" loading="eager"/>
     <div class="rv-hero-gradient"></div>
@@ -940,7 +946,6 @@ function updateHero(){
 }
 
 const rv=document.getElementById('reading-view');
-const rvClose=document.getElementById('rv-close-btn');
 const rvImg=document.getElementById('rv-img');
 const rvTag=document.getElementById('rv-tag');
 const rvTitle=document.getElementById('rv-title');
@@ -948,6 +953,7 @@ const rvDate=document.getElementById('rv-date');
 const rvRead=document.getElementById('rv-read');
 const rvBody=document.getElementById('rv-body');
 let curPid=null;
+let rvCloseBtn=null;
 
 function openPost(pid){
   const m=POST_META[pid];curPid=pid;
@@ -959,6 +965,13 @@ function openPost(pid){
   rv.classList.add('open');document.body.style.overflow='hidden';
   document.getElementById('theme-toggle-btn').style.display='none';
   document.getElementById('theme-bar').classList.remove('open');
+  // Create close button fresh each time
+  rvCloseBtn=document.createElement('button');
+  rvCloseBtn.setAttribute('aria-label','Close post');
+  rvCloseBtn.innerHTML='&#x2715;';
+  rvCloseBtn.style.cssText='position:fixed;top:clamp(14px,2.2vh,22px);right:clamp(16px,3vw,28px);z-index:801;width:44px;height:44px;border-radius:50%;background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--mid);font-size:16px;line-height:1;';
+  rvCloseBtn.addEventListener('click',closePost);
+  document.body.appendChild(rvCloseBtn);
   if(pid==='02')buildThemeGrid();
   if(pid==='03')setTimeout(buildPost03,50);
   gtag('event','blog_post_open',{post_id:pid,post_title:m.title});
@@ -967,13 +980,14 @@ function closePost(){
   if(curPid){markRead(curPid);updateHero();}
   rv.classList.remove('open');document.body.style.overflow='';
   document.getElementById('theme-toggle-btn').style.display='';
+  // Destroy close button
+  if(rvCloseBtn){rvCloseBtn.remove();rvCloseBtn=null;}
   gtag('event','blog_post_close',{post_id:curPid});curPid=null;
 }
 document.querySelectorAll('.blog-card').forEach(c=>c.addEventListener('click',()=>{
   gtag('event','blog_card_click',{post_id:c.dataset.postid,post_title:c.dataset.title,source:'card_list'});
   openPost(c.dataset.postid);
 }));
-rvClose.addEventListener('click',closePost);
 rv.addEventListener('click',e=>{
   const a=e.target.closest('.rv-body a');
   if(a){gtag('event','blog_resource_click',{post_id:curPid,url:a.href,text:a.textContent.trim().substring(0,50)});}
