@@ -131,8 +131,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;b
 ::selection{background:var(--accent);color:#fff}
 
 /* ══ CURSOR ══ */
-#cur{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .4s,opacity .2s}
-#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--accent-25);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
+#cur{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:100001;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .4s,opacity .2s}
+#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--accent-25);pointer-events:none;z-index:100000;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s}
 body.cur-h #cur{width:16px;height:16px;background:var(--text);mix-blend-mode:difference}
 body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 @media(hover:none),(max-width:640px){#cur,#cur-ring{display:none!important}}
@@ -240,8 +240,13 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 
 /* Phone-sized centered image for WhatsApp */
 .phone-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;justify-content:center}
-.phone-img-wrap img{max-width:clamp(240px,28vw,360px);width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 32px 80px var(--shadow)}
+.phone-img-wrap img{max-width:clamp(360px,42vw,540px);width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 32px 80px var(--shadow)}
 .phone-img-wrap img:hover{transform:scale(1.02);box-shadow:0 40px 100px var(--shadow)}
+
+/* A4-portrait centered image for Meta post */
+.a4-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;justify-content:center}
+.a4-img-wrap img{max-width:clamp(280px,32vw,420px);width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 20px 60px var(--shadow)}
+.a4-img-wrap img:hover{transform:scale(1.01);box-shadow:0 28px 72px var(--shadow)}
 
 .caption{padding:0 clamp(24px,6vw,80px);margin-top:clamp(8px,1.2vh,12px);font-size:clamp(9px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;transition:color .5s}
 .caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0;transition:background .5s}
@@ -565,7 +570,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 <div class="caption rv">Meta carousel · five-slide campaign sequence, approved and going live</div>
 
-<div class="img-contained rv" style="margin-top:clamp(32px,5vh,60px)">
+<div class="a4-img-wrap rv" style="margin-top:clamp(32px,5vh,60px)">
   <img src="RaazMD/page4_13.webp" alt="Meta campaign post — standalone social creative" data-lightbox loading="lazy"/>
 </div>
 <div class="caption rv">Meta post · standalone campaign creative</div>
