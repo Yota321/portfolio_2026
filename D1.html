@@ -238,10 +238,18 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .img-grid-2-narrow img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s;cursor:zoom-in!important}
 .img-grid-2-narrow img:hover{transform:scale(1.01)}
 
-/* Phone-sized centered image for WhatsApp */
-.phone-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;justify-content:center}
-.phone-img-wrap img{max-width:clamp(360px,42vw,540px);width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 32px 80px var(--shadow)}
-.phone-img-wrap img:hover{transform:scale(1.02);box-shadow:0 40px 100px var(--shadow)}
+/* A4-portrait grid — for prescription images */
+.img-grid-2-portrait{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.8vw,20px);max-width:clamp(500px,60vw,820px);margin-left:auto;margin-right:auto}
+.img-grid-2-portrait img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s;cursor:zoom-in!important}
+.img-grid-2-portrait img:hover{transform:scale(1.01)}
+
+/* Medium centered image — for YouTube thumbnail */
+.mid-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;justify-content:center}
+.mid-img-wrap img{max-width:clamp(340px,48vw,640px);width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 16px 48px var(--shadow)}
+.mid-img-wrap img:hover{transform:scale(1.01)}
+.phone-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0}
+.phone-img-wrap img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--border);transition:border-color .5s,transform .3s,box-shadow .3s;cursor:zoom-in!important;box-shadow:0 32px 80px var(--shadow)}
+.phone-img-wrap img:hover{transform:scale(1.005);box-shadow:0 40px 100px var(--shadow)}
 
 /* A4-portrait centered image for Meta post */
 .a4-img-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0;display:flex;justify-content:center}
@@ -454,7 +462,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <!-- EXPLORATION IMAGES -->
-<div class="img-grid-2 rv">
+<div class="img-grid-2-portrait rv">
   <img src="RaazMD/page4_2.webp" alt="Prescription exploration — table layout direction" data-lightbox loading="lazy"/>
   <img src="RaazMD/page4_3.webp" alt="Prescription exploration — card layout direction" data-lightbox loading="lazy"/>
 </div>
@@ -477,7 +485,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
 </div>
 
 <!-- FINAL IMAGES -->
-<div class="img-grid-2 rv">
+<div class="img-grid-2-portrait rv">
   <img src="RaazMD/page4_4.webp" alt="Final prescription design — page 1, root cause assessment and treatment plan" data-lightbox loading="lazy"/>
   <img src="RaazMD/page4_5.webp" alt="Final prescription design — page 2, treatment timeline, dietary and exercise recommendations" data-lightbox loading="lazy"/>
 </div>
@@ -612,7 +620,7 @@ footer{padding:clamp(20px,3.5vh,28px) clamp(24px,6vw,80px);border-top:1px solid 
   </div>
 </div>
 
-<div class="img-contained rv">
+<div class="mid-img-wrap rv">
   <img src="RaazMD/page4_15.webp" alt="RaazMD YouTube thumbnail — part of a defined visual system for future content" data-lightbox loading="lazy"/>
 </div>
 <div class="caption rv">YouTube thumbnail · one of 10+ designed with a consistent visual system</div>
