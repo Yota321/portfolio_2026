@@ -260,11 +260,12 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0;transition:background .5s}
 
 @media(max-width:640px){
-  .img-grid-2,.img-grid-2-narrow{grid-template-columns:1fr;padding:0 20px}
-  .img-grid-3{grid-template-columns:1fr 1fr;padding:0 20px}
-  .img-grid-3 img:last-child{grid-column:1/-1;max-width:50%;margin:0 auto}
-  .img-contained,.caption,.phone-img-wrap{padding-left:20px;padding-right:20px}
+  .img-grid-2,.img-grid-2-narrow,.img-grid-2-portrait{grid-template-columns:1fr;padding:0 20px}
+  .img-grid-3{grid-template-columns:1fr;padding:0 20px}
+  .img-grid-3 img:last-child{grid-column:auto;max-width:100%;margin:0}
+  .img-contained,.caption,.phone-img-wrap,.mid-img-wrap,.a4-img-wrap{padding-left:20px;padding-right:20px}
   .img-grid-2-narrow{max-width:100%;margin-left:0;margin-right:0}
+  .img-grid-2-portrait{max-width:100%;margin-left:0;margin-right:0}
 }
 
 /* ══ LINK CARDS ══ */
