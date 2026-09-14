@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Forge — UI/UX Platform Design · G.S.Ahamed</title>
+<meta name="description" content="Forge — A UI/UX concept for a footwear design community and marketplace. Platform design, branding, role-based onboarding, and interaction design by G.S.Ahamed."/>
+<meta name="author" content="Golam Sayon Ahamed"/>
+<meta name="robots" content="index, follow"/>
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.sayanahamed.online/forge.html"/>
+<link rel="alternate" hreflang="en" href="https://www.sayanahamed.online/forge.html"/>
+<link rel="alternate" hreflang="x-default" href="https://www.sayanahamed.online/forge.html"/>
+<meta name="keywords" content="Forge, UI UX design, platform design, footwear community, app concept, G.S.Ahamed, Sayon Ahamed, interaction design, Figma, mobile app design, product design, role-based onboarding, marketplace design"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="G.S.Ahamed Portfolio"/>
+<meta property="og:title" content="Forge — UI/UX Platform Design · G.S.Ahamed"/>
+<meta property="og:description" content="A platform for footwear designers that treats craft, community, and commerce as equal parts of the same thing."/>
+<meta property="og:url" content="https://www.sayanahamed.online/forge.html"/>
+<meta property="og:image" content="https://www.sayanahamed.online/Preview_page_2.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Forge — UI/UX platform concept by Golam Sayon Ahamed"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta property="og:locale:alternate" content="en_GB"/>
+<meta property="og:locale:alternate" content="en_AU"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Forge — UI/UX Platform Design · G.S.Ahamed"/>
+<meta name="twitter:description" content="A platform for footwear designers. Community and commerce without one swallowing the other."/>
+<meta name="twitter:image" content="https://www.sayanahamed.online/Preview_page_2.png"/>
+<meta name="twitter:image:alt" content="Forge — UI/UX platform concept by Golam Sayon Ahamed"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Forge",
+  "description": "A UI/UX concept for a footwear design community and marketplace. Platform design, branding, role-based onboarding, and interaction design.",
+  "url": "https://www.sayanahamed.online/forge.html",
+  "image": "https://www.sayanahamed.online/Preview_page_2.png",
+  "genre": "UI/UX Platform Design",
+  "keywords": "platform design, UI UX, footwear community, marketplace, app concept, interaction design, role-based onboarding",
+  "creator": {
+    "@type": "Person",
+    "name": "Golam Sayon Ahamed",
+    "url": "https://www.sayanahamed.online/",
+    "jobTitle": "Brand & UI Designer"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "G.S.Ahamed Portfolio",
+    "url": "https://www.sayanahamed.online/"
+  }
+}
+</script>
+<meta name="theme-color" content="#0a0a0a"/>
+<meta name="view-transition" content="same-origin"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' letter-spacing='-0.5' fill='%23ede9e0'>GS</text></svg>"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJD2MSVYRS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LJD2MSVYRS');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/global.css">
+<style>
+:root{--a-h:20;--a-s:78%;--a-l:50%;--accent:hsl(var(--a-h),var(--a-s),var(--a-l));--accent-d:hsl(var(--a-h),var(--a-s),calc(var(--a-l) - 9%));--accent-15:hsla(var(--a-h),var(--a-s),var(--a-l),.15);--accent-08:hsla(var(--a-h),var(--a-s),var(--a-l),.08);--accent-25:hsla(var(--a-h),var(--a-s),var(--a-l),.25)}
+[data-theme="dark"]{--bg:#0a0a0a;--bg2:#111;--surface:#181818;--text:#ede9e0;--mid:rgba(237,233,224,.60);--dim:rgba(237,233,224,.36);--faint:rgba(237,233,224,.16);--border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);--glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.08);--shadow:rgba(0,0,0,.65);--bg-rgb:10,10,10;--gold:#c8a96e;--panel:#0e0e0e;--ptxt:rgba(237,233,224,.80);--pacc:var(--accent);--pdim:rgba(237,233,224,.36);--pbdr:rgba(255,255,255,.06);--glass-panel:rgba(255,255,255,.04);--glass2-panel:rgba(255,255,255,.08)}
+[data-theme="light"]{--bg:#f5f0e3;--bg2:#ede8d8;--surface:#e6e0d0;--text:#111111;--mid:rgba(17,17,17,.68);--dim:rgba(17,17,17,.48);--faint:rgba(17,17,17,.22);--border:rgba(29,30,20,.10);--border2:rgba(29,30,20,.20);--glass:rgba(255,255,255,.50);--glass2:rgba(255,255,255,.72);--shadow:rgba(40,30,10,.16);--bg-rgb:245,240,227;--gold:#6b4e16;--panel:#1d2d1a;--ptxt:#e8f0e5;--pacc:#e8960a;--pdim:rgba(232,240,229,.72);--pbdr:rgba(255,255,255,.10);--glass-panel:rgba(255,255,255,.08);--glass2-panel:rgba(255,255,255,.14)}
+[data-theme="studio"]{--bg:#f5f5f7;--bg2:#ececee;--surface:#dddde0;--text:#1d1d1f;--mid:rgba(29,29,31,.65);--dim:rgba(29,29,31,.42);--faint:rgba(29,29,31,.18);--border:rgba(0,0,0,.06);--border2:rgba(0,0,0,.11);--glass:rgba(255,255,255,.72);--glass2:rgba(255,255,255,.88);--shadow:rgba(0,0,0,.08);--bg-rgb:245,245,247;--gold:#0071e3;--panel:#1d1d1f;--ptxt:#f5f5f7;--pacc:#0071e3;--pdim:rgba(245,245,247,.75);--pbdr:rgba(0,113,227,.15);--glass-panel:rgba(255,255,255,.08);--glass2-panel:rgba(255,255,255,.14)}
+[data-theme="chalk"]{--bg:#ffffff;--bg2:#f4f4f4;--surface:#e8e8e8;--text:#0d0d0d;--mid:rgba(13,13,13,.72);--dim:rgba(13,13,13,.50);--faint:rgba(13,13,13,.22);--border:rgba(0,0,0,.09);--border2:rgba(0,0,0,.16);--glass:rgba(0,0,0,.04);--glass2:rgba(0,0,0,.08);--shadow:rgba(0,0,0,.14);--bg-rgb:255,255,255;--gold:#444;--panel:#111111;--ptxt:#e8e8e8;--pacc:var(--accent);--pdim:rgba(232,232,232,.70);--pbdr:rgba(255,255,255,.12)}
+[data-theme="sketch"]{--bg:#fafafa;--bg2:#f0f0f0;--surface:#e4e4e4;--text:#0a0a0a;--mid:rgba(10,10,10,.68);--dim:rgba(10,10,10,.45);--faint:rgba(10,10,10,.20);--border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.14);--glass:rgba(0,0,0,.03);--glass2:rgba(0,0,0,.06);--shadow:rgba(0,0,0,.10);--bg-rgb:250,250,250;--gold:#0a0a0a;--panel:#0a0a0a;--ptxt:#fafafa;--pacc:#fafafa;--pdim:rgba(250,250,250,.72);--pbdr:rgba(255,255,255,.10)}
+[data-theme="grid"]{--bg:#f2edd8;--bg2:#e8e2c8;--surface:#ddd7be;--text:#2a2a1e;--mid:rgba(42,42,30,.68);--dim:rgba(42,42,30,.48);--faint:rgba(42,42,30,.22);--border:rgba(42,42,30,.10);--border2:rgba(42,42,30,.18);--glass:rgba(255,255,255,.48);--glass2:rgba(255,255,255,.70);--shadow:rgba(42,42,30,.16);--bg-rgb:242,237,216;--gold:#6b7c3a;--panel:#4a5228;--ptxt:#f2edd8;--pacc:#8a9e42;--pdim:rgba(242,237,216,.72);--pbdr:rgba(138,158,66,.18)}
+[data-theme="tokyo"]{--bg:#f5ede0;--bg2:#ece3d4;--surface:#dfd6c4;--text:#0a0505;--mid:rgba(10,5,5,.68);--dim:rgba(10,5,5,.48);--faint:rgba(10,5,5,.22);--border:rgba(10,5,5,.10);--border2:rgba(10,5,5,.18);--glass:rgba(255,255,255,.52);--glass2:rgba(255,255,255,.74);--shadow:rgba(10,5,5,.18);--bg-rgb:245,237,224;--gold:#b81c1c;--panel:#8a1414;--ptxt:#f5ede0;--pacc:#d42020;--pdim:rgba(245,237,224,.72);--pbdr:rgba(212,32,32,.20)}
+[data-theme="sand"]{--bg:#f7f0e6;--bg2:#ede4d3;--surface:#e0d5c0;--text:#2d1a0e;--mid:rgba(45,26,14,.65);--dim:rgba(45,26,14,.45);--faint:rgba(45,26,14,.20);--border:rgba(45,26,14,.10);--border2:rgba(45,26,14,.18);--glass:rgba(255,255,255,.55);--glass2:rgba(255,255,255,.75);--shadow:rgba(45,26,14,.18);--bg-rgb:247,240,230;--gold:#c0622a;--panel:#2d1a0e;--ptxt:#f5e8d8;--pacc:#e8520a;--pdim:rgba(245,232,216,.72);--pbdr:rgba(232,82,10,.18)}
+[data-theme="terracotta"]{--bg:#f0e8e0;--bg2:#e8ddd4;--surface:#d8cfc4;--text:#1c2b4a;--mid:rgba(28,43,74,.68);--dim:rgba(28,43,74,.48);--faint:rgba(28,43,74,.22);--border:rgba(28,43,74,.10);--border2:rgba(28,43,74,.18);--glass:rgba(255,255,255,.52);--glass2:rgba(255,255,255,.74);--shadow:rgba(28,43,74,.18);--bg-rgb:240,232,224;--gold:#c45c38;--panel:#1c2b4a;--ptxt:#f0e8e0;--pacc:#e8722a;--pdim:rgba(240,232,224,.72);--pbdr:rgba(232,114,42,.18)}
+[data-theme="ember"]{--bg:#f7ede4;--bg2:#eee0d3;--surface:#e2d0bf;--text:#1a0f0a;--mid:rgba(26,15,10,.68);--dim:rgba(26,15,10,.48);--faint:rgba(26,15,10,.22);--border:rgba(26,15,10,.10);--border2:rgba(26,15,10,.18);--glass:rgba(255,255,255,.50);--glass2:rgba(255,255,255,.72);--shadow:rgba(26,15,10,.18);--bg-rgb:247,237,228;--gold:#c4622a;--panel:#1a0f0a;--ptxt:#f7ede4;--pacc:#d4602a;--pdim:rgba(247,237,228,.72);--pbdr:rgba(212,96,42,.18)}
+[data-theme="paper"]{--bg:#ede5d8;--bg2:#e2d9c8;--surface:#d4c9b0;--text:#1a0832;--mid:rgba(26,8,50,.72);--dim:rgba(26,8,50,.52);--faint:rgba(26,8,50,.24);--border:rgba(26,8,50,.12);--border2:rgba(26,8,50,.22);--glass:rgba(255,255,255,.52);--glass2:rgba(255,255,255,.76);--shadow:rgba(26,8,50,.22);--bg-rgb:237,229,216;--gold:#6d28d9;--panel:#130620;--ptxt:#f0eaff;--pacc:#9333ea;--pdim:rgba(240,234,255,.72);--pbdr:rgba(147,51,234,.22)}
+[data-theme="forest"]{--bg:#0e1410;--bg2:#141d16;--surface:#1a2b1c;--text:#d4e8d0;--mid:rgba(212,232,208,.70);--dim:rgba(212,232,208,.48);--faint:rgba(212,232,208,.22);--border:rgba(100,200,100,.09);--border2:rgba(100,200,100,.18);--glass:rgba(100,200,100,.06);--glass2:rgba(100,200,100,.12);--shadow:rgba(0,0,0,.65);--bg-rgb:14,20,16;--gold:#86c888;--panel:#0e1a10;--ptxt:#d4e8d0;--pacc:var(--accent);--pdim:rgba(212,232,208,.55);--pbdr:rgba(100,200,100,.14)}
+[data-theme="midnight"]{--bg:#060b14;--bg2:#0c1525;--surface:#111e33;--text:#d8eaf8;--mid:rgba(216,234,248,.70);--dim:rgba(216,234,248,.48);--faint:rgba(216,234,248,.22);--border:rgba(100,180,255,.09);--border2:rgba(100,180,255,.18);--glass:rgba(100,180,255,.06);--glass2:rgba(100,180,255,.12);--shadow:rgba(0,0,0,.7);--bg-rgb:6,11,20;--gold:#7eb8d4;--panel:#050a13;--ptxt:#d8eaf8;--pacc:var(--accent);--pdim:rgba(216,234,248,.60);--pbdr:rgba(100,180,255,.14)}
+[data-theme="navy"]{--bg:#0d1b2e;--bg2:#142338;--surface:#1c2e48;--text:#e8eef8;--mid:rgba(232,238,248,.62);--dim:rgba(232,238,248,.40);--faint:rgba(232,238,248,.18);--border:rgba(232,238,248,.08);--border2:rgba(232,238,248,.14);--glass:rgba(232,238,248,.05);--glass2:rgba(232,238,248,.10);--shadow:rgba(0,0,0,.65);--bg-rgb:13,27,46;--gold:#f472b6;--panel:#080f1a;--ptxt:#fce7f3;--pacc:#ec4899;--pdim:rgba(252,231,243,.60);--pbdr:rgba(236,72,153,.16)}
+[data-theme="dusk"]{--bg:#100810;--bg2:#18101a;--surface:#22162a;--text:#f0dce8;--mid:rgba(240,220,232,.70);--dim:rgba(240,220,232,.48);--faint:rgba(240,220,232,.22);--border:rgba(200,100,180,.09);--border2:rgba(200,100,180,.18);--glass:rgba(200,100,180,.06);--glass2:rgba(200,100,180,.12);--shadow:rgba(0,0,0,.68);--bg-rgb:16,8,16;--gold:#d4a0c0;--panel:#0c060c;--ptxt:#f0dce8;--pacc:var(--accent);--pdim:rgba(240,220,232,.60);--pbdr:rgba(200,100,180,.14)}
+[data-theme="noir"]{--bg:#0d0d0d;--bg2:#141414;--surface:#1c1c1c;--text:#f0f0f0;--mid:rgba(240,240,240,.62);--dim:rgba(240,240,240,.38);--faint:rgba(240,240,240,.18);--border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);--glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.08);--shadow:rgba(0,0,0,.70);--bg-rgb:13,13,13;--gold:#b8e832;--panel:#080808;--ptxt:#f0f0f0;--pacc:#b8e832;--pdim:rgba(240,240,240,.55);--pbdr:rgba(184,232,50,.14)}
+
+/* ══ TEXTURES ══ */
+[data-theme="paper"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(26,8,50,.03) 2px,rgba(26,8,50,.03) 3px),repeating-linear-gradient(88deg,transparent,transparent 5px,rgba(26,8,50,.012) 5px,rgba(26,8,50,.012) 6px),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85 0.25' numOctaves='5' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23f)' opacity='.7'/%3E%3C/svg%3E");background-repeat:repeat,repeat,repeat;background-size:auto,auto,320px 320px;opacity:.55;mix-blend-mode:multiply}
+[data-theme="paper"] body::after{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.6' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"),radial-gradient(ellipse at 0% 0%,rgba(26,8,50,.10) 0%,transparent 50%),radial-gradient(ellipse at 100% 100%,rgba(26,8,50,.12) 0%,transparent 50%),radial-gradient(ellipse at center,transparent 40%,rgba(26,8,50,.07) 100%)}
+[data-theme="sand"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.7 0.5' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E");background-repeat:repeat;background-size:200px 200px;opacity:.11;mix-blend-mode:multiply}
+[data-theme="chalk"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65 0.5' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='350' height='350' filter='url(%23c)' opacity='.6'/%3E%3C/svg%3E");background-repeat:repeat;background-size:280px 280px;opacity:.06;mix-blend-mode:multiply}
+[data-theme="forest"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9993;background:radial-gradient(ellipse 60% 40% at 15% 25%,rgba(34,120,34,.18) 0%,transparent 70%),radial-gradient(ellipse 40% 55% at 85% 70%,rgba(20,100,40,.14) 0%,transparent 65%),radial-gradient(ellipse 50% 35% at 50% 5%,rgba(60,160,60,.10) 0%,transparent 60%)}
+[data-theme="forest"] body::after{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E")}
+[data-theme="ember"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9993;background:radial-gradient(ellipse 55% 38% at 80% 90%,rgba(220,80,20,.16) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 10% 85%,rgba(200,60,10,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 30% at 50% 100%,rgba(240,100,30,.10) 0%,transparent 55%)}
+[data-theme="ember"] body::after{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E")}
+[data-theme="studio"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9993;background:radial-gradient(ellipse 70% 50% at 20% 10%,rgba(0,113,227,.05) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 80% 80%,rgba(52,199,89,.04) 0%,transparent 55%)}
+[data-theme="tokyo"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='th'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7 0.5' numOctaves='3' seed='22' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23th)' opacity='1'/%3E%3C/svg%3E");background-repeat:repeat;background-size:220px 220px;opacity:.06;mix-blend-mode:multiply}
+[data-theme="grid"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:linear-gradient(rgba(42,42,30,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(42,42,30,.08) 1px,transparent 1px),linear-gradient(rgba(42,42,30,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(42,42,30,.04) 1px,transparent 1px);background-size:40px 40px,40px 40px,8px 8px,8px 8px}
+[data-theme="sketch"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9 0.7' numOctaves='4' seed='19' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23s)' opacity='.5'/%3E%3C/svg%3E");background-repeat:repeat;background-size:220px 220px;opacity:.05;mix-blend-mode:multiply}
+[data-theme="terracotta"] body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9994;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75 0.55' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23t)' opacity='1'/%3E%3C/svg%3E");background-repeat:repeat;background-size:200px 200px;opacity:.07;mix-blend-mode:multiply}
+
+/* ══ THEME TOGGLE ══ */
+#theme-toggle-btn{position:fixed;left:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:600;width:44px;height:44px;border-radius:50%;background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border2);box-shadow:0 4px 20px var(--shadow);display:flex;align-items:center;justify-content:center;cursor:none;transition:background .3s,border-color .3s,transform .2s}
+@media(hover:none),(max-width:640px){#theme-toggle-btn{cursor:pointer}}
+#theme-toggle-btn:hover{transform:scale(1.1)}
+#theme-toggle-btn svg{width:17px;height:17px;color:var(--text);transition:color .5s}
+#theme-bar{position:fixed;left:clamp(16px,3vw,28px);bottom:74px;z-index:599;display:flex;flex-direction:column;align-items:center;background:var(--glass2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border2);border-radius:30px;padding:14px 0;box-shadow:0 8px 40px var(--shadow);width:44px;opacity:0;pointer-events:none;transform:translateY(10px) scale(.92);transition:opacity .3s cubic-bezier(.16,1,.3,1),transform .3s cubic-bezier(.16,1,.3,1),background .5s,border-color .5s;user-select:none;touch-action:none}
+#theme-bar.open{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+#tb-track{width:8px;height:240px;border-radius:8px;position:relative;cursor:pointer;background:linear-gradient(180deg,#f5f0e3 0%,#f5f5f7 6%,#fafafa 12%,#f5f5f5 19%,#f2edd8 25%,#f5ede0 31%,#f7f0e6 37%,#f0e8e0 43%,#f7ede4 50%,#ede5d8 56%,#0e1410 62%,#060b14 68%,#0d1b2e 74%,#100810 81%,#0d0d0d 88%,#0a0a0a 100%);box-shadow:inset 0 1px 3px rgba(0,0,0,.3)}
+.tb-stop{position:absolute;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.9);border:1.5px solid rgba(0,0,0,.25);box-shadow:0 1px 4px rgba(0,0,0,.35);pointer-events:none}
+.tb-stop.active-stop{width:13px;height:13px;background:#fff;box-shadow:0 0 0 3px var(--accent)}
+#tb-thumb{position:absolute;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff;border:2.5px solid var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.5);cursor:grab;z-index:2;transition:border-color .3s}
+#tb-thumb:active{cursor:grabbing;transform:translate(-50%,-50%) scale(1.15)}
+#tb-label{position:absolute;left:calc(100% + 12px);background:var(--surface);border:1px solid var(--border2);border-radius:6px;padding:4px 10px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;top:50%;transform:translateY(-50%)}
+#theme-bar.open #tb-label{opacity:1}
+
+/* ══ HERO ══ */
+.cs-hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;padding:clamp(100px,16vh,160px) clamp(24px,6vw,80px) clamp(56px,9vh,88px);overflow:hidden}
+.cs-hero-video{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;opacity:.38;filter:grayscale(15%);transition:filter 1s}
+[data-theme="light"] .cs-hero-video,[data-theme="chalk"] .cs-hero-video,[data-theme="paper"] .cs-hero-video,[data-theme="sand"] .cs-hero-video,[data-theme="studio"] .cs-hero-video,[data-theme="sketch"] .cs-hero-video,[data-theme="grid"] .cs-hero-video,[data-theme="tokyo"] .cs-hero-video,[data-theme="terracotta"] .cs-hero-video,[data-theme="ember"] .cs-hero-video{opacity:.22;filter:grayscale(20%) brightness(.88)}
+.cs-hero-gradient{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,var(--bg) 0%,rgba(var(--bg-rgb,10,10,10),.6) 55%,rgba(var(--bg-rgb,10,10,10),.15) 100%)}
+.cs-hero-ghost{position:absolute;right:-1%;bottom:-5%;z-index:1;font-family:'Bebas Neue',sans-serif;font-size:clamp(120px,24vw,340px);color:rgba(255,255,255,.022);letter-spacing:-.02em;line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+[data-theme="light"] .cs-hero-ghost,[data-theme="chalk"] .cs-hero-ghost,[data-theme="paper"] .cs-hero-ghost,[data-theme="sand"] .cs-hero-ghost,[data-theme="studio"] .cs-hero-ghost,[data-theme="sketch"] .cs-hero-ghost,[data-theme="grid"] .cs-hero-ghost,[data-theme="tokyo"] .cs-hero-ghost,[data-theme="terracotta"] .cs-hero-ghost,[data-theme="ember"] .cs-hero-ghost{color:rgba(0,0,0,.035)}
+.cs-hero-orb{position:absolute;width:clamp(300px,50vw,600px);height:clamp(300px,50vw,600px);border-radius:50%;background:radial-gradient(circle,var(--accent-08) 0%,transparent 70%);top:10%;left:20%;animation:orb 8s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes orb{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+.cs-hero-content{position:relative;z-index:3;max-width:800px}
+.cs-eyebrow{display:flex;align-items:center;gap:clamp(10px,2vw,18px);margin-bottom:clamp(14px,2.5vh,24px);flex-wrap:wrap}
+.cs-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--accent-25);background:var(--accent-08);color:var(--accent);font-size:clamp(8px,.9vw,10px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:5px 14px;border-radius:30px;transition:border-color .5s,background .5s,color .5s}
+.cs-year{font-size:clamp(8px,.9vw,10px);letter-spacing:.25em;text-transform:uppercase;color:var(--dim);font-family:'Cormorant Garamond',serif;font-style:italic;transition:color .5s}
+.cs-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,13vw,172px);line-height:.86;letter-spacing:.02em;color:var(--text);margin-bottom:clamp(16px,2.8vh,28px);transition:color .5s}
+.cs-title .t-stroke{-webkit-text-stroke:1.5px var(--text);color:transparent;transition:-webkit-text-stroke .5s}
+.cs-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;color:var(--mid);letter-spacing:.04em;font-style:italic;max-width:520px;line-height:1.55;transition:color .5s}
+
+/* ══ META STRIP ══ */
+.cs-meta{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);padding:clamp(20px,3.5vh,32px) clamp(24px,6vw,80px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,4vw,48px);transition:background .5s,border-color .5s}
+.meta-lbl{font-size:clamp(8px,.85vw,9.5px);letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:8px;transition:color .5s}
+.meta-val{font-size:clamp(11px,1.1vw,13px);font-weight:300;color:var(--mid);line-height:1.65;transition:color .5s}
+@media(max-width:700px){.cs-meta{grid-template-columns:1fr 1fr}}@media(max-width:420px){.cs-meta{grid-template-columns:1fr}}
+
+/* ══ MARQUEE ══ */
+.cs-marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:12px 0;overflow:hidden;background:var(--panel);transition:background .5s,border-color .5s}
+.cs-marquee:hover .cs-marquee-inner{animation-play-state:paused}
+.cs-marquee-inner{display:flex;gap:clamp(28px,5vw,56px);white-space:nowrap;animation:mq 28s linear infinite;width:max-content}
+.cs-mi{font-family:'Bebas Neue',sans-serif;font-size:clamp(11px,1.3vw,13px);letter-spacing:.26em;color:var(--pdim);display:flex;align-items:center;gap:clamp(14px,2vw,24px);transition:color .2s;cursor:default}
+.cs-mi:hover{color:var(--pacc)}
+.cs-mi::after{content:'✦';color:var(--pacc);font-size:7px;opacity:.75}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ══ BODY ══ */
+.cs-body{padding:clamp(64px,10vh,120px) clamp(24px,6vw,80px);max-width:1160px;margin:0 auto}
+.s-label{display:block;font-size:clamp(8px,.85vw,10px);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:clamp(12px,2vh,20px);transition:color .5s}
+.two-col{display:grid;grid-template-columns:clamp(150px,20vw,240px) 1fr;gap:clamp(32px,7vw,110px);align-items:start}
+.two-col-sticky{position:sticky;top:clamp(80px,12vh,110px)}
+.two-col-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,5.5vw,68px);line-height:.9;letter-spacing:.03em;color:var(--text);transition:color .5s}
+.body-text{font-size:clamp(13px,1.3vw,15px);font-weight:300;line-height:1.92;color:var(--mid);transition:color .5s}
+.body-text+.body-text{margin-top:clamp(16px,2.5vh,24px)}
+.body-text strong{color:var(--text);font-weight:500;transition:color .5s}
+@media(max-width:780px){.two-col{grid-template-columns:1fr}.two-col-sticky{position:static}}
+.div{border:none;border-top:1px solid var(--border);margin:clamp(48px,8vh,96px) clamp(24px,6vw,80px);transition:border-color .5s}
+
+/* ══ WIPE BOX ══ */
+.two-col-heading .wipe-wrap{display:inline-block;position:relative}
+.two-col-heading .wipe-bg{position:absolute;inset:0 0 2px 0;background:var(--accent);transform:scaleX(0);transform-origin:left;border-radius:2px;transition:transform .55s cubic-bezier(.77,0,.18,1);z-index:0}
+.two-col-heading .wipe-wrap.wiped .wipe-bg{transform:scaleX(1)}
+.two-col-heading .wipe-text{position:relative;z-index:1;color:var(--accent);font-style:normal;display:block;transition:color .12s ease .28s}
+.two-col-heading .wipe-wrap.wiped .wipe-text{color:#fff}
+
+/* ══ IMAGES ══ */
+.img-contained{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,4.5vh,56px) 0}
+.img-contained img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s}
+.screen-grid{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.8vw,20px)}
+.screen-grid img{width:100%;display:block;border-radius:10px;border:1px solid var(--border);transition:border-color .5s}
+.wire-grid{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(12px,2vw,24px)}
+.wire-grid img{width:100%;display:block;border-radius:8px;border:1px solid var(--border);height:clamp(340px,50vw,620px);object-fit:cover;object-position:top center;transition:border-color .5s}
+.caption{padding:0 clamp(24px,6vw,80px);margin-top:clamp(8px,1.2vh,12px);font-size:clamp(9px,.85vw,10px);letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:10px;transition:color .5s}
+.caption::before{content:'';width:20px;height:1px;background:var(--border2);flex-shrink:0;transition:background .5s}
+@media(max-width:600px){.screen-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 20px}.wire-grid{grid-template-columns:1fr;padding:0 20px}}
+
+/* ══ LOGO DISPLAY — always light so dark logo reads ══ */
+.logo-display{padding:clamp(50px,8vh,90px) clamp(24px,6vw,80px);background:#f0ece4;border-top:1px solid rgba(0,0,0,.07);border-bottom:1px solid rgba(0,0,0,.07);display:flex;align-items:center;justify-content:center}
+.logo-display img{max-width:clamp(220px,38vw,460px);width:100%;display:block}
+
+/* ══ ENTRY VIDEO ══ */
+.entry-video-wrap{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:flex;justify-content:center}
+.entry-video-inner{position:relative;width:clamp(220px,26vw,300px);border-radius:28px;overflow:hidden;background:var(--surface);border:1px solid var(--border);box-shadow:0 40px 80px var(--shadow)}
+.entry-video-inner video{width:100%;display:block;aspect-ratio:9/19.5;object-fit:cover}
+@media(max-width:640px){.entry-video-wrap{padding:0 20px}.entry-video-inner{width:clamp(180px,58vw,260px)}}
+
+/* ══ CELLS ══ */
+.cells{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:clamp(28px,4.5vh,48px);transition:background .5s,border-color .5s}
+.cell{background:var(--bg);padding:clamp(20px,3.2vh,34px) clamp(18px,2.8vw,30px);transition:background .25s}
+.cell:hover{background:var(--surface)}
+.cell-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:12px;transition:color .5s}
+.cell-t{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.7vw,20px);font-weight:400;color:var(--text);margin-bottom:8px;line-height:1.3;transition:color .5s}
+.cell-b{font-size:clamp(12px,1.1vw,13px);font-weight:300;line-height:1.82;color:var(--mid);transition:color .5s}
+@media(max-width:600px){.cells{grid-template-columns:1fr}}
+
+/* ══ VIDEO GRID ══ */
+.video-grid{padding:0 clamp(24px,6vw,80px);margin:clamp(28px,5vh,56px) 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,32px)}
+.video-wrap{position:relative;border-radius:20px;overflow:hidden;background:var(--surface);border:1px solid var(--border);transition:border-color .5s}
+.video-wrap video{width:100%;display:block;aspect-ratio:9/19.5;object-fit:cover}
+.video-label{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.85),transparent);font-size:clamp(8px,.8vw,9.5px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr 1fr;gap:10px;padding:0 20px}.video-grid .video-wrap:last-child{grid-column:1/-1;max-width:160px;margin:0 auto}}
+
+/* ══ PULL QUOTE ══ */
+.pull-quote{padding:clamp(52px,8vh,96px) clamp(24px,6vw,80px);background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;transition:background .5s,border-color .5s}
+.pq-mark{font-family:'Cormorant Garamond',serif;font-size:clamp(56px,9vw,110px);color:var(--accent-15);line-height:.6;margin-bottom:clamp(18px,3.5vh,36px);display:block}
+.pq-text{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.8vw,32px);font-weight:300;font-style:italic;color:var(--text);max-width:700px;margin:0 auto;line-height:1.52;letter-spacing:.02em;transition:color .5s}
+.pq-attr{margin-top:clamp(16px,2.8vh,26px);font-size:clamp(9px,.9vw,10px);letter-spacing:.25em;text-transform:uppercase;color:var(--gold);transition:color .5s}
+
+/* ══ NEXT PROJECT ══ */
+.next-project{border-top:1px solid var(--border);background:var(--panel);padding:clamp(52px,8vh,100px) clamp(24px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,4vw,40px);text-decoration:none;transition:background .3s,border-color .5s;position:relative;overflow:hidden}
+.next-project::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--accent-08),transparent);transition:width .5s}
+.next-project:hover::before{width:100%}
+.next-project:hover .np-arrow{transform:translate(6px,-6px)}
+.np-pre{font-size:clamp(8px,.85vw,10px);letter-spacing:.3em;text-transform:uppercase;color:var(--pdim);margin-bottom:10px;transition:color .5s}
+.np-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,8vw,100px);line-height:.88;letter-spacing:.03em;color:var(--ptxt);transition:color .5s}
+.np-title span{color:var(--pacc);transition:color .5s}
+.np-tag{display:inline-block;margin-top:10px;font-size:clamp(8px,.85vw,9px);letter-spacing:.2em;text-transform:uppercase;color:var(--pacc);border:1px solid var(--accent-25);padding:3px 10px;border-radius:20px;transition:color .5s,border-color .5s}
+.np-arrow{font-size:clamp(28px,5vw,56px);color:var(--pacc);transition:transform .3s,color .5s;flex-shrink:0;opacity:.7}
+
+/* ══ MOBILE ══ */
+@media(max-width:640px){
+  .cs-hero{min-height:70svh;padding:80px 20px 40px}
+  .cs-hero-ghost{display:none}
+  .cs-body{padding:clamp(36px,6vh,60px) 20px}
+  .div{margin:clamp(28px,5vh,48px) 20px}
+  .two-col{gap:16px}
+  .two-col-sticky{margin-bottom:4px}
+  .two-col-heading{font-size:clamp(34px,9vw,50px)}
+  .cells{margin-top:20px}
+  .cell{padding:16px}
+  .pull-quote{padding:36px 20px}
+  .pq-text{font-size:clamp(17px,5vw,22px)}
+  .img-contained,.caption{padding:0 20px}
+  .entry-video-wrap{padding:0 20px;margin:20px 0}
+  .logo-display{padding:36px 20px}
+  .next-project{padding:36px 20px;flex-direction:column;align-items:flex-start;gap:12px}
+  .cs-meta{padding:18px 20px;gap:16px}
+}
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w0p6kyh1oi");
+</script>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div id="spb"></div>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle-btn" aria-label="Toggle theme picker">
+  <svg id="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+<div id="theme-bar" role="group" aria-label="Choose theme">
+  <div id="tb-track">
+    <div id="tb-thumb"></div>
+    <div class="tb-stop" id="stop-0"></div><div class="tb-stop" id="stop-1"></div>
+    <div class="tb-stop" id="stop-2"></div><div class="tb-stop" id="stop-3"></div>
+    <div class="tb-stop" id="stop-4"></div><div class="tb-stop" id="stop-5"></div>
+    <div class="tb-stop" id="stop-6"></div><div class="tb-stop" id="stop-7"></div>
+    <div class="tb-stop" id="stop-8"></div><div class="tb-stop" id="stop-9"></div>
+    <div class="tb-stop" id="stop-10"></div><div class="tb-stop" id="stop-11"></div>
+    <div class="tb-stop" id="stop-12"></div><div class="tb-stop" id="stop-13"></div>
+    <div class="tb-stop" id="stop-14"></div><div class="tb-stop" id="stop-15"></div>
+  </div>
+  <div id="tb-label">Dark</div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="index.html" class="nav-logo">G.S.Ahamed</a>
+  <a href="index.html#works" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Work
+  </a>
+</header>
+<main>
+
+<!-- HERO -->
+<section class="cs-hero">
+  <span class="cs-hero-ghost" aria-hidden="true">FRG</span>
+  <div class="cs-hero-orb" aria-hidden="true"></div>
+  <video class="cs-hero-video" autoplay muted loop playsinline style="view-transition-name:forge-hero">
+    <source src="forge/page2_9.mp4" type="video/mp4"/>
+  </video>
+  <div class="cs-hero-gradient"></div>
+  <div class="cs-hero-content">
+    <div class="cs-eyebrow rv">
+      <span class="cs-tag">UI/UX &amp; Platform Design</span>
+      <span class="cs-year">Concept · 2024 / 25</span>
+    </div>
+    <h1 class="cs-title rv" style="transition-delay:.08s"><span class="t-stroke">For</span>ge</h1>
+    <p class="cs-subtitle rv" style="transition-delay:.16s">A platform for footwear designers that treats craft, community, and commerce as equal parts of the same thing.</p>
+  </div>
+</section>
+
+<!-- META -->
+<div class="cs-meta">
+  <div class="rv"><div class="meta-lbl">Tools</div><div class="meta-val">Figma<br>Photoshop<br>Illustrator</div></div>
+  <div class="rv" style="transition-delay:.06s"><div class="meta-lbl">Scope</div><div class="meta-val">App Concept<br>Branding<br>UI/UX<br>Interactions</div></div>
+  <div class="rv" style="transition-delay:.12s"><div class="meta-lbl">Platform</div><div class="meta-val">Mobile App<br>Android &amp; iOS</div></div>
+  <div class="rv" style="transition-delay:.18s"><div class="meta-lbl">Type</div><div class="meta-val">Product Concept<br>Community &amp; Marketplace</div></div>
+</div>
+
+<!-- MARQUEE -->
+<div class="cs-marquee" aria-hidden="true">
+  <div class="cs-marquee-inner">
+    <span class="cs-mi">Forge</span><span class="cs-mi">UI/UX Design</span><span class="cs-mi">Footwear Community</span><span class="cs-mi">Figma</span><span class="cs-mi">App Concept</span><span class="cs-mi">Role-Based Onboarding</span><span class="cs-mi">Discovery Logic</span><span class="cs-mi">Marketplace</span><span class="cs-mi">Micro Interactions</span><span class="cs-mi">Platform Design</span>
+    <span class="cs-mi">Forge</span><span class="cs-mi">UI/UX Design</span><span class="cs-mi">Footwear Community</span><span class="cs-mi">Figma</span><span class="cs-mi">App Concept</span><span class="cs-mi">Role-Based Onboarding</span><span class="cs-mi">Discovery Logic</span><span class="cs-mi">Marketplace</span><span class="cs-mi">Micro Interactions</span><span class="cs-mi">Platform Design</span>
+  </div>
+</div>
+
+<!-- 01 CONCEPT -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">01 — Concept</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">The<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Problem.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Footwear designers don't have a home. They patch together Instagram for visibility, Behance for portfolio, and DMs for commissions. None of those were built for them, and all of them treat the work as secondary to the platform's own logic.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Forge is what I wanted that platform to be. The premise was simple: build something that actually respects what designers do. Not just somewhere they post things.</p>
+      <p class="body-text rv" style="transition-delay:.14s">The balance I kept coming back to: it shouldn't feel like an e-commerce app pretending to be social, or a social app pretending to sell. Either extreme kills what makes it interesting. The whole thing had to hold both without one eating the other.</p>
+      <div class="cells rv" style="transition-delay:.2s">
+        <div class="cell">
+          <div class="cell-lbl">For Designers</div>
+          <div class="cell-t">Share Work, Build Presence</div>
+          <p class="cell-b">Document process, receive feedback, and build an audience without being pushed to optimise for engagement over quality.</p>
+        </div>
+        <div class="cell">
+          <div class="cell-lbl">For Makers and Brands</div>
+          <div class="cell-t">Discover, Commission, Collaborate</div>
+          <p class="cell-b">Find designers by craft and aesthetic rather than follower count. Commission work directly through the platform without external back-and-forth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div"/>
+
+<!-- 02 PROCESS -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">02 — Process</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Before the<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Screens.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">I started with flows before I touched anything visual. The questions that mattered early were structural: who is this for, how does the platform know, and how does that change what happens next. Getting those wrong at the start would have broken everything downstream.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Three flows covered the core: how users enter by role, how a purchase moves from feed to checkout, and how a designer posts and gets back to their work. These wireframes aren't pretty. They were the actual design work.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wire-grid rv">
+  <img loading="lazy" src="forge/page2_2.webp" alt="Forge UI/UX wireframe by Golam Sayon Ahamed — role onboarding flow showing Designer vs Maker path logic"/>
+  <img loading="lazy" src="forge/page2_3.webp" alt="Forge UI/UX wireframe by Golam Sayon Ahamed — purchase flow and posting flow user journey"/>
+</div>
+<div class="caption rv">Wireframes · role onboarding, purchase flow, posting flow</div>
+
+<hr class="div"/>
+
+<!-- 03 BRANDING -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">03 — Branding</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">The Entry<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Moment.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">The logo is modular and intentionally structural, built from parts the way footwear is. I made it in Illustrator from scratch rather than adapting a typeface, because adapted typefaces always carry someone else's logic in them.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The opening animation is quiet on purpose. The first signal to a user should be that this platform is about craft, not noise. A flashy intro would have said exactly the wrong thing.</p>
+    </div>
+  </div>
+</div>
+
+<div class="logo-display rv">
+  <img loading="eager" src="forge/page2_1.webp" alt="Forge logo by Golam Sayon Ahamed — modular structural wordmark built from scratch in Illustrator for footwear design platform"/>
+</div>
+
+<div class="entry-video-wrap rv">
+  <div class="entry-video-inner">
+    <video autoplay muted loop playsinline preload="none" poster="forge/page2_8.png">
+      <source data-src="forge/page2_9.mp4" type="video/mp4"/>
+    </video>
+  </div>
+</div>
+<div class="caption rv">Opening animation · first-launch experience</div>
+
+<hr class="div"/>
+
+<!-- 04 STRUCTURE -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">04 — Structure</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">How It<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Works.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">The platform runs on a structure that doesn't try to do everything at once. Designers share and document work. Makers and brands discover or commission. Social features support visibility. Commerce integrates without dominating.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Home, Trending, Following. These three feed views are the daily core. They look similar but they're doing different things. Home surfaces everything. Trending shows what's gaining traction. Following keeps it tight to people you've already decided matter.</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rv">
+  <img loading="lazy" src="forge/page2_5.webp" alt="Forge home feed screen by Golam Sayon Ahamed — surfacing all footwear designer content for casual browsing"/>
+  <img loading="lazy" src="forge/page2_6.webp" alt="Forge trending feed screen by Golam Sayon Ahamed — showing work gaining traction across the platform"/>
+  <img loading="lazy" src="forge/page2_7.webp" alt="Forge following feed screen by Golam Sayon Ahamed — tight view of designers the user already follows"/>
+</div>
+<div class="caption rv">Product structure · Home, Trending, Following</div>
+
+<hr class="div"/>
+
+<!-- 05 ONBOARDING -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">05 — Onboarding</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Role-Based<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Entry.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">The first thing you do when you open Forge is pick a role: <strong>Footwear Designer</strong> or <strong>Shoe Maker.</strong> That single choice changes everything that comes after. Content, recommendations, what your profile can do, what actions are available, all of it adapts based on who you said you are.</p>
+      <p class="body-text rv" style="transition-delay:.08s">That's not a personalisation feature. It's how the platform thinks about you. Designing for one generic user type would have made every screen worse for everyone.</p>
+      <p class="body-text rv" style="transition-delay:.14s">After that the setup stays minimal. I only asked for what was actually needed to get someone to the core experience. Every extra field is a reason to close the app.</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rv">
+  <img loading="lazy" src="forge/page2_10.webp" alt="Forge role selection screen by Golam Sayon Ahamed — Footwear Designer or Shoe Maker, single choice that changes the entire platform experience"/>
+  <img loading="lazy" src="forge/page2_11.webp" alt="Forge account setup screen by Golam Sayon Ahamed — minimal onboarding asking only what the platform needs"/>
+  <img loading="lazy" src="forge/page2_12.webp" alt="Forge onboarding complete screen by Golam Sayon Ahamed — entry point into the platform after role-based setup"/>
+</div>
+<div class="caption rv">Onboarding · role selection, account setup, entry</div>
+
+<div class="pull-quote">
+  <span class="pq-mark rv">"</span>
+  <p class="pq-text rv" style="transition-delay:.08s">Designing for two user types at once forced every decision to be honest. If a feature only worked for one of them, it probably wasn't the right feature.</p>
+  <p class="pq-attr rv" style="transition-delay:.16s">On designing role-based systems</p>
+</div>
+
+<hr class="div"/>
+
+<!-- 06 DISCOVERY -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">06 — Discovery</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Two<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Mindsets.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Exploration and searching are different things and they shouldn't share the same space. When you're scrolling for inspiration you don't want filters. When you know what you're looking for you don't want a feed.</p>
+      <p class="body-text rv" style="transition-delay:.08s">Forge separates these intentionally. The feed is for browsing freely. The marketplace is for browsing with intent. Keeping them distinct means neither one has to compromise to accommodate the other.</p>
+      <div class="cells rv" style="transition-delay:.14s">
+        <div class="cell">
+          <div class="cell-lbl">Exploration Mode</div>
+          <div class="cell-t">Feed · Scroll Freely</div>
+          <p class="cell-b">Casual browsing, inspiration, unexpected discovery. No pressure to decide. Work surfaces naturally through the feed.</p>
+        </div>
+        <div class="cell">
+          <div class="cell-lbl">Decision Mode</div>
+          <div class="cell-t">Marketplace · Browse With Intent</div>
+          <p class="cell-b">Structured browsing with filters, categories, and clear purchase paths for users who know what they're looking for.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rv">
+  <img loading="lazy" src="forge/page2_5.webp" alt="Forge home feed exploration by Golam Sayon Ahamed — casual browsing mode for footwear design inspiration"/>
+  <img loading="lazy" src="forge/page2_14.webp" alt="Forge marketplace view by Golam Sayon Ahamed — structured browsing with intent for buyers and brands"/>
+  <img loading="lazy" src="forge/page2_15.webp" alt="Forge search and filters by Golam Sayon Ahamed — finding designers by craft and aesthetic not follower count"/>
+</div>
+<div class="caption rv">Discovery · home feed, marketplace, search and filters</div>
+
+<hr class="div"/>
+
+<!-- 07 COMMERCE -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">07 — Commerce</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Product and<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Commission.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Product pages lead with the design story before the price. That's a deliberate choice. Making buying feel like supporting a designer rather than completing a transaction changes how the whole page reads.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The purchase path stays direct: Feed to Marketplace to Product to Purchase to Home. The commission flow branches off for brands and advanced needs but doesn't interrupt the standard experience. Both paths are simple because complexity at the point of transaction kills the sale.</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rv">
+  <img loading="lazy" src="forge/page2_16.webp" alt="Forge product page by Golam Sayon Ahamed — design story leads before the price, supporting the designer not just the transaction"/>
+  <img loading="lazy" src="forge/page2_17.webp" alt="Forge commission flow by Golam Sayon Ahamed — direct designer to brand collaboration path"/>
+  <img loading="lazy" src="forge/page2_18.webp" alt="Forge buyer checkout view by Golam Sayon Ahamed — simple purchase path from product page to confirmation"/>
+</div>
+<div class="caption rv">Commerce · product page, commission flow, buyer view</div>
+
+<hr class="div"/>
+
+<!-- 08 SOCIAL -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">08 — Social</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">Community<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Layer.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Profiles adapt based on who's looking at them. A public visitor sees a portfolio. A buyer sees purchase history and commission options. A designer gets full control over their presence and analytics. Same person, different views, because the relationship is different.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The communication layer, notifications, messages, posting, is kept deliberately fast. Posting shouldn't feel like a production. If sharing work becomes a task, designers stop doing it. The whole thing had to feel light enough that using it regularly isn't an effort.</p>
+    </div>
+  </div>
+</div>
+
+<div class="screen-grid rv">
+  <img loading="lazy" src="forge/page2_19.webp" alt="Forge public profile view by Golam Sayon Ahamed — portfolio-first presentation for visitors browsing a designer"/>
+  <img loading="lazy" src="forge/page2_20.webp" alt="Forge buyer profile view by Golam Sayon Ahamed — showing purchase history and commission options for buyers"/>
+  <img loading="lazy" src="forge/page2_21.webp" alt="Forge designer profile view by Golam Sayon Ahamed — full control over presence, analytics, and work presentation"/>
+</div>
+<div class="caption rv">Profiles · public view, buyer view, designer view</div>
+
+<div class="screen-grid rv" style="margin-top:clamp(16px,2.5vh,28px)">
+  <img loading="lazy" src="forge/page2_25.webp" alt="Forge notifications screen by Golam Sayon Ahamed — fast activity layer keeping interactions lightweight"/>
+  <img loading="lazy" src="forge/page2_26.webp" alt="Forge messages screen by Golam Sayon Ahamed — direct communication between designers, makers, and brands"/>
+  <img loading="lazy" src="forge/page2_27.webp" alt="Forge post creation screen by Golam Sayon Ahamed — minimal posting flow so sharing work never feels like a task"/>
+</div>
+<div class="caption rv">Activity · notifications, messages, post creation</div>
+
+<hr class="div"/>
+
+<!-- 09 INTERACTIONS -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">09 — Interactions</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">The Small<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Stuff.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Button states, transitions, feedback animations, all of it was kept subtle. The goal was for the app to feel responsive and alive without the interactions pulling focus from the content itself.</p>
+      <p class="body-text rv" style="transition-delay:.08s">The moments I focused on most: following a designer, completing a purchase, navigating between sections. Small signals that tell the user the system noticed what they did. That's what makes an app feel considered rather than just functional.</p>
+    </div>
+  </div>
+</div>
+
+<div class="video-grid rv">
+  <div class="video-wrap">
+    <video autoplay muted loop playsinline preload="none"><source data-src="forge/page2_22.mp4" type="video/mp4"/></video>
+    <span class="video-label">Follow interaction</span>
+  </div>
+  <div class="video-wrap">
+    <video autoplay muted loop playsinline preload="none"><source data-src="forge/page2_23.mp4" type="video/mp4"/></video>
+    <span class="video-label">Purchase feedback</span>
+  </div>
+  <div class="video-wrap">
+    <video autoplay muted loop playsinline preload="none"><source data-src="forge/page2_24.mp4" type="video/mp4"/></video>
+    <span class="video-label">Navigation transitions</span>
+  </div>
+</div>
+<div class="caption rv">Micro interactions · three key moments in the app experience</div>
+
+<hr class="div"/>
+
+<!-- 10 REFLECTION -->
+<div class="cs-body">
+  <div class="two-col">
+    <div class="two-col-sticky">
+      <span class="s-label rv-l">10 — Reflection</span>
+      <h2 class="two-col-heading rv-l" style="transition-delay:.08s">What It<span class="wipe-wrap"><span class="wipe-bg"></span><span class="wipe-text">Taught Me.</span></span></h2>
+    </div>
+    <div>
+      <p class="body-text rv">Forge pushed me to think in systems rather than screens. Every individual decision had to connect to a user's motivation somewhere upstream. That's a different kind of design work than making a single screen look good.</p>
+      <p class="body-text rv" style="transition-delay:.08s">I left out payment configurations, deep settings, and system-level screens on purpose. This wasn't about simulating a finished app. It was about proving the structure makes sense and the experience feels right before any of that enters the picture.</p>
+      <p class="body-text rv" style="transition-delay:.14s">What I'd do differently: the commission flow deserves its own distinct experience. It's the most interesting part of the platform, direct designer-to-brand collaboration, and right now it's just a branch off the marketplace. It should be its own thing.</p>
+    </div>
+  </div>
+</div>
+
+<a href="marvel-a24.html" class="next-project">
+  <div class="rv">
+    <p class="np-pre">Next Project</p>
+    <div class="np-title">Marvel <span>x</span> A24</div>
+    <span class="np-tag">Conceptual Reimagining</span>
+  </div>
+  <span class="np-arrow rv-r">↗</span>
+</a>
+
+</main>
+
+<footer>
+  <span class="f-logo">G.S.Ahamed</span>
+  <span class="f-copy">© 2026 Golam Sayon Ahamed · Bangalore, India</span>
+  <div class="f-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#works">Work</a>
+    <a href="privacy-rights.html">Privacy</a>
+    <a href="index.html#connect">Contact</a>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  const THEMES=[
+    {id:0, th:'light',      h:155,s:'62%',l:'42%',label:'Cream'},
+    {id:1, th:'studio',     h:211,s:'100%',l:'50%',label:'Studio'},
+    {id:2, th:'chalk',      h:20, s:'78%',l:'50%',label:'Chalk'},
+    {id:3, th:'sketch',     h:0,  s:'0%', l:'10%',label:'Sketch'},
+    {id:4, th:'grid',       h:72, s:'38%',l:'36%',label:'Grid'},
+    {id:5, th:'tokyo',      h:4,  s:'78%',l:'45%',label:'Tokyo'},
+    {id:6, th:'sand',       h:28, s:'65%',l:'48%',label:'Sand'},
+    {id:7, th:'terracotta', h:18, s:'70%',l:'48%',label:'Terra'},
+    {id:8, th:'ember',      h:22, s:'72%',l:'46%',label:'Ember'},
+    {id:9, th:'paper',      h:278,s:'60%',l:'56%',label:'Paper'},
+    {id:10,th:'forest',     h:140,s:'55%',l:'48%',label:'Forest'},
+    {id:11,th:'midnight',   h:196,s:'84%',l:'52%',label:'Midnight'},
+    {id:12,th:'navy',       h:322,s:'80%',l:'58%',label:'Navy'},
+    {id:13,th:'dusk',       h:310,s:'62%',l:'58%',label:'Dusk'},
+    {id:14,th:'noir',       h:76, s:'78%',l:'55%',label:'Noir'},
+    {id:15,th:'dark',       h:20, s:'78%',l:'50%',label:'Dark'},
+  ];
+  const html=document.documentElement,bar=document.getElementById('theme-bar'),
+        btn=document.getElementById('theme-toggle-btn'),track=document.getElementById('tb-track'),
+        thumb=document.getElementById('tb-thumb'),label=document.getElementById('tb-label'),
+        iconSun=document.getElementById('theme-icon-sun'),iconMoon=document.getElementById('theme-icon-moon');
+  if(!bar||!btn||!track||!thumb) return;
+  let isOpen=false,activeIdx=15,dragging=false;
+  function posForIdx(i){return i/(THEMES.length-1)}
+  function applyTheme(idx){
+    activeIdx=idx;const t=THEMES[idx];
+    html.setAttribute('data-theme',t.th);
+    html.style.setProperty('--a-h',t.h);html.style.setProperty('--a-s',t.s);html.style.setProperty('--a-l',t.l);
+    if(label) label.textContent=t.label;
+    placeThumb(posForIdx(idx));
+    document.querySelectorAll('.tb-stop').forEach((s,i)=>s.classList.toggle('active-stop',i===idx));
+    const isDark=['dark','midnight','forest','dusk','noir','navy'].includes(t.th);
+    if(iconSun) iconSun.style.display=isDark?'none':'block';
+    if(iconMoon) iconMoon.style.display=isDark?'block':'none';
+    let m=document.querySelector('meta[name="theme-color"]');
+    if(!m){m=document.createElement('meta');m.name='theme-color';document.head.appendChild(m);}
+    m.content=isDark?'#0a0a0a':'#f5f0e3';
+    localStorage.setItem('gsa-theme-idx',idx);
+  }
+  function placeThumb(pos){const th=track.offsetHeight,tw=thumb.offsetHeight;thumb.style.top=(pos*(th-tw)+tw/2)+'px';}
+  function positionStops(){
+    THEMES.forEach((t,i)=>{
+      const stop=document.getElementById('stop-'+i);if(!stop) return;
+      const pos=posForIdx(i),th=track.offsetHeight,tw=thumb.offsetHeight;
+      const px=pos*(th-tw)+tw/2;
+      stop.style.top=px+'px';stop.style.transform='translate(-50%,-50%)';
+    });
+  }
+  function getIdxFromY(clientY){
+    const rect=track.getBoundingClientRect(),tw=thumb.offsetHeight;
+    const usable=rect.height-tw;
+    return Math.round(Math.max(0,Math.min(1,(clientY-rect.top-tw/2)/usable))*(THEMES.length-1));
+  }
+  btn.addEventListener('click',()=>{isOpen=!isOpen;bar.classList.toggle('open',isOpen);btn.classList.toggle('bar-open',isOpen)});
+  document.addEventListener('click',e=>{if(isOpen&&!bar.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){isOpen=false;bar.classList.remove('open');btn.classList.remove('bar-open')}});
+  track.addEventListener('click',e=>{if(dragging) return;e.stopPropagation();applyTheme(getIdxFromY(e.clientY))});
+  function onDragStart(e){dragging=true;e.preventDefault();document.addEventListener('mousemove',onDragMove);document.addEventListener('mouseup',onDragEnd);document.addEventListener('touchmove',onDragMoveT,{passive:false});document.addEventListener('touchend',onDragEnd)}
+  function onDragMove(e){if(!dragging) return;applyTheme(getIdxFromY(e.clientY))}
+  function onDragMoveT(e){if(!dragging) return;e.preventDefault();applyTheme(getIdxFromY(e.touches[0].clientY))}
+  function onDragEnd(){dragging=false;document.removeEventListener('mousemove',onDragMove);document.removeEventListener('mouseup',onDragEnd);document.removeEventListener('touchmove',onDragMoveT);document.removeEventListener('touchend',onDragEnd)}
+  thumb.addEventListener('mousedown',onDragStart);
+  thumb.addEventListener('touchstart',onDragStart,{passive:false});
+  requestAnimationFrame(()=>{
+    const saved=parseInt(localStorage.getItem('gsa-theme-idx')??'15');
+    const hasSaved=localStorage.getItem('gsa-theme-idx')!==null;
+    let defaultIdx=15;
+    if(!hasSaved) defaultIdx=window.matchMedia('(prefers-color-scheme: dark)').matches?15:0;
+    applyTheme(isNaN(saved)?defaultIdx:Math.max(0,Math.min(15,saved)));
+    positionStops();
+  });
+  window.addEventListener('resize',()=>{placeThumb(posForIdx(activeIdx));positionStops()});
+})();
+
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.07});
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>io.observe(el));
+
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('spb').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight))*100)+'%';
+},{passive:true});
+
+window.addEventListener('scroll',()=>{
+  const btn=document.getElementById('scroll-top');
+  if(btn) btn.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+
+const mqEl=document.querySelector('.cs-marquee'),mqIn=document.querySelector('.cs-marquee-inner');
+if(mqEl&&mqIn){mqEl.addEventListener('touchstart',()=>{mqIn.style.animationPlayState='paused'},{passive:true});mqEl.addEventListener('touchend',()=>{mqIn.style.animationPlayState='running'},{passive:true});}
+
+(function(){
+  const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+  if(!cur||!ring||!window.matchMedia('(hover:hover)').matches) return;
+  let mx=0,my=0,rx=0,ry=0,raf=null;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';if(!raf) raf=requestAnimationFrame(loop);},{passive:true});
+  function loop(){raf=null;rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx.toFixed(1)+'px';ring.style.top=ry.toFixed(1)+'px';if(Math.abs(mx-rx)>.3||Math.abs(my-ry)>.3) raf=requestAnimationFrame(loop);}
+  document.addEventListener('mouseover',e=>{if(e.target.closest('a,button,[role="button"]')) document.body.classList.add('cur-h');});
+  document.addEventListener('mouseout',e=>{if(e.target.closest('a,button,[role="button"]')) document.body.classList.remove('cur-h');});
+  document.addEventListener('mouseleave',()=>{cur.style.opacity='0';ring.style.opacity='0';});
+  document.addEventListener('mouseenter',()=>{cur.style.opacity='1';ring.style.opacity='1';});
+})();
+
+(function(){
+  function fireWipe(wrap){if(!wrap.classList.contains('wiped')) wrap.classList.add('wiped');}
+  function checkAll(){document.querySelectorAll('.wipe-wrap:not(.wiped)').forEach(wrap=>{const rect=wrap.getBoundingClientRect();if(rect.top<window.innerHeight*.88&&rect.bottom>0) setTimeout(()=>fireWipe(wrap),400);});}
+  window.addEventListener('scroll',checkAll,{passive:true});
+  window.addEventListener('load',()=>{setTimeout(checkAll,300);setTimeout(checkAll,900);});
+  setTimeout(checkAll,500);
+})();
+</script>
+<script>
+(function(){
+  var seen=new WeakSet();
+  var lazyVideoSeen=new WeakSet();
+
+  /* ── lazy video loading: swap <source data-src> to src when near viewport ── */
+  function lazyLoadVideo(video){
+    var sources=video.querySelectorAll('source[data-src]');
+    if(!sources.length) return;
+    sources.forEach(function(s){
+      s.src=s.getAttribute('data-src');
+      s.removeAttribute('data-src');
+    });
+    video.load();
+  }
+  var videoIO=null;
+  function getVideoIO(){
+    if(videoIO || !('IntersectionObserver' in window)) return videoIO;
+    videoIO=new IntersectionObserver(function(entries,obs){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          lazyLoadVideo(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },{rootMargin:'400px 0px'});
+    return videoIO;
+  }
+  function initVideoLazyLoad(video){
+    if(lazyVideoSeen.has(video)) return;
+    if(!video.querySelector('source[data-src]')) return;
+    lazyVideoSeen.add(video);
+    var io=getVideoIO();
+    if(io){ io.observe(video); }
+    else { lazyLoadVideo(video); }
+  }
+
+  /* ── skeleton / shimmer ── */
+  function shouldSkip(el){
+    if(el.tagName==='IMG'){
+      return !el.getAttribute('src') || (el.complete && el.naturalWidth>0);
+    }
+    if(el.tagName==='VIDEO'){
+      return el.readyState>=2;
+    }
+    return true;
+  }
+  function markLoaded(el){
+    el.classList.remove('media-skel');
+    el.classList.add('media-loaded');
+  }
+  function initSkeleton(el){
+    if(seen.has(el)) return;
+    seen.add(el);
+    if(shouldSkip(el)) return;
+    el.classList.add('media-skel');
+    function done(){
+      markLoaded(el);
+      el.removeEventListener('load',done);
+      el.removeEventListener('loadeddata',done);
+      el.removeEventListener('error',done);
+    }
+    if(el.tagName==='IMG'){
+      el.addEventListener('load',done);
+      el.addEventListener('error',done);
+    }else{
+      el.addEventListener('loadeddata',done);
+      el.addEventListener('error',done);
+    }
+  }
+  function scan(root){
+    if(root.matches && root.matches('img[src]')) initSkeleton(root);
+    if(root.matches && root.matches('video')){ initVideoLazyLoad(root); initSkeleton(root); }
+    if(root.querySelectorAll){
+      root.querySelectorAll('img[src]').forEach(initSkeleton);
+      root.querySelectorAll('video').forEach(function(v){ initVideoLazyLoad(v); initSkeleton(v); });
+    }
+  }
+  function run(){
+    scan(document);
+    if('MutationObserver' in window){
+      new MutationObserver(function(mutations){
+        mutations.forEach(function(m){
+          m.addedNodes.forEach(function(node){
+            if(node.nodeType===1) scan(node);
+          });
+        });
+      }).observe(document.body,{childList:true,subtree:true});
+    }
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',run);
+  }else{
+    run();
+  }
+})();
+</script>
+</body>
+</html>
