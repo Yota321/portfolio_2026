@@ -615,6 +615,7 @@ body.cur-h #cur-ring{width:16px;height:16px;border-color:transparent}
 .nav-back:hover svg{transform:translateX(-3px)}
 .nav-links{display:flex;gap:clamp(18px,3vw,40px);list-style:none}
 .nav-links a{font-size:clamp(9px,1vw,11px);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);text-decoration:none;position:relative;transition:color .2s}
+.nav-links a::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;min-width:44px;height:44px}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--accent);transition:width .3s}
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
@@ -815,4 +816,7 @@ img.media-loaded,video.media-loaded{
 }
 @media(prefers-reduced-motion:reduce){
   img.media-skel,video.media-skel{animation:none;opacity:1;background:none}
+  .rv,.rv-l,.rv-r{transition:opacity .3s linear;transform:none!important}
+  .cs-marquee-inner{animation:none}
+  .two-col-heading .wipe-bg,.two-col-heading .wipe-text{transition:none}
 }
