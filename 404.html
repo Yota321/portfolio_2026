@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Page Not Found · G.S.Ahamed</title>
+<meta name="description" content="This page doesn't exist. Redirecting you back to the G.S.Ahamed portfolio homepage."/>
+<meta name="robots" content="noindex, follow"/>
+<meta name="theme-color" content="#0a0a0a"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0a0a'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='14' font-weight='700' letter-spacing='-0.5' fill='%23ede9e0'>GS</text></svg>"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJD2MSVYRS"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LJD2MSVYRS');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/global.css">
+<style>
+/* ══ 404 PAGE ══ */
+.err-wrap{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative}
+.err-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(12px,1.3vw,15px);letter-spacing:.3em;color:var(--dim);text-transform:uppercase;transition:color .5s}
+.err-code{font-family:'Bebas Neue',sans-serif;font-size:clamp(110px,24vw,300px);line-height:.85;letter-spacing:.02em;color:var(--text);margin:clamp(8px,2vh,16px) 0;transition:color .5s}
+.err-code span{color:transparent;-webkit-text-stroke:2px var(--accent);transition:-webkit-text-stroke-color .5s}
+.err-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,32px);letter-spacing:.04em;color:var(--text);margin-bottom:clamp(10px,2vh,16px);transition:color .5s}
+.err-desc{font-size:clamp(13px,1.3vw,15px);font-weight:300;line-height:1.8;color:var(--mid);max-width:440px;transition:color .5s}
+.err-countdown{margin-top:clamp(18px,3vh,26px);font-size:clamp(10px,1vw,11px);letter-spacing:.15em;text-transform:uppercase;color:var(--dim);transition:color .5s}
+.err-countdown b{color:var(--accent);font-weight:600}
+.err-actions{margin-top:clamp(18px,3vh,24px);display:flex;gap:16px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:clamp(9px,.95vw,11px);font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:none;transition:all .25s;cursor:none!important}
+.btn-p{background:var(--accent-d);color:#fff;padding:clamp(10px,1.5vh,14px) clamp(18px,2.4vw,26px);border-radius:5px}
+.btn-p:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 12px 28px var(--accent-25)}
+.btn-g{color:var(--mid);padding:clamp(10px,1.5vh,14px) 0;border-bottom:1px solid var(--border2)}
+.btn-g:hover{color:var(--text);border-bottom-color:var(--text)}
+
+/* ── theme control (chip + dropdown) ── */
+.theme-control{position:relative;margin-top:clamp(30px,5vh,44px);display:inline-block}
+.theme-chip{display:inline-flex;align-items:center;gap:10px;background:var(--glass2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--border2);border-radius:30px;padding:9px 16px 9px 12px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text);cursor:none!important;transition:border-color .2s,background .2s}
+.theme-chip:hover{border-color:var(--accent-25);background:var(--glass)}
+.theme-chip-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1px var(--border2);transition:background .3s}
+.theme-chip-pre{color:var(--dim);font-weight:400;letter-spacing:.14em}
+.theme-chip-chevron{color:var(--dim);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.theme-chip[aria-expanded="true"] .theme-chip-chevron{transform:rotate(180deg)}
+
+.theme-dropdown{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);width:200px;max-height:0;opacity:0;overflow:hidden;background:var(--glass2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border2);border-radius:16px;box-shadow:0 16px 48px var(--shadow);transition:max-height .4s cubic-bezier(.16,1,.3,1),opacity .25s ease,transform .25s ease;z-index:30;pointer-events:none}
+.theme-dropdown.open{max-height:280px;opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto;overflow-y:auto}
+.theme-option{display:flex;align-items:center;gap:10px;width:100%;padding:10px 14px;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.04em;color:var(--mid);text-align:left;cursor:none!important;transition:background .15s,color .15s}
+.theme-option:hover,.theme-option:focus-visible{background:var(--glass);color:var(--text)}
+.theme-option-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 1px var(--border2)}
+
+@media(hover:none),(max-width:640px){.btn,.theme-chip,.theme-option{cursor:pointer}}
+@media(max-width:480px){.err-actions{flex-direction:column;gap:12px}}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<header class="nav">
+  <a href="./" class="nav-logo">G.S.Ahamed</a>
+  <a href="./" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Home
+  </a>
+</header>
+
+<main class="err-wrap">
+  <p class="err-eyebrow rv">Error</p>
+  <h1 class="err-code rv" style="transition-delay:.06s">4<span>0</span>4</h1>
+  <p class="err-title rv" style="transition-delay:.12s">This page wandered off.</p>
+  <p class="err-desc rv" style="transition-delay:.16s">The link you followed doesn't exist, or the page has moved. It happens, so I'm sending you back to the homepage.</p>
+  <p class="err-countdown rv" style="transition-delay:.2s"><span id="redirect-label">Redirecting you home in</span> <b id="redirect-count">6</b>s...</p>
+  <div class="err-actions rv" style="transition-delay:.24s">
+    <a href="./" class="btn btn-p">Go to Homepage →</a>
+    <a href="./#connect" class="btn btn-g">Contact Me</a>
+  </div>
+
+  <div class="theme-control rv" style="transition-delay:.3s">
+    <button type="button" class="theme-chip" id="theme-chip" aria-expanded="false" aria-haspopup="listbox" aria-controls="theme-dropdown">
+      <span class="theme-chip-dot" id="theme-chip-dot"></span>
+      <span><span class="theme-chip-pre">Mood</span> <span id="theme-chip-label">Dark</span></span>
+      <svg class="theme-chip-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="theme-dropdown" id="theme-dropdown" role="listbox" aria-label="Choose a theme"></div>
+  </div>
+</main>
+
+<footer>
+  <span class="f-logo">G.S.Ahamed</span>
+  <span class="f-copy">© 2026 Golam Sayon Ahamed · Bangalore, India</span>
+  <div class="f-links">
+    <a href="./">Home</a>
+    <a href="./#works">Work</a>
+    <a href="privacy-rights/">Privacy</a>
+    <a href="./#connect">Contact</a>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script>
+(function(){
+  var THEMES=[
+    {th:'light',      h:155,s:'62%',l:'42%',label:'Cream'},
+    {th:'studio',     h:211,s:'100%',l:'50%',label:'Studio'},
+    {th:'chalk',      h:20, s:'78%',l:'50%',label:'Chalk'},
+    {th:'sketch',     h:0,  s:'0%', l:'10%',label:'Sketch'},
+    {th:'grid',       h:72, s:'38%',l:'36%',label:'Grid'},
+    {th:'tokyo',      h:4,  s:'78%',l:'45%',label:'Tokyo'},
+    {th:'sand',       h:28, s:'65%',l:'48%',label:'Sand'},
+    {th:'terracotta', h:18, s:'70%',l:'48%',label:'Terra'},
+    {th:'ember',      h:22, s:'72%',l:'46%',label:'Ember'},
+    {th:'paper',      h:278,s:'60%',l:'56%',label:'Paper'},
+    {th:'forest',     h:140,s:'55%',l:'48%',label:'Forest'},
+    {th:'midnight',   h:196,s:'84%',l:'52%',label:'Midnight'},
+    {th:'navy',       h:322,s:'80%',l:'58%',label:'Navy'},
+    {th:'dusk',       h:310,s:'62%',l:'58%',label:'Dusk'},
+    {th:'noir',       h:76, s:'78%',l:'55%',label:'Noir'},
+    {th:'dark',       h:20, s:'78%',l:'50%',label:'Dark'}
+  ];
+  var html=document.documentElement;
+  var currentIdx=15;
+
+  function hsl(t){ return 'hsl('+t.h+','+t.s+','+t.l+')'; }
+
+  function applyTheme(idx){
+    var t=THEMES[idx];
+    currentIdx=idx;
+    html.setAttribute('data-theme',t.th);
+    html.style.setProperty('--a-h',t.h);
+    html.style.setProperty('--a-s',t.s);
+    html.style.setProperty('--a-l',t.l);
+    localStorage.setItem('gsa-theme-idx',idx);
+    updateChip(idx);
+    renderDropdown(idx);
+  }
+
+  var chipDot=document.getElementById('theme-chip-dot');
+  var chipLabel=document.getElementById('theme-chip-label');
+  function updateChip(idx){
+    var t=THEMES[idx];
+    chipDot.style.background=hsl(t);
+    chipLabel.textContent=t.label;
+  }
+
+  var dropdown=document.getElementById('theme-dropdown');
+  var chip=document.getElementById('theme-chip');
+  function renderDropdown(excludeIdx){
+    dropdown.innerHTML='';
+    THEMES.forEach(function(t,i){
+      if(i===excludeIdx) return;
+      var b=document.createElement('button');
+      b.type='button';
+      b.className='theme-option';
+      b.setAttribute('role','option');
+      var dot=document.createElement('span');
+      dot.className='theme-option-dot';
+      dot.style.background=hsl(t);
+      var name=document.createElement('span');
+      name.textContent=t.label;
+      b.appendChild(dot);
+      b.appendChild(name);
+      b.addEventListener('click',function(){
+        applyTheme(i);
+        closeDropdown();
+        scheduleRedirect(2000,true);
+      });
+      dropdown.appendChild(b);
+    });
+  }
+
+  function openDropdown(){
+    dropdown.classList.add('open');
+    chip.setAttribute('aria-expanded','true');
+  }
+  function closeDropdown(){
+    dropdown.classList.remove('open');
+    chip.setAttribute('aria-expanded','false');
+  }
+  chip.addEventListener('click',function(e){
+    e.stopPropagation();
+    if(dropdown.classList.contains('open')) closeDropdown();
+    else openDropdown();
+  });
+  document.addEventListener('click',function(e){
+    if(!dropdown.contains(e.target)&&e.target!==chip) closeDropdown();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeDropdown();
+  });
+
+  /* apply whatever theme the visitor last chose elsewhere on the site */
+  var saved=parseInt(localStorage.getItem('gsa-theme-idx'));
+  var savedIdx=(!isNaN(saved)&&saved>=0&&saved<=15)?saved:15;
+  applyTheme(savedIdx);
+
+  /* redirect countdown: random on load, fixed 2s after a theme pick */
+  var countEl=document.getElementById('redirect-count');
+  var labelEl=document.getElementById('redirect-label');
+  var tickTimer=null,goTimer=null;
+
+  function scheduleRedirect(ms,viaTheme){
+    if(tickTimer) clearInterval(tickTimer);
+    if(goTimer) clearTimeout(goTimer);
+    var remaining=Math.ceil(ms/1000);
+    if(countEl) countEl.textContent=remaining;
+    if(labelEl) labelEl.textContent=viaTheme?'Nice pick. Taking you home in':'Redirecting you home in';
+    tickTimer=setInterval(function(){
+      remaining=Math.max(0,remaining-1);
+      if(countEl) countEl.textContent=remaining;
+    },1000);
+    goTimer=setTimeout(function(){ window.location.href='./'; },ms);
+  }
+
+  /* start the default random redirect, feels natural, not instant, not a long wait */
+  var randomDelay=Math.floor(Math.random()*(9000-5000+1))+5000;
+  scheduleRedirect(randomDelay,false);
+})();
+</script>
+</body>
+</html>
