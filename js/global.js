@@ -106,11 +106,38 @@
 })();
 
 /* ── SCROLL PROGRESS ── */
-window.addEventListener('scroll',()=>{
-  const h=document.documentElement;
-  const spb=document.getElementById('spb');
-  if(spb) spb.style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight))*100)+'%';
-},{passive:true});
+(function(){
+  var track=document.getElementById('spb-track'),fill=document.getElementById('spb');
+  if(!track||!fill) return;
+  var html=document.documentElement;
+  function maxScroll(){return html.scrollHeight-html.clientHeight;}
+  function update(){
+    var sh=maxScroll(),pct=sh>0?(html.scrollTop/sh)*100:0;
+    fill.style.width=pct+'%';
+    track.setAttribute('aria-valuenow',Math.round(pct));
+  }
+  function seek(clientX){
+    var r=track.getBoundingClientRect();
+    var pct=Math.min(1,Math.max(0,(clientX-r.left)/r.width));
+    html.scrollTop=pct*maxScroll();
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  update();
+  var dragging=false;
+  track.addEventListener('mousedown',function(e){dragging=true;seek(e.clientX);e.preventDefault();});
+  window.addEventListener('mousemove',function(e){if(dragging)seek(e.clientX);});
+  window.addEventListener('mouseup',function(){dragging=false;});
+  track.addEventListener('touchstart',function(e){dragging=true;seek(e.touches[0].clientX);},{passive:true});
+  track.addEventListener('touchmove',function(e){if(dragging){seek(e.touches[0].clientX);e.preventDefault();}},{passive:false});
+  track.addEventListener('touchend',function(){dragging=false;});
+  track.addEventListener('keydown',function(e){
+    var sh=maxScroll(),step=sh*0.05;
+    if(e.key==='ArrowRight'||e.key==='ArrowUp'){html.scrollTop=Math.min(sh,html.scrollTop+step);e.preventDefault();}
+    else if(e.key==='ArrowLeft'||e.key==='ArrowDown'){html.scrollTop=Math.max(0,html.scrollTop-step);e.preventDefault();}
+    else if(e.key==='Home'){html.scrollTop=0;e.preventDefault();}
+    else if(e.key==='End'){html.scrollTop=sh;e.preventDefault();}
+  });
+})();
 
 /* ── SCROLL TO TOP ── */
 window.addEventListener('scroll',()=>{
